@@ -1,0 +1,31 @@
+@keyframes flow {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.animate-flow {
+  stroke-dasharray: 1000;
+  animation: flow 12s linear infinite;
+}
+
+.animate-flowSlow {
+  stroke-dasharray: 1200;
+  animation: flow 18s linear infinite;
+}
+
+.animate-pulseSoft {
+  animation: pulseSoft 3s ease-in-out infinite;
+}

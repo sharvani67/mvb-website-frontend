@@ -1,0 +1,33 @@
+/* =============================== */
+/* Animate marquee horizontally */
+/* =============================== */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+/* =============================== */
+/* Animate network line flow */
+/* =============================== */
+@keyframes lineFlow {
+  0% {
+    stroke-dasharray: 0 600;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 600 0;
+    stroke-dashoffset: -600;
+  }
+}
+
+.animate-lineFlow {
+  stroke-dasharray: 300;
+  animation: lineFlow 8s linear infinite;
+}
+
+.delay-2000 { animation-delay: 2s; }
+.delay-4000 { animation-delay: 4s; }
