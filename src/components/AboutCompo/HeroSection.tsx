@@ -582,23 +582,28 @@ export function HeroSection() {
         >
           We specialize in{' '}
           <span className="relative">
-            <span className="relative z-10 font-bold text-pink-300">Data Cabling</span>
-            <span className="absolute bottom-0 left-0 w-full h-3 bg-pink-500/40 -z-10 rounded-full blur-sm" />
+            <span className="relative z-10 font-bold text-pink-600">Data Cabling</span>
+            
           </span>
           ,{' '}
           <span className="relative">
-            <span className="relative z-10 font-bold text-yellow-300">Data Security</span>
-            <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-500/40 -z-10 rounded-full blur-sm" />
+            <span className="relative z-10 font-bold text-yellow-800">Data Physical Security</span>
+            {/* <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-500/40 -z-10 rounded-full " /> */}
+          </span>
+          ,{' '}
+           <span className="relative">
+            <span className="relative z-10 font-bold text-green-800">Data Security </span>
+            {/* <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-500/40 -z-10 rounded-full " /> */}
           </span>
           ,{' '}
           <span className="relative">
-            <span className="relative z-10 font-bold text-blue-300">Physical Security</span>
-            <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/40 -z-10 rounded-full blur-sm" />
+            <span className="relative z-10 font-bold text-blue-600">Data Infra</span>
+            {/* <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/40 -z-10 rounded-full " /> */}
           </span>
           , and{' '}
           <span className="relative">
-            <span className="relative z-10 font-bold text-cyan-300">Artificial Intelligence</span>
-            <span className="absolute bottom-0 left-0 w-full h-3 bg-cyan-500/40 -z-10 rounded-full blur-sm" />
+            <span className="relative z-10 font-bold text-cyan-600">Artificial Intelligence</span>
+            {/* <span className="absolute bottom-0 left-0 w-full h-3 bg-cyan-500/40 -z-10 rounded-full " /> */}
           </span>
           .
         </motion.p>

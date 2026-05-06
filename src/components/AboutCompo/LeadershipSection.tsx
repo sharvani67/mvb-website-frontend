@@ -143,6 +143,7 @@
 
 import { Crown, Quote } from "lucide-react";
 import { TiltCard } from "./TiltCard";
+import profile from "../../assets/profileicon.jpg";
 
 const leadership = [
   {
@@ -152,7 +153,7 @@ const leadership = [
       "22+ years of industrial experience in Enterprise IT Infrastructure, focused on value and solution selling. Successfully executed projects across Data Center, Manufacturing, Enterprises, and Educational sectors.",
     gradient: "from-[#E11D48] via-[#F97316] to-[#FACC15]",
     image:
-      "https://i.pinimg.com/1200x/e8/09/8a/e8098a3d487b4fd7b8d591d7d9db32bb.jpg",
+      profile,
     quote: "We don't just build networks. We build trust.",
   },
   {
@@ -162,29 +163,29 @@ const leadership = [
       "Steering financial strategy with precision and integrity, ensuring sustainable growth and operational excellence across all business verticals.",
     gradient: "from-[#C026D3] via-[#E11D48] to-[#F97316]",
     image:
-      "https://i.pinimg.com/1200x/0e/a7/75/0ea775632aaed02b9c1c1e27bd09cad7.jpg",
+      profile,
     quote:
       "Every investment in infrastructure is an investment in peace of mind.",
   },
+  // {
+  //   name: "Niranjan Nayak",
+  //   title: "Director - Sales & Marketing",
+  //   description:
+  //     "Driving business growth through strategic partnerships and customer-centric sales approaches, expanding MV's footprint across enterprise segments.",
+  //   gradient: "from-[#22C55E] via-[#06B6D4] to-[#2563EB]",
+  //   image:
+  //     "https://i.pinimg.com/736x/ac/4e/ba/ac4ebaf46561a0ea3617ed706b7ff37d.jpg",
+  //   quote:
+  //     "The best solutions begin with understanding, not selling.",
+  // },
   {
-    name: "Niranjan Nayak",
-    title: "Director - Sales & Marketing",
+    name: "Vikas Sagar",
+    title: "Technical Lead",
     description:
-      "Driving business growth through strategic partnerships and customer-centric sales approaches, expanding MV's footprint across enterprise segments.",
-    gradient: "from-[#22C55E] via-[#06B6D4] to-[#2563EB]",
-    image:
-      "https://i.pinimg.com/736x/ac/4e/ba/ac4ebaf46561a0ea3617ed706b7ff37d.jpg",
-    quote:
-      "The best solutions begin with understanding, not selling.",
-  },
-  {
-    name: "Chandan Gosh",
-    title: "Director - Security & IT Infra",
-    description:
-      "Leading security architecture and IT infrastructure delivery, with expertise in SOC, NOC, SIEM, and enterprise-grade security solutions.",
+      "Vikas Sagar holds prestigious certifications, including CCIE/ Azure Security Engineer has thirst for technology that are client centric, being network specialist/security architecture, specialising in IP Core/MPLS backbone infra/ cloud security solutions. He has proven track record of managing complex, multi-vendor network environments and implementing advanced SIEM and SOAR platforms.",
     gradient: "from-[#FACC15] via-[#F97316] to-[#E11D48]",
     image:
-      "https://i.pinimg.com/1200x/a7/37/c0/a737c000753c6dbd490efc06277437aa.jpg",
+      profile,
     quote: "Security isn't a product. It's a mindset.",
   },
 ];

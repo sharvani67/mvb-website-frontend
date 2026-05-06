@@ -448,7 +448,7 @@ export default function Index() {
       
       <HeroSection />
        <AboutSection />
-      <ValuesSection />
+      {/* <ValuesSection /> */}
       <ServicesSection />
       <WhyChooseUsSection />
       <StatsSection />

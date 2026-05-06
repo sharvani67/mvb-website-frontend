@@ -11,6 +11,7 @@ const testimonials = [
     points: [
       "Management expressed satisfaction with overall implementation",
       "Smooth performance with no issues for over a year",
+      "Large manufacturing Plant",
       "Strong collaboration on future upgrades for Nagasandra office",
       "Focus on automation security enhancements",
     ],
@@ -29,6 +30,7 @@ const testimonials = [
       "Additional projects and orders have been assigned",
       "Firewall capacity upgrade planned next year",
       "Additional camera installation in progress",
+      "10 acres of IB School ",
     
     ],
   },

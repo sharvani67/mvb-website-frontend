@@ -1115,6 +1115,7 @@ const services = [
       "Intelligent PDU For Power Monitoring of Cabinets & Devices",
       "Network Operation Centre",
       "KVM For Remote Management",
+      "Rare Door Heat Exchangers, Direct To Chip Cooling & Immersion Cooling"
     ],
     stats: "AI-Optimized Infrastructure",
   },

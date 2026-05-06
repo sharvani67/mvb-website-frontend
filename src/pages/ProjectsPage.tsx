@@ -1092,18 +1092,17 @@ const ProjectsPage: React.FC = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-tight">
-              Enterprise IT
+            <h1 className="text-3xl sm:text-3xl lg:text-6xl font-black text-white mb-6 leading-tight">
               
-              <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300">
-                Infrastructure Solutions
+              
+              <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-pink-600 to-yellow-600">
+                Client Success is Our Success
               </span>
             </h1>
 
             {/* Description */}
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Delivering comprehensive IT infrastructure, network security, and data center solutions 
-              for enterprises across manufacturing, education, and corporate sectors.
+              Well-defined systems, Process and methodologies ensuring smooth execution
             </p>
 
             {/* Buttons */}

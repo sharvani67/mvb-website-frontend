@@ -907,16 +907,16 @@ export default function Services() {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.1]">
-              Your Trusted
-              <span className="block bg-gradient-to-r from-yellow-300 to-pink-300 bg-clip-text text-transparent">
-                IT Partner
+            <h1 className="text-3xl sm:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.1]">
+             
+              <span className="block bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
+                Data As the Core 
               </span>
             </h1>
 
             {/* Subheading */}
             <p className="text-xl sm:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
-              Data Cabling • Security • Innovation
+              Cabling - Physical Security - Security - Infra - AI
             </p>
 
             {/* CTA Buttons */}

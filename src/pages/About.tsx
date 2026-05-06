@@ -28,9 +28,10 @@ export default function About() {
       {/* < Aboutlogosection /> */}
       {/* <StorySection /> */}
       {/* <VisionMissionSection /> */}
-      {/* <CoreValuesSection /> */}
+     
       <VisionMission />
-      <CoreValues /> 
+       <CoreValuesSection />
+      {/* <CoreValues />  */}
       <LeadershipSection />
       {/* <ProcessFlow /> */}
       {/* <TimelineSection /> */}

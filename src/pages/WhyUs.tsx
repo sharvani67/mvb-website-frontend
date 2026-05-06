@@ -1273,22 +1273,22 @@ export default function WhyUs() {
               </div>
 
               {/* Heading */}
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-8 leading-[0.95]">
-                Beyond Service Delivery —{" "}
+              <h1 className="text-5xl sm:text-6xl lg:text-6xl font-black text-white mb-8 leading-[0.95]">
+               Simplifying Customer complexity through MV’s proven design, build, and delivery expertise
                 <span className="block bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent">
-                  True Partnership
+                   
                 </span>
               </h1>
 
               {/* Description */}
-              <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10">
+              {/* <p className="text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10">
                 We don't just implement IT solutions—we become an extension of your team.
                 With a foundation built on{" "}
                 <span className="text-yellow-200 font-semibold">Trust</span>, driven by{" "}
                 <span className="text-pink-200 font-semibold">Innovation</span>, and focused on{" "}
                 <span className="text-blue-200 font-semibold">Growth</span>, we deliver
                 infrastructure that transforms businesses.
-              </p>
+              </p> */}
 
               {/* Buttons */}
               <div className="flex flex-wrap gap-4 justify-center">
@@ -1350,7 +1350,7 @@ export default function WhyUs() {
 
       <StatsSection />
       <ThreePillars />
-       <CoreValue />
+       {/* <CoreValue /> */}
       <MVDifferencePage />
       <AchievementsSection />
       <ClientsSection />

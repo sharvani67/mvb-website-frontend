@@ -208,7 +208,7 @@ const solutions = [
 
 const IndustrySolutions = () => {
   return (
-    <section className="relative py-28 bg-gray-50 overflow-hidden">
+    <section className="relative py-5 bg-gray-50 overflow-hidden">
 
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">

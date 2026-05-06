@@ -781,15 +781,13 @@ const SolutionsPage: React.FC = () => {
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
             Transform Your Business with
             <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 via-pink-200 to-cyan-200">
-              MVB-Powered Innovation
+              MV-Powered Innovation
             </span>
           </h1>
 
           {/* Description */}
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Leverage our cutting-edge MVB (Minimum Viable Blockchain) technology
-            to accelerate your digital transformation. Build scalable, secure,
-            and future-ready solutions that drive real business outcomes.
+            Bringing multiple IT infrastructure needs together into Efficient, Deliverable & Simplified Solutions 
           </p>
 
           {/* Buttons */}
@@ -861,7 +859,7 @@ const SolutionsPage: React.FC = () => {
     <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
       Built on{" "}
       <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent">
-        MVB Core
+        MV Core
       </span>
     </h2>
     <p className="text-gray-600 max-w-2xl mx-auto">
@@ -1008,41 +1006,48 @@ const SolutionsPage: React.FC = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                title: "Ultra-Low Latency",
-                desc: "Sub-second finality for real-time transactions",
-                icon: "⚡",
-                stat: "< 1s"
-              },
-              {
-                title: "Enterprise Security",
-                desc: "Military-grade encryption and consensus mechanisms",
-                icon: "🛡️",
-                stat: "99.99%"
-              },
-              {
-                title: "Scalable Architecture",
-                desc: "Handle millions of transactions seamlessly",
-                icon: "📈",
-                stat: "10M+ TPS"
-              },
-              {
-                title: "Green Technology",
-                desc: "99% less energy consumption than traditional chains",
-                icon: "🌱",
-                stat: "-99% Energy"
-              }
-            ].map((feature, idx) => (
-              <div key={idx} className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow">
-                <div className="text-5xl mb-4">{feature.icon}</div>
-                <div className="text-2xl font-bold text-pink-600 mb-2">{feature.stat}</div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600 text-sm">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
+           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {[
+        {
+          title: "Artificial Intelligence",
+          desc: "Leverage AI-powered automation and insights to enhance decision-making and operational efficiency.",
+          icon: "🤖",
+          stat: "AI Powered"
+        },
+        {
+          title: "Data-Driven Growth",
+          desc: "Transform data into actionable insights to boost revenue, optimize strategies, and improve performance.",
+          icon: "📊",
+          stat: "Smart Insights"
+        },
+        {
+          title: "Single Platform Solutions",
+          desc: "Integrate all your business operations into one unified platform for seamless management and scalability.",
+          icon: "🧩",
+          stat: "All-in-One"
+        },
+        {
+          title: "Green Technologies",
+          desc: "Adopt eco-friendly solutions that reduce environmental impact while maintaining high performance.",
+          icon: "🌱",
+          stat: "Sustainable"
+        }
+      ].map((feature, idx) => (
+        <div
+          key={idx}
+          className="bg-white rounded-xl p-6 text-center shadow-md hover:shadow-lg transition-shadow"
+        >
+          <div className="text-5xl mb-4">{feature.icon}</div>
+          {/* <div className="text-xl font-bold text-pink-600 mb-2">
+            {feature.stat}
+          </div> */}
+          <h3 className="text-lg font-bold text-gray-900 mb-2">
+            {feature.title}
+          </h3>
+          {/* <p className="text-gray-600 text-sm">{feature.desc}</p> */}
+        </div>
+      ))}
+    </div>
         </div>
       </div>
 

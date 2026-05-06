@@ -27873,7 +27873,7 @@ export default function HomePage() {
           </div>
         </section>
         <MissionValues/>
-        <CoreValues />
+        {/* <CoreValues /> */}
         <TestimonialsSectionss />
         <PremiumCTA />
   
