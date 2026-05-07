@@ -993,6 +993,13 @@ import SectionWrapper from "@/components/SectionWrapper";
 import { Network, Shield, Server, Cpu, CheckCircle, ArrowRight, Zap, Globe, Lock, Database, Cloud, Wifi, Phone, Eye, Fingerprint, Video, Ruler, HardDrive, Thermometer, Activity, FileText, TrendingUp, Headphones } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import dataInfraImage from '../../assets/Servicesimages/DataInfraimg.jpeg';
+import dataSecurityImage from '../../assets/Servicesimages/DataSecurityImage.webp';
+import physicalSecurityImage from '../../assets/Servicesimages/PhysicalSecurity.png';
+import dataCablingImage from '../../assets/Servicesimages/DataInfraimg.jpeg';
+import aiImage from '../../assets/Servicesimages/AIimg.jpeg';
+
+
 
 const services = [
   {
@@ -1005,7 +1012,7 @@ const services = [
     iconBg: "bg-blue-100",
     iconColor: "text-blue-600",
     borderColor: "border-blue-200",
-    image: "https://i.pinimg.com/736x/d3/0f/6d/d30f6d70d06163fee29c13e4b15ce915.jpg",
+    image: dataInfraImage,
     colorMeaning: "Built on Reliability & Scale",
     features: [
       "VDI",
@@ -1029,7 +1036,7 @@ const services = [
     iconBg: "bg-fuchsia-100",
     iconColor: "text-fuchsia-600",
     borderColor: "border-fuchsia-200",
-    image: "https://i.pinimg.com/736x/fe/56/b1/fe56b1b38087f9ac0fdc1261a74d1055.jpg",
+    image: dataSecurityImage,
     colorMeaning: "Driven by Security Excellence",
     features: [
       "Network Infrastructure",
@@ -1054,7 +1061,7 @@ const services = [
     iconBg: "bg-emerald-100",
     iconColor: "text-emerald-600",
     borderColor: "border-emerald-200",
-    image: "https://i.pinimg.com/1200x/81/8b/7b/818b7bfe1dc13b340b383c0d1efc4328.jpg",
+    image: physicalSecurityImage ,
     colorMeaning: "Rooted in Protection",
     features: [
       "Time and Attendance Management System",
@@ -1079,7 +1086,7 @@ const services = [
     iconBg: "bg-violet-100",
     iconColor: "text-violet-600",
     borderColor: "border-violet-200",
-    image: "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=800&h=600&fit=crop",
+    image: dataCablingImage,
     colorMeaning: "Anchored in Performance",
     features: [
       "Structured Cabling Solutions (Cat6/Cat6A/Cat7/FTP/STP)",
@@ -1103,7 +1110,7 @@ const services = [
     iconBg: "bg-orange-100",
     iconColor: "text-orange-600",
     borderColor: "border-orange-200",
-    image: "https://i.pinimg.com/1200x/0d/fa/e6/0dfae65f15d971b19689cd1288adb4e5.jpg",
+    image: aiImage,
     colorMeaning: "Built for AI Scale",
     features: [
       "Hyper Scale Data Centre",

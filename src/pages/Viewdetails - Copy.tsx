@@ -367,7 +367,7 @@ const CaseStudy: React.FC = () => {
       <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
         DeFi Lending Protocol
         <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent">
-          Built on MVB Core
+          Built on MV Core
         </span>
       </h1>
 
@@ -416,7 +416,7 @@ const CaseStudy: React.FC = () => {
               Next-Generation Lending Infrastructure
             </h3>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              A decentralized lending platform built on MVB Core delivering automated yield optimization and seamless cross-chain liquidity pools. Users can lend, borrow, and earn yields across multiple blockchain networks with maximum capital efficiency.
+              A decentralized lending platform built on MV Core delivering automated yield optimization and seamless cross-chain liquidity pools. Users can lend, borrow, and earn yields across multiple blockchain networks with maximum capital efficiency.
             </p>
             <div className="space-y-3">
               <div className="flex items-start space-x-3">
@@ -572,7 +572,7 @@ const CaseStudy: React.FC = () => {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h3 className="text-3xl font-bold mb-6 text-green-600">MVB Core Solutions</h3>
+          <h3 className="text-3xl font-bold mb-6 text-green-600">MV Core Solutions</h3>
           <ul className="space-y-3">
             {["Unified cross-chain liquidity pools", "Automated yield optimization algorithms", "Scalable MVB Core infrastructure with low fees", "Audited smart contracts & bug bounties", "Intuitive dashboard with wallet integration"].map((item, idx) => (
               <li key={idx} className="flex items-center space-x-3 text-gray-700">
@@ -644,7 +644,7 @@ const CaseStudy: React.FC = () => {
           <h3 className="text-3xl font-bold mb-6">Project Details</h3>
           <div className="space-y-3">
             <p><span className="font-semibold">Protocol:</span> DeFi Lending Platform</p>
-            <p><span className="font-semibold">Blockchain:</span> MVB Core</p>
+            <p><span className="font-semibold">Blockchain:</span> MV Core</p>
             <p><span className="font-semibold">TVL:</span> $120 Million</p>
             <p><span className="font-semibold">Users:</span> 50,000+ Active</p>
             <p><span className="font-semibold">Transactions:</span> 1.2 Million</p>

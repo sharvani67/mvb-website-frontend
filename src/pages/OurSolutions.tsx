@@ -979,7 +979,7 @@ const SolutionsPage: React.FC = () => {
     </div>
 
     <div className="bg-white/90 rounded-xl p-6 text-center border border-gray-200">
-      <div className="text-2xl font-bold mb-2 text-gray-900">Ready to Build on MVB?</div>
+      <div className="text-2xl font-bold mb-2 text-gray-900">Ready to Build on MV?</div>
       <p className="text-gray-700 mb-4">Join hundreds of enterprises already building on our platform</p>
       <button
         onClick={scrollToContactForm}
@@ -1155,7 +1155,7 @@ const SolutionsPage: React.FC = () => {
       </span>
     </h2>
     <p className="text-gray-600 max-w-2xl mx-auto">
-      See how leading enterprises are leveraging MVB technology across industries
+      See how leading enterprises are leveraging MV technology across industries
     </p>
   </div>
 
@@ -1246,7 +1246,7 @@ const SolutionsPage: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-            Get started with MVB technology today and join the future of enterprise blockchain
+            Get started with MV technology today and join the future of enterprise blockchain
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

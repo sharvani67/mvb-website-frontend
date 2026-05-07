@@ -967,7 +967,7 @@ const MissionVision: React.FC = () => {
 
        <PyramidSection />
 
-       {/* <Pyramidvideo /> */}
+       <Pyramidvideo />
 
       {/* 🔹 Grid Style */}
       <style>{`

@@ -2143,9 +2143,16 @@
 
 
 
+
 import { Zap } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import aiImage from '../assets/Homeimages/AIimage.jpg';
+import dataInfraImage from '../assets/Homeimages/DataInfraimage.jpeg';
+import dataSecurityImage from '../assets/Homeimages/DataSecurityimg.jpg';
+import physicalSecurityImage from '../assets/Homeimages/DataPhysicalSecurityimage.jpg';
+import dataCablingImage from '../assets/Homeimages/datacabling.jpg';
+
 
 type ProductCard = {
   id: number;
@@ -2162,7 +2169,7 @@ const productData: ProductCard[] = [
     title: "Artificial Intelligence",
     subtitle: "Smart Technology Solutions",
     content: "AI-powered solutions that transform business operations. Implement machine learning models, natural language processing, and computer vision to automate processes and gain insights from your data.",
-    image: "https://i.pinimg.com/736x/30/f1/50/30f150b6738f5c8a7c3726ace3d095fd.jpg",
+    image: aiImage,
     category: "Smart Technology"
   },
   {
@@ -2170,7 +2177,7 @@ const productData: ProductCard[] = [
     title: "Data Infrastructure",
     subtitle: "Scalable Foundation",
     content: "Robust data infrastructure solutions designed for scalability and performance. From cloud storage to on-premise servers, we provide the foundation for your data-driven operations.",
-    image: "https://i.pinimg.com/736x/b7/88/25/b7882524b3523f23a3ca93a6774fe1cd.jpg",
+    image: dataInfraImage,
     category: "Data Infra"
   },
   {
@@ -2178,7 +2185,7 @@ const productData: ProductCard[] = [
     title: "Data Security",
     subtitle: "Protection & Compliance",
     content: "Comprehensive security solutions to protect your valuable data. Implement encryption, access controls, and monitoring systems to safeguard against threats and ensure compliance.",
-    image: "https://i.pinimg.com/1200x/07/53/51/0753512c7e43723ea45fc614c359e6ed.jpg",
+    image: dataSecurityImage,
     category: "Security"
   },
   {
@@ -2186,7 +2193,7 @@ const productData: ProductCard[] = [
     title: "Data Physical Security",
     subtitle: "Hardware Protection",
     content: "Physical security measures to protect from campus entry to data center through biometric access controls to surveillance system, ensuring your infrastructure is physically secured.",
-    image: "https://i.pinimg.com/736x/3a/4e/50/3a4e50446d33d1dcacbd5287bbec4542.jpg",
+    image: physicalSecurityImage ,
     category: "Physical Security"
   },
   {
@@ -2194,7 +2201,7 @@ const productData: ProductCard[] = [
     title: "Data Cabling",
     subtitle: "High Bandwidth Connectivity",
     content: "Professional cabling solutions for maximum data throughput. Structured cabling systems designed for reliability and future-proofing your network infrastructure.",
-    image: "https://i.pinimg.com/1200x/18/1a/99/181a993445e84789e42325760cf7200a.jpg",
+    image: dataCablingImage,
     category: "Connectivity"
   }
 ];
