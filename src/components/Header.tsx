@@ -180,23 +180,31 @@ export default function Header() {
 
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-2">
-          {navItems.map(item => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`relative px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
-                location.pathname === item.path
-                  ? 'text-white'
-                  : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white'
-              }`}
-            >
-              {location.pathname === item.path && (
-                <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 -z-10 blur-sm opacity-80" />
-              )}
-              {item.label}
-            </Link>
-          ))}
-        </nav>
+  {navItems.map(item => {
+    const isActive =
+      item.path === '/projectpage'
+        ? location.pathname.startsWith('/projectpage') ||
+          location.pathname.startsWith('/viewdetailspage')
+        : location.pathname === item.path;
+
+    return (
+      <Link
+        key={item.path}
+        to={item.path}
+        className={`relative px-4 py-2 rounded-lg text-sm font-semibold transition-all ${
+          isActive
+            ? 'text-white'
+            : 'text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white'
+        }`}
+      >
+        {isActive && (
+          <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 -z-10 blur-sm opacity-80" />
+        )}
+        {item.label}
+      </Link>
+    );
+  })}
+</nav>
 
         {/* RIGHT SIDE */}
         <div className="flex items-center gap-3">
@@ -233,19 +241,27 @@ export default function Header() {
         }`}
       >
         <nav className="flex flex-col p-4 gap-2">
-          {navItems.map(item => (
-            <Link
-              key={item.path}
-              to={item.path}
-              className={`px-4 py-3 rounded-lg font-medium ${
-                location.pathname === item.path
-                  ? 'bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 text-white'
-                  : 'text-gray-700 hover:bg-gray-100'
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
+          {navItems.map(item => {
+  const isActive =
+    item.path === '/projectpage'
+      ? location.pathname.startsWith('/projectpage') ||
+        location.pathname.startsWith('/viewdetailspage')
+      : location.pathname === item.path;
+
+  return (
+    <Link
+      key={item.path}
+      to={item.path}
+      className={`px-4 py-3 rounded-lg font-medium ${
+        isActive
+          ? 'bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 text-white'
+          : 'text-gray-700 hover:bg-gray-100'
+      }`}
+    >
+      {item.label}
+    </Link>
+  );
+})}
         </nav>
       </div>
     </header>

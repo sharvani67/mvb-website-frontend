@@ -339,52 +339,68 @@ export default function PremiumVideoSection({ contactRef }) {
     }
   };
 
- return (
-  <section className="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden bg-white">
+  return (
+    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden bg-white">
 
-    {/* 🌈 Gradient Background */}
-    <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-yellow-100 to-blue-200 opacity-70" />
+      {/* 🌈 Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-yellow-100 to-blue-200 opacity-70" />
 
-    {/* ✨ Glow Effects (Reduced Size) */}
-    <div className="absolute top-10 left-10 w-52 h-52 bg-pink-300/30 rounded-full blur-3xl" />
-    <div className="absolute bottom-10 right-10 w-52 h-52 bg-blue-300/30 rounded-full blur-3xl" />
+      {/* ✨ Glow Effects */}
+      <div className="absolute top-10 left-10 w-72 h-72 bg-pink-300/40 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-10 w-72 h-72 bg-blue-300/40 rounded-full blur-3xl" />
 
-    {/* 🔥 Main Container */}
-    <div className="relative z-10 max-w-6xl w-full px-6 grid md:grid-cols-[1fr_1.2fr] gap-8 items-center">
+      {/* 🔥 Main Container */}
+      <div className="relative z-10 max-w-7xl w-full px-6 grid md:grid-cols-[1fr_1.3fr] gap-12 items-center">
 
-      {/* 📝 LEFT CONTENT */}
-      <div className="space-y-6">
-        
-        <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
-          EmPowering Your Business with
-          <span className="block bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 bg-clip-text text-transparent">
-            Smart & Secure Technology 
-          </span>
-        </h1>
+        {/* 📝 LEFT CONTENT */}
+        <div className="space-y-6">
+          
+          <h1 className="text-4xl md:text-6xl font-bold leading-tight text-gray-900">
+            EmPowering Your Business with
+            <span className="block bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 bg-clip-text text-transparent">
+              Smart & Secure Technology 
+            </span>
+          </h1>
+
+          {/* <p className="text-gray-600 text-lg">
+            Experience Business Centric IT Infra for Large & Emerging Enterprise, 
+            Manufacturing, Datacenter, Consultants and Others
+          </p> */}
+
+          {/* Optional Button */}
+          {/* 
+          <div className="flex gap-4">
+            <button 
+              onClick={scrollToContact}
+              className="bg-gradient-to-r from-pink-500 to-yellow-400 text-white px-6 py-3 rounded-full font-semibold flex items-center gap-2 hover:scale-105 transition cursor-pointer"
+            >
+              Get Started <ArrowRight size={18} />
+            </button>
+          </div> 
+          */}
+        </div>
+
+        {/* 🎥 RIGHT VIDEO SECTION */}
+        <div className="relative group w-full max-w-3xl mx-auto">
+          
+          {/* Glass Card */}
+          <div className="absolute inset-0 bg-white/60 backdrop-blur-xl rounded-3xl border border-gray-200 shadow-xl" />
+
+          {/* Video */}
+          <video
+            src={videoFile}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="relative w-250px h-[300px] md:h-[400px] object-cover rounded-3xl transform group-hover:scale-105 transition duration-500"
+          />
+
+          {/* Hover Border Glow */}
+          <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-pink-400/60 transition" />
+        </div>
 
       </div>
-
-      {/* 🎥 RIGHT VIDEO SECTION */}
-      <div className="relative group w-full max-w-xl mx-auto">
-        
-        {/* Glass Card */}
-        <div className="absolute inset-0 bg-white/60 backdrop-blur-xl rounded-3xl border border-gray-200 shadow-xl" />
-
-        {/* Video */}
-        <video
-          src={videoFile}
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="relative w-full h-[260px] md:h-[280px] object-cover rounded-3xl transform group-hover:scale-105 transition duration-500"
-        />
-
-        {/* Hover Border Glow */}
-        <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-pink-400/60 transition" />
-      </div>
-
-    </div>
-  </section>
-);
+    </section>
+  );
 }

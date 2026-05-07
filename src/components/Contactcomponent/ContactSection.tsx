@@ -421,7 +421,7 @@
 //               <div className="space-y-4">
 //                 <div className="flex items-center gap-3">
 //                   <Mail className="text-pink-500" />
-//                   <span>rajeshyanamadala2000@gmail.com</span>
+//                   <span>venkatesh@mvbsolutions.com</span>
 //                 </div>
 //                 <div className="flex items-center gap-3">
 //                   <Phone className="text-yellow-500" />
@@ -436,7 +436,7 @@
 //             <Button 
 //               className="mt-6 text-white 
 //               bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500"
-//               onClick={() => window.location.href = "mailto:rajeshyanamadala2000@gmail.com"}
+//               onClick={() => window.location.href = "mailto:venkatesh@mvbsolutions.com"}
 //             >
 //               Contact Now
 //             </Button>
@@ -651,11 +651,11 @@ export default function ContactSection() {
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="text-pink-500" />
-                  <span>rajeshyanamadala2000@gmail.com</span>
+                  <span>venkatesh@mvbsolutions.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone className="text-yellow-500" />
-                  <span>+91 98765 43210</span>
+                  <span>+91 9686521214</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin className="text-blue-500" />
@@ -666,7 +666,7 @@ export default function ContactSection() {
             <Button 
               className="mt-6 text-white 
               bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500"
-              onClick={() => window.location.href = "mailto:rajeshyanamadala2000@gmail.com"}
+              onClick={() => window.location.href = "mailto:venkatesh@mvbsolutions.com"}
             >
               Contact Now
             </Button>

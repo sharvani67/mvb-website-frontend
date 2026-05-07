@@ -62,7 +62,7 @@ export default function Pyramidvideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
-    <section className="relative w-full h-[950px] overflow-hidden">
+    <section className="relative w-full h-[750px] overflow-hidden">
       {/* Background Video */}
       <video
         ref={videoRef}

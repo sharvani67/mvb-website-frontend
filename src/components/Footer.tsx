@@ -87,7 +87,7 @@
 //                 </div>
 //                 <div>
 //                   <div className="text-xs text-muted-foreground">Email</div>
-//                   <span className="text-foreground font-medium">info@mvbranding.com</span>
+//                   <span className="text-foreground font-medium">venkatesh@mvbsolutions.com</span>
 //                 </div>
 //               </div>
 //               <div className="flex items-start gap-3">
@@ -286,7 +286,7 @@
 //                 </div>
 //                 <div>
 //                   <div className="text-xs">Email</div>
-//                   <span className="font-medium text-gray-900">info@mvbranding.com</span>
+//                   <span className="font-medium text-gray-900">venkatesh@mvbsolutions.com</span>
 //                 </div>
 //               </div>
 
@@ -514,7 +514,7 @@ export default function Footer() {
       </div>
       <div>
         <div className="text-xs">Email</div>
-        <span className="font-medium text-gray-900">info@mvbranding.com</span>
+        <span className="font-medium text-gray-900">venkatesh@mvbsolutions.com</span>
       </div>
     </div>
 
