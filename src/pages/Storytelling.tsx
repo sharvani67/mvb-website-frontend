@@ -4218,6 +4218,7 @@ import stakeholdersBg from "../assets/images/hero8.jpg";
 import visionBg from "../assets/images/hero9.jpg";
 import ctaBg from "../assets/images/hero10.jpg";
 
+
 // Alternative: If you want to import all images dynamically from a folder
 // const importAllImages = (requireContext: __WebpackModuleApi.RequireContext) => {
 //   const images: { [key: string]: string } = {};
@@ -4483,7 +4484,7 @@ const StoryCarousel = () => {
           <div className="slide-content history-slide">
             {/* <div className="timeline-badge">{currentSlideData.year}</div> */}
             {/* <div className="history-icon">{currentSlideData.icon}</div> */}
-            <h2 className="slide-title">{currentSlideData.title}</h2>
+            <h2 className="slide-title large">{currentSlideData.title}</h2>
             <p className="slide-description">{currentSlideData.description}</p>
             <div className="history-stats">{currentSlideData.stats as string}</div>
           </div>
@@ -4492,11 +4493,11 @@ const StoryCarousel = () => {
       case "leadership":
         return (
           <div className="slide-content leadership-slide">
-            <h2 className="slide-title">{currentSlideData.title}</h2>
+            <h2 className="slide-title large">{currentSlideData.title}</h2>
             <p className="slide-description">{currentSlideData.description}</p>
             <div className="leadership-grid">
               {currentSlideData.leaders?.map((leader, idx) => (
-                <div key={idx} className="leader-card">
+                <div key={idx} className="stakeholder-card">
                   {/* <div className="leader-icon">{leader.icon || "👤"}</div> */}
                   <div className="leader-role">{leader.role}</div>
                   <div className="leader-focus">{leader.focus}</div>
@@ -4509,7 +4510,7 @@ const StoryCarousel = () => {
       case "stakeholders":
         return (
           <div className="slide-content stakeholders-slide">
-            <h2 className="slide-title">{currentSlideData.title}</h2>
+            <h2 className="slide-title large">{currentSlideData.title}</h2>
             <div className="stakeholders-grid">
               {currentSlideData.stakeholders?.map((stakeholder, idx) => (
                 <div key={idx} className="stakeholder-card">
@@ -4525,7 +4526,7 @@ const StoryCarousel = () => {
       case "services":
         return (
           <div className="slide-content services-slide">
-            <h2 className="slide-title">{currentSlideData.title}</h2>
+            <h2 className="slide-title large">{currentSlideData.title}</h2>
             <div className="services-grid">
               {currentSlideData.services?.map((service, idx) => (
                 <div key={idx} className="service-item">
@@ -4541,7 +4542,7 @@ const StoryCarousel = () => {
       case "achievements":
         return (
           <div className="slide-content achievements-slide">
-            <h2 className="slide-title">{currentSlideData.title}</h2>
+            <h2 className="slide-title large">{currentSlideData.title}</h2>
             <div className="achievements-grid">
               {(currentSlideData.stats as Array<{ value: string; label: string; icon: string }>)?.map((stat, idx) => (
                 <div key={idx} className="achievement-card">
@@ -4558,9 +4559,9 @@ const StoryCarousel = () => {
         return (
           <div className="slide-content vision-slide">
             <div className="vision-icon">{currentSlideData.icon}</div>
-            <h2 className="slide-title">{currentSlideData.title}</h2>
+            <h2 className="slide-title large">{currentSlideData.title}</h2>
             <p className="slide-subtitle">{currentSlideData.subtitle}</p>
-            <p className="slide-description vision-description">{currentSlideData.description}</p>
+            <p className="slide-description quote-highlight">{currentSlideData.description}</p>
             <div className="values-list">
               {currentSlideData.values?.map((value, idx) => (
                 <span key={idx} className="value-tag">{value}</span>
@@ -4573,7 +4574,7 @@ const StoryCarousel = () => {
         return (
           <div className="slide-content cta-slide">
             <h2 className="slide-title large">{currentSlideData.title}</h2>
-            <p className="slide-description">{currentSlideData.description}</p>
+            <p className="slide-description quote-highlight">{currentSlideData.description}</p>
             <button className="cta-large-button">{currentSlideData.buttonText || "Get Started"}</button>
           </div>
         );
@@ -4767,12 +4768,28 @@ const StoryCarousel = () => {
           text-transform: uppercase;
         }
 
+        // .slide-title.large {
+        //   font-size: 4rem;
+        //   background: linear-gradient(135deg, #FFFFFF, #dc1dd6, #FACC15, #FFFFFF);
+        //   -webkit-background-clip: text;
+        //   background-clip: text;
+        // }
+
         .slide-title.large {
-          font-size: 4rem;
-          background: linear-gradient(135deg, #FFFFFF, #E0E8FF, #FACC15, #FFFFFF);
-          -webkit-background-clip: text;
-          background-clip: text;
-        }
+  font-size: 4rem;
+  background: linear-gradient(
+    135deg,
+    #E11D48, /* Red / Pink */
+    #C026D3, /* Magenta */
+    #F97316, /* Orange */
+    #FACC15, /* Yellow */
+   /* Cyan */
+    #2563EB  /* Blue */
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
         .slide-subtitle {
           font-size: 1.5rem;
@@ -4838,19 +4855,43 @@ const StoryCarousel = () => {
           border-radius: 60px;
         }
 
+        // .history-stats {
+        //   margin-top: 25px;
+        //   padding: 12px 28px;
+        //   background: rgba(255, 255, 255, 0.95) !important;
+        //   border-radius: 50px;
+        //   font-size: 0.85rem;
+        //   display: inline-block;
+        //   font-weight: 600;
+        //   color: #1a2a3a !important;
+        //   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        //   font-family: 'Clash Grotesk', 'Satoshi', sans-serif;
+        //   text-transform: uppercase;
+        // }
+
+
         .history-stats {
-          margin-top: 25px;
-          padding: 12px 28px;
-          background: rgba(255, 255, 255, 0.95) !important;
-          border-radius: 50px;
-          font-size: 0.85rem;
-          display: inline-block;
-          font-weight: 600;
-          color: #1a2a3a !important;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-          font-family: 'Clash Grotesk', 'Satoshi', sans-serif;
-          text-transform: uppercase;
-        }
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: linear-gradient(
+    135deg,
+     #ffe4e6, /* very light pink */
+    #f5d0fe, /* very light magenta */
+    #ffedd5, /* very light orange */
+    #fef9c3, /* very light yellow */
+    #dcfce7, /* very light green */
+    #cffafe, /* very light cyan */
+    #dbeafe  /* very light blue */
+  ) !important;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  display: inline-block;
+  font-weight: 600;
+  color: #1a2a3a !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Clash Grotesk', 'Satoshi', sans-serif;
+  text-transform: uppercase;
+}
 
         /* Grid Layouts */
         .leadership-grid {
@@ -4887,16 +4928,37 @@ const StoryCarousel = () => {
           margin-top: 30px;
         }
 
+        // .stakeholder-card {
+        //   background: #ffffff !important;
+        //   padding: 24px 16px;
+        //   border-radius: 20px;
+        //   text-align: center;
+        //   transition: all 0.3s ease;
+        //   cursor: pointer;
+        //   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        //   border: 1px solid rgba(0, 0, 0, 0.05);
+        // }
+
+
         .stakeholder-card {
-          background: #ffffff !important;
-          padding: 24px 16px;
-          border-radius: 20px;
-          text-align: center;
-          transition: all 0.3s ease;
-          cursor: pointer;
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-          border: 1px solid rgba(0, 0, 0, 0.05);
-        }
+  background: linear-gradient(
+    135deg,
+    #fff1f2, /* extremely light pink */
+    #faf5ff, /* extremely light magenta */
+    #fff7ed, /* extremely light orange */
+    #fefce8, /* extremely light yellow */
+    #f0fdf4, /* extremely light green */
+    #ecfeff, /* extremely light cyan */
+    #eff6ff  /* extremely light blue */
+  ) !important;
+  padding: 24px 16px;
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
 
         .stakeholder-card:hover { 
           transform: translateY(-5px); 
@@ -5000,17 +5062,39 @@ const StoryCarousel = () => {
           margin-top: 35px;
         }
 
+        // .value-tag {
+        //   padding: 10px 24px;
+        //   background: rgba(255, 255, 255, 0.95) !important;
+        //   border-radius: 50px;
+        //   font-size: 0.8rem;
+        //   transition: all 0.3s ease;
+        //   cursor: pointer;
+        //   font-weight: 600;
+        //   color: #1a1a1a !important;
+        //   text-transform: uppercase;
+        // }
+
+
         .value-tag {
-          padding: 10px 24px;
-          background: rgba(255, 255, 255, 0.95) !important;
-          border-radius: 50px;
-          font-size: 0.8rem;
-          transition: all 0.3s ease;
-          cursor: pointer;
-          font-weight: 600;
-          color: #1a1a1a !important;
-          text-transform: uppercase;
-        }
+  padding: 10px 24px;
+  background: linear-gradient(
+    135deg,
+     #ffe4e6, /* very light pink */
+    #f5d0fe, /* very light magenta */
+    #ffedd5, /* very light orange */
+    #fef9c3, /* very light yellow */
+    #dcfce7, /* very light green */
+    #cffafe, /* very light cyan */
+    #dbeafe  /* very light blue */
+  ) !important;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-weight: 600;
+  color: #1a1a1a !important;
+  text-transform: uppercase;
+}
 
         .value-tag:hover { transform: translateY(-2px); border-bottom: 2px solid #E11D48; }
 

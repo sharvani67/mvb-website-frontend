@@ -27578,7 +27578,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen mt-4">
       <Storytelling />
-      <VideoSection />
+      <VideoSection/>
       <div className="min-h-screen overflow-x-hidden mt-4" style={{ backgroundColor: '#FFDE42' }}>
         
         {/* Progress Bar */}
