@@ -4219,6 +4219,7 @@ import visionBg from "../assets/images/hero9.jpg";
 import ctaBg from "../assets/images/hero10.jpg";
 
 
+
 // Alternative: If you want to import all images dynamically from a folder
 // const importAllImages = (requireContext: __WebpackModuleApi.RequireContext) => {
 //   const images: { [key: string]: string } = {};
@@ -4255,6 +4256,8 @@ interface SlideData {
 
 interface SlideshowData {
   slides: SlideData[];
+
+
 }
 
 const slideshowData: SlideshowData = {
@@ -4575,7 +4578,7 @@ const StoryCarousel = () => {
           <div className="slide-content cta-slide">
             <h2 className="slide-title large">{currentSlideData.title}</h2>
             <p className="slide-description quote-highlight">{currentSlideData.description}</p>
-            <button className="cta-large-button">{currentSlideData.buttonText || "Get Started"}</button>
+            {/* <button className="cta-large-button">{currentSlideData.buttonText || "Get Started"}</button> */}
           </div>
         );
 

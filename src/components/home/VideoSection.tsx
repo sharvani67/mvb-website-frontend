@@ -388,13 +388,13 @@ export default function PremiumVideoSection({ contactRef }) {
 
           {/* Video */}
           <video
-            src={videoFile}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="relative w-250px h-[300px] md:h-[400px] object-cover rounded-3xl transform group-hover:scale-105 transition duration-500"
-          />
+  src={videoFile}
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="relative w-full h-[360px] md:h-[400px] object-contain md:object-cover rounded-3xl transform group-hover:scale-105 transition duration-500"
+/>
 
           {/* Hover Border Glow */}
           <div className="absolute inset-0 rounded-3xl border border-transparent group-hover:border-pink-400/60 transition" />
