@@ -792,6 +792,7 @@ import Servicecards from '@/components/ServicesCompo/Servicecards';
 import Process from '@/components/ServicesCompo/Process';
 import ServicePromise from '@/components/ServicesCompo/ServicePromise';
 
+
 const services = [
   {
     icon: Network,
@@ -842,15 +843,26 @@ const processSteps = [
   { step: '04', title: 'Optimize', desc: 'Continuous monitoring and optimization ensure peak performance.', color: 'blue' as const },
 ];
 
+// const industries = [
+//   { name: 'Financial Services', icon: '🏦' },
+//   { name: 'Healthcare', icon: '🏥' },
+//   { name: 'Government', icon: '🏛️' },
+//   { name: 'Education', icon: '🎓' },
+//   { name: 'Manufacturing', icon: '🏭' },
+//   { name: 'Technology', icon: '💻' },
+//   { name: 'Retail', icon: '🏪' },
+//   { name: 'Energy', icon: '⚡' },
+// ];
+
 const industries = [
-  { name: 'Financial Services', icon: '🏦' },
-  { name: 'Healthcare', icon: '🏥' },
-  { name: 'Government', icon: '🏛️' },
-  { name: 'Education', icon: '🎓' },
-  { name: 'Manufacturing', icon: '🏭' },
-  { name: 'Technology', icon: '💻' },
-  { name: 'Retail', icon: '🏪' },
-  { name: 'Energy', icon: '⚡' },
+  { name: "Emerging Enterprise", icon: "✨" },
+  { name: "Large Enterprise", icon: "🏙️" },
+  { name: "Manufacturing", icon: "⚙️" },
+  { name: "Data Centre", icon: "💾" },
+  { name: "Architect, Builders & Consultant", icon: "📐" },
+  { name: "Educational", icon: "📚" },
+  { name: "Hospitality", icon: "🛎️" },
+  { name: "BFSI", icon: "💳" },
 ];
 
 const bgMap = { blue: 'bg-mv-blue/10', magenta: 'bg-mv-magenta/10', green: 'bg-mv-green/10' };
@@ -1013,6 +1025,8 @@ export default function Services() {
           </div>
         </div>
       </section>
+
+     
 
       <ServicePromise />
 

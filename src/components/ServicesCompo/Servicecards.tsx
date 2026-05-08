@@ -997,7 +997,7 @@ import dataInfraImage from '../../assets/Servicesimages/DataInfraimg.jpeg';
 import dataSecurityImage from '../../assets/Servicesimages/DataSecurityImage.webp';
 import physicalSecurityImage from '../../assets/Servicesimages/PhysicalSecurity.png';
 import dataCablingImage from '../../assets/Servicesimages/DataInfraimg.jpeg';
-import aiImage from '../../assets/Servicesimages/AIimg.jpeg';
+import aiImage from '../../assets/Servicesimages/AI Image1.png';
 
 
 
@@ -1136,7 +1136,7 @@ const services = [
     iconBg: "bg-cyan-100",
     iconColor: "text-cyan-600",
     borderColor: "border-cyan-200",
-    image: "https://i.pinimg.com/1200x/93/e5/65/93e565327e3f46c0a998badce74306ea.jpg",
+    image: aiImage ,
     colorMeaning: "Driven by Intelligence",
     features: [
       "Manufacturing process performance analytics, Alert analytics, Shopfloor productivity",
@@ -1211,7 +1211,7 @@ export default function Servicecards() {
                     />
                     
                     {/* Gradient overlay */}
-                    <div className={`absolute inset-0 bg-gradient-to-t ${s.color} mix-blend-multiply opacity-40`} />
+                    {/* <div className={`absolute inset-0 bg-gradient-to-t ${s.color} mix-blend-multiply opacity-40`} /> */}
                     
                     {/* Icon - Now clearly visible with white background and shadow */}
                     <div className={`absolute top-4 right-4 w-14 h-14 rounded-xl ${s.iconBg} shadow-xl flex items-center justify-center border-2 border-white z-10`}>

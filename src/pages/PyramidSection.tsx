@@ -2144,6 +2144,373 @@
 
 
 
+// import { Zap } from "lucide-react";
+// import React, { useState, useEffect, useRef } from "react";
+// import { Link } from "react-router-dom";
+// import aiImage from '../assets/Homeimages/AIimage.jpg';
+// import dataInfraImage from '../assets/Homeimages/DataInfraimage.jpeg';
+// import dataSecurityImage from '../assets/Homeimages/DataSecurityimg.jpg';
+// import physicalSecurityImage from '../assets/Homeimages/DataPhysicalSecurityimage.jpg';
+// import dataCablingImage from '../assets/Homeimages/datacabling.jpg';
+
+
+// type ProductCard = {
+//   id: number;
+//   title: string;
+//   subtitle?: string;
+//   content: string;
+//   image: string;
+//   category: string;
+// };
+
+// const productData: ProductCard[] = [
+//   {
+//     id: 1,
+//     title: "Artificial Intelligence",
+//     subtitle: "Smart Technology Solutions",
+//     content: "AI-powered solutions that transform business operations. Implement machine learning models, natural language processing, and computer vision to automate processes and gain insights from your data.",
+//     image: aiImage,
+//     category: "Smart Technology"
+//   },
+//   {
+//     id: 2,
+//     title: "Data Infrastructure",
+//     subtitle: "Scalable Foundation",
+//     content: "Robust data infrastructure solutions designed for scalability and performance. From cloud storage to on-premise servers, we provide the foundation for your data-driven operations.",
+//     image: dataInfraImage,
+//     category: "Data Infra"
+//   },
+//   {
+//     id: 3,
+//     title: "Data Security",
+//     subtitle: "Protection & Compliance",
+//     content: "Comprehensive security solutions to protect your valuable data. Implement encryption, access controls, and monitoring systems to safeguard against threats and ensure compliance.",
+//     image: dataSecurityImage,
+//     category: "Security"
+//   },
+//   {
+//     id: 4,
+//     title: "Data Physical Security",
+//     subtitle: "Hardware Protection",
+//     content: "Physical security measures to protect from campus entry to data center through biometric access controls to surveillance system, ensuring your infrastructure is physically secured.",
+//     image: physicalSecurityImage ,
+//     category: "Physical Security"
+//   },
+//   {
+//     id: 5,
+//     title: "Data Cabling",
+//     subtitle: "High Bandwidth Connectivity",
+//     content: "Professional cabling solutions for maximum data throughput. Structured cabling systems designed for reliability and future-proofing your network infrastructure.",
+//     image: dataCablingImage,
+//     category: "Connectivity"
+//   }
+// ];
+
+// const CardContent = ({ product, isOpen, color, index }) => {
+//   const [contentHeight, setContentHeight] = useState(0);
+//   const [specsHeight, setSpecsHeight] = useState(0);
+//   const contentRef = useRef(null);
+//   const specsRef = useRef(null);
+
+//   useEffect(() => {
+//     if (contentRef.current) {
+//       setContentHeight(contentRef.current.scrollHeight);
+//     }
+//     if (specsRef.current) {
+//       setSpecsHeight(specsRef.current.scrollHeight);
+//     }
+//   }, [product.id]);
+
+//   const getSpecsContent = () => {
+//     switch(product.id) {
+//       case 1:
+//         return (
+//           <>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Technology</div>
+//               <div className="text-white font-bold text-sm">Machine Learning</div>
+//             </div>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Application</div>
+//               <div className="text-white font-bold text-sm">Business Intelligence</div>
+//             </div>
+//           </>
+//         );
+//       case 2:
+//         return (
+//           <>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Scalability</div>
+//               <div className="text-white font-bold text-sm">Enterprise Level</div>
+//             </div>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Performance</div>
+//               <div className="text-white font-bold text-sm">High Throughput</div>
+//             </div>
+//           </>
+//         );
+//       case 3:
+//         return (
+//           <>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Protection</div>
+//               <div className="text-white font-bold text-sm">End-to-End Encryption</div>
+//             </div>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Compliance</div>
+//               <div className="text-white font-bold text-sm">Industry Standards</div>
+//             </div>
+//           </>
+//         );
+//       case 4:
+//         return (
+//           <>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Access Control</div>
+//               <div className="text-white font-bold text-sm">Biometric Systems</div>
+//             </div>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Monitoring</div>
+//               <div className="text-white font-bold text-sm">24/7 Surveillance</div>
+//             </div>
+//           </>
+//         );
+//       case 5:
+//         return (
+//           <>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Bandwidth</div>
+//               <div className="text-white font-bold text-sm">High Speed</div>
+//             </div>
+//             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
+//               <div className="text-cyan-200 font-semibold text-xs">Reliability</div>
+//               <div className="text-white font-bold text-sm">99.9% Uptime</div>
+//             </div>
+//           </>
+//         );
+//       default:
+//         return null;
+//     }
+//   };
+
+//   return (
+//     <div className="relative z-10 p-6 sm:p-8 h-full flex flex-col justify-between text-left">
+//       <div>
+//         <div className={`inline-flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium mb-4 transition-all duration-300 border border-white/30`}>
+//           <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
+//           <span className="text-white font-semibold">{product.category}</span>
+//         </div>
+        
+//         <p className="text-sm uppercase tracking-widest text-yellow-200 font-semibold transition-all duration-300 drop-shadow-lg">
+//           {product.subtitle}
+//         </p>
+//         <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white drop-shadow-lg transition-all duration-300">
+//           {product.title}
+//         </h2>
+//       </div>
+
+//       <div className="mt-4">
+//         <div
+//           className="transition-all duration-500 ease-in-out overflow-hidden"
+//           style={{
+//             maxHeight: isOpen ? `${contentHeight}px` : "0",
+//             opacity: isOpen ? 1 : 0,
+//           }}
+//         >
+//           <div ref={contentRef}>
+//             <p className="text-sm sm:text-base leading-relaxed text-gray-100 drop-shadow-md bg-black/20 backdrop-blur-sm p-3 rounded-lg">
+//               {product.content}
+//             </p>
+//           </div>
+//         </div>
+
+//         <div
+//           className="transition-all duration-500 ease-in-out delay-100 overflow-hidden"
+//           style={{
+//             maxHeight: isOpen ? `${specsHeight}px` : "0",
+//             opacity: isOpen ? 1 : 0,
+//             marginTop: isOpen ? "1.5rem" : "0",
+//           }}
+//         >
+//           <div ref={specsRef}>
+//             <div className="grid grid-cols-2 gap-4 text-xs">
+//               {getSpecsContent()}
+//             </div>
+//           </div>
+//         </div>
+
+//         <div
+//           className={`transition-all duration-500 ease-in-out delay-200 ${
+//             isOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
+//           }`}
+//           style={{ marginTop: isOpen ? "1.5rem" : "0" }}
+//         >
+//           <Link to="/services">
+//             <span className={`inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 px-5 py-2.5 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105 shadow-lg`}>
+//               Learn More
+//               <svg className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+//                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+//               </svg>
+//             </span>
+//           </Link>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default function ITInfraShowcase() {
+//   const [openId, setOpenId] = useState<number | null>(1);
+//   const [hoveredId, setHoveredId] = useState<number | null>(null);
+
+//   const cardColors = [
+//     { bg: 'bg-pink-500', light: 'bg-pink-100', text: 'text-pink-300' },
+//     { bg: 'bg-magenta-500', light: 'bg-magenta-100', text: 'text-magenta-300' },
+//     { bg: 'bg-orange-500', light: 'bg-orange-100', text: 'text-orange-300' },
+//     { bg: 'bg-yellow-500', light: 'bg-yellow-100', text: 'text-yellow-300' },
+//     { bg: 'bg-blue-500', light: 'bg-blue-100', text: 'text-blue-300' },
+//   ];
+
+//   return (
+//     <div className="min-h-screen bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 flex items-center justify-center p-6">
+//       <div className="w-full max-w-7xl">
+        
+//         {/* Header Section */}
+//         <div className="text-center mb-12 animate-fadeIn">
+//           <div className="inline-flex items-center gap-2 bg-black/30 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-medium mb-6 animate-slideDown border border-white/30">
+//             <Zap size={16} className="animate-pulse" />
+//             <span>Building Tomorrow's IT Infrastructure</span>
+//           </div>
+//           <h1 className="text-4xl sm:text-5xl font-black mb-4 text-center animate-slideUp">
+//             <span className="bg-gradient-to-r from-pink-700 via-orange-500 to-blue-700 bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
+//               BUSINESS IT INFRA STRATEGY
+//             </span>
+//           </h1>
+//           <p className="text-xl text-white max-w-3xl mx-auto animate-fadeInUp drop-shadow-lg font-medium">
+//             A.I. is a Smart Technology that requires scalable Data Infrastructure and Security of Data with High Bandwidth & connectivity of Data Cabling.
+//           </p>
+//         </div>
+
+//         {/* Product Cards Container */}
+//         <div className="flex flex-col lg:flex-row gap-4 sm:gap-6 overflow-visible">
+//           {productData.map((product, index) => {
+//             const isOpen = openId === product.id;
+//             const isHovered = hoveredId === product.id;
+//             const color = cardColors[index];
+
+//             return (
+//               <button
+//                 key={product.id}
+//                 onClick={() => setOpenId(isOpen ? null : product.id)}
+//                 onMouseEnter={() => setHoveredId(product.id)}
+//                 onMouseLeave={() => setHoveredId(null)}
+//                 className={`relative group block flex-1 min-h-[500px] rounded-2xl shadow-xl overflow-hidden transition-all duration-700 ease-out transform cursor-pointer text-left
+//                   ${isOpen ? "lg:flex-[3.2]" : "lg:flex-[1]"} 
+//                   ${isHovered && !isOpen ? "lg:flex-[1.2]" : ""}
+//                   bg-white border border-white/20 backdrop-blur-sm`}
+//                 aria-expanded={isOpen}
+//                 style={{
+//                   transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
+//                 }}
+//               >
+//                 {/* Background image with smooth zoom effect */}
+//                 <div
+//                   className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out will-change-transform"
+//                   style={{ 
+//                     backgroundImage: `url(${product.image})`,
+//                     transform: isOpen ? 'scale(1.05)' : isHovered ? 'scale(1.08)' : 'scale(1)',
+//                     filter: isOpen ? "brightness(1.1)" : "brightness(0.6)"
+//                   }}
+//                 />
+
+//                 {/* Animated gradient overlay */}
+//                 <div 
+//                   className="absolute inset-0 transition-all duration-700 ease-out"
+//                   style={{
+//                     background: `linear-gradient(to top, 
+//                       rgba(0,0,0,0.95) 0%, 
+//                       rgba(0,0,0,0.7) 30%,
+//                       ${isOpen ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.6)'} 100%)`
+//                   }}
+//                 />
+
+//                 <CardContent 
+//                   product={product} 
+//                   isOpen={isOpen} 
+//                   color={color}
+//                   index={index}
+//                 />
+
+//                 <span className="sr-only">
+//                   {isOpen ? `${product.title} (open)` : `${product.title} (closed)`}
+//                 </span>
+//               </button>
+//             );
+//           })}
+//         </div>
+//       </div>
+
+//       <style >{`
+//         @keyframes fadeIn {
+//           from { opacity: 0; }
+//           to { opacity: 1; }
+//         }
+        
+//         @keyframes slideDown {
+//           from {
+//             opacity: 0;
+//             transform: translateY(-20px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+        
+//         @keyframes slideUp {
+//           from {
+//             opacity: 0;
+//             transform: translateY(20px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+        
+//         @keyframes fadeInUp {
+//           from {
+//             opacity: 0;
+//             transform: translateY(30px);
+//           }
+//           to {
+//             opacity: 1;
+//             transform: translateY(0);
+//           }
+//         }
+        
+//         .animate-fadeIn {
+//           animation: fadeIn 0.6s ease-out;
+//         }
+        
+//         .animate-slideDown {
+//           animation: slideDown 0.5s ease-out;
+//         }
+        
+//         .animate-slideUp {
+//           animation: slideUp 0.5s ease-out;
+//         }
+        
+//         .animate-fadeInUp {
+//           animation: fadeInUp 0.7s ease-out;
+//         }
+//       `}</style>
+//     </div>
+//   );
+// }
+
+
+
 import { Zap } from "lucide-react";
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
@@ -2151,8 +2518,7 @@ import aiImage from '../assets/Homeimages/AIimage.jpg';
 import dataInfraImage from '../assets/Homeimages/DataInfraimage.jpeg';
 import dataSecurityImage from '../assets/Homeimages/DataSecurityimg.jpg';
 import physicalSecurityImage from '../assets/Homeimages/DataPhysicalSecurityimage.jpg';
-import dataCablingImage from '../assets/Homeimages/datacabling.jpg';
-
+import dataCablingImage from '../assets/Homeimages/datacabling1.jpg';
 
 type ProductCard = {
   id: number;
@@ -2193,7 +2559,7 @@ const productData: ProductCard[] = [
     title: "Data Physical Security",
     subtitle: "Hardware Protection",
     content: "Physical security measures to protect from campus entry to data center through biometric access controls to surveillance system, ensuring your infrastructure is physically secured.",
-    image: physicalSecurityImage ,
+    image: physicalSecurityImage,
     category: "Physical Security"
   },
   {
@@ -2205,6 +2571,11 @@ const productData: ProductCard[] = [
     category: "Connectivity"
   }
 ];
+
+// Helper function to capitalize first letter of each word
+const capitalizeWords = (str: string) => {
+  return str.replace(/\b\w/g, (char) => char.toUpperCase());
+};
 
 const CardContent = ({ product, isOpen, color, index }) => {
   const [contentHeight, setContentHeight] = useState(0);
@@ -2254,7 +2625,7 @@ const CardContent = ({ product, isOpen, color, index }) => {
           <>
             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
               <div className="text-cyan-200 font-semibold text-xs">Protection</div>
-              <div className="text-white font-bold text-sm">End-to-End Encryption</div>
+              <div className="text-white font-bold text-sm">End-To-End Encryption</div>
             </div>
             <div className="bg-black/30 backdrop-blur-sm p-2 rounded transform transition-all duration-300 hover:scale-105 border border-white/20">
               <div className="text-cyan-200 font-semibold text-xs">Compliance</div>
@@ -2293,19 +2664,25 @@ const CardContent = ({ product, isOpen, color, index }) => {
     }
   };
 
+  // Capitalize all text content
+  const capitalizedTitle = capitalizeWords(product.title);
+  const capitalizedSubtitle = product.subtitle ? capitalizeWords(product.subtitle) : "";
+  const capitalizedCategory = capitalizeWords(product.category);
+  const capitalizedContent = capitalizeWords(product.content);
+
   return (
     <div className="relative z-10 p-6 sm:p-8 h-full flex flex-col justify-between text-left">
       <div>
         <div className={`inline-flex items-center gap-2 bg-black/40 backdrop-blur-md px-3 py-1 rounded-full text-xs font-medium mb-4 transition-all duration-300 border border-white/30`}>
           <span className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></span>
-          <span className="text-white font-semibold">{product.category}</span>
+          <span className="text-white font-semibold">{capitalizedCategory}</span>
         </div>
         
         <p className="text-sm uppercase tracking-widest text-yellow-200 font-semibold transition-all duration-300 drop-shadow-lg">
-          {product.subtitle}
+          {capitalizedSubtitle}
         </p>
         <h2 className="mt-2 text-2xl sm:text-3xl font-bold text-white drop-shadow-lg transition-all duration-300">
-          {product.title}
+          {capitalizedTitle}
         </h2>
       </div>
 
@@ -2319,7 +2696,7 @@ const CardContent = ({ product, isOpen, color, index }) => {
         >
           <div ref={contentRef}>
             <p className="text-sm sm:text-base leading-relaxed text-gray-100 drop-shadow-md bg-black/20 backdrop-blur-sm p-3 rounded-lg">
-              {product.content}
+              {capitalizedContent}
             </p>
           </div>
         </div>
@@ -2371,6 +2748,10 @@ export default function ITInfraShowcase() {
     { bg: 'bg-blue-500', light: 'bg-blue-100', text: 'text-blue-300' },
   ];
 
+  // Capitalize header texts
+  const headerTitle = "Business IT Infra Strategy";
+  const headerDescription = "A.I. Is A Smart Technology That Requires Scalable Data Infrastructure And Security Of Data With High Bandwidth & Connectivity Of Data Cabling.";
+
   return (
     <div className="min-h-screen bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 flex items-center justify-center p-6">
       <div className="w-full max-w-7xl">
@@ -2383,11 +2764,11 @@ export default function ITInfraShowcase() {
           </div>
           <h1 className="text-4xl sm:text-5xl font-black mb-4 text-center animate-slideUp">
             <span className="bg-gradient-to-r from-pink-700 via-orange-500 to-blue-700 bg-clip-text text-transparent drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)]">
-              BUSINESS IT INFRA STRATEGY
+              {headerTitle}
             </span>
           </h1>
           <p className="text-xl text-white max-w-3xl mx-auto animate-fadeInUp drop-shadow-lg font-medium">
-            A.I. is a Smart Technology that requires scalable Data Infrastructure and Security of Data with High Bandwidth & connectivity of Data Cabling.
+            {headerDescription}
           </p>
         </div>
 
@@ -2413,24 +2794,25 @@ export default function ITInfraShowcase() {
                   transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)'
                 }}
               >
-                {/* Background image with smooth zoom effect */}
+                {/* Background image with smooth zoom effect - brighter with mix-blend-mode */}
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-out will-change-transform"
                   style={{ 
                     backgroundImage: `url(${product.image})`,
                     transform: isOpen ? 'scale(1.05)' : isHovered ? 'scale(1.08)' : 'scale(1)',
-                    filter: isOpen ? "brightness(1.1)" : "brightness(0.6)"
+                    filter: isOpen ? "brightness(1.15) contrast(1.05)" : "brightness(0.85) contrast(1.1)",
+                    backgroundBlendMode: "overlay"
                   }}
                 />
 
-                {/* Animated gradient overlay */}
+                {/* Brighter animated gradient overlay for better image visibility */}
                 <div 
                   className="absolute inset-0 transition-all duration-700 ease-out"
                   style={{
                     background: `linear-gradient(to top, 
-                      rgba(0,0,0,0.95) 0%, 
-                      rgba(0,0,0,0.7) 30%,
-                      ${isOpen ? 'rgba(0,0,0,0.3)' : 'rgba(0,0,0,0.6)'} 100%)`
+                      rgba(0,0,0,0.85) 0%, 
+                      rgba(0,0,0,0.5) 40%,
+                      ${isOpen ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.5)'} 100%)`
                   }}
                 />
 
@@ -2450,7 +2832,7 @@ export default function ITInfraShowcase() {
         </div>
       </div>
 
-      <style >{`
+      <style>{`
         @keyframes fadeIn {
           from { opacity: 0; }
           to { opacity: 1; }
