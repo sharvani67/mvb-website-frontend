@@ -36,12 +36,14 @@ export default function ContactHero() {
             <p className="text-xl text-white/90 leading-relaxed">
               Ready to transform your IT infrastructure? Get in touch.
             </p>
+            
+            <br></br>
 
-            <p className="text-sm text-white/80 leading-relaxed mt-6 max-w-2xl mx-auto">
-              Let us tailor a service package that meets your needs.
+               <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
+         Let us tailor a service package that meets your needs.
               Tell us a little about your business, and we will get back to you
-              with some ideas as soon as possible.
-            </p>
+              with some ideas as soon as possible. 
+          </p>
           </div>
         </SectionWrapper>
       </div>

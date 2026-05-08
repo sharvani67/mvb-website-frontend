@@ -143,15 +143,26 @@
 import { BookOpen, CheckCircle, Gem, Lightbulb, ShieldCheck, Sprout, Target, Trophy, Users } from 'lucide-react';
 import { TiltCard } from './TiltCard';
 
+// const values = [
+//   { icon: Users, title: "Customer Centricity", description: "Your challenges become our challenges. Your success becomes our story." },
+//   { icon: ShieldCheck, title: "Peace of Mind", description: "Sleep well. We handle the complexity while you focus on growth." },
+//   { icon: Lightbulb, title: "Complex to Simplified Solutions", description: "Complex problems deserve elegant solutions. We make the complicated simple." },
+//   { icon: Sprout, title: "Value, Respect & Growth for Talents", description: "Our team isn't just talent. They're family. Their growth is our growth." },
+//   { icon: BookOpen, title: "Continuous Learning", description: "In technology, standing still is falling behind. We're forever students." },
+//   { icon: CheckCircle, title: "Responsibility with Accountability & Transparency", description: "We own our promises. Every. Single. One." },
+//   { icon: Target, title: "Right Product, Right Solutions, Right Value Proposition", description: "Not what we have. What you need. There's a difference." },
+//   { icon: Trophy, title: "Work with Integrity, Commitment & Result oriented", description: "Ethics aren't optional. Results aren't negotiable." },
+// ];
+
 const values = [
-  { icon: Users, title: "Customer Centricity", description: "Your challenges become our challenges. Your success becomes our story." },
-  { icon: ShieldCheck, title: "Peace of Mind", description: "Sleep well. We handle the complexity while you focus on growth." },
-  { icon: Lightbulb, title: "Complex to Simplified Solutions", description: "Complex problems deserve elegant solutions. We make the complicated simple." },
-  { icon: Sprout, title: "Value, Respect & Growth for Talents", description: "Our team isn't just talent. They're family. Their growth is our growth." },
-  { icon: BookOpen, title: "Continuous Learning", description: "In technology, standing still is falling behind. We're forever students." },
-  { icon: CheckCircle, title: "Responsibility with Accountability & Transparency", description: "We own our promises. Every. Single. One." },
-  { icon: Target, title: "Right Product, Right Solutions, Right Value Proposition", description: "Not what we have. What you need. There's a difference." },
-  { icon: Trophy, title: "Work with Integrity, Commitment & Result oriented", description: "Ethics aren't optional. Results aren't negotiable." },
+  { icon: Users, title: "Customer Centricity",  },
+  { icon: ShieldCheck, title: "Peace of Mind", },
+  { icon: Lightbulb, title: "Complex to Simplified Solutions",  },
+  { icon: Sprout, title: "Value, Respect & Growth for Talents",   },
+  { icon: BookOpen, title: "Continuous Learning",  },
+  { icon: CheckCircle, title: "Responsibility with Accountability & Transparency",  },
+  { icon: Target, title: "Right Product, Right Solutions, Right Value Proposition", },
+  { icon: Trophy, title: "Work with Integrity, Commitment & Result oriented",  },
 ];
 
 export function CoreValuesSection() {
@@ -199,9 +210,9 @@ export function CoreValuesSection() {
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-700 text-sm leading-relaxed">
+                  {/* <p className="text-gray-700 text-sm leading-relaxed">
                     {value.description}
-                  </p>
+                  </p> */}
 
                   {/* Decorative Circle */}
                   <div className="absolute bottom-6 right-6 w-12 h-12 bg-gradient-to-r from-[#E11D48] via-[#FACC15] to-[#2563EB] rounded-full opacity-0 group-hover:opacity-100 transition duration-500 blur-sm" />
