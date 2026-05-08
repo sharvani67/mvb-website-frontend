@@ -27296,6 +27296,7 @@ import VideoSection from "./VideoSection";
 import CoreValues from "@/pages/CoreValues";
 import PremiumCTA from "@/pages/PremiumCTA";
 import TestimonialsSectionss from "./TestimonialSection";
+import Pyramidvideo from "@/pages/Pyramidvideo";
 
 const timelineStory = [
   {
@@ -27578,7 +27579,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen mt-4">
       <Storytelling />
-      <VideoSection/>
+      {/* <VideoSection/> */}
+         <Pyramidvideo />
       <div className="min-h-screen overflow-x-hidden mt-4" style={{ backgroundColor: '#FFDE42' }}>
         
         {/* Progress Bar */}

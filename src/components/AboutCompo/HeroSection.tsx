@@ -574,7 +574,7 @@ export function HeroSection() {
         </motion.h1>
 
         {/* Animated Description - Updated with vibrant colors on dark background */}
-        <motion.p
+        {/* <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -588,25 +588,29 @@ export function HeroSection() {
           ,{' '}
           <span className="relative">
             <span className="relative z-10 font-bold text-yellow-800">Data Physical Security</span>
-            {/* <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-500/40 -z-10 rounded-full " /> */}
+       
           </span>
           ,{' '}
            <span className="relative">
             <span className="relative z-10 font-bold text-green-800">Data Security </span>
-            {/* <span className="absolute bottom-0 left-0 w-full h-3 bg-yellow-500/40 -z-10 rounded-full " /> */}
+          
           </span>
           ,{' '}
           <span className="relative">
             <span className="relative z-10 font-bold text-blue-600">Data Infra</span>
-            {/* <span className="absolute bottom-0 left-0 w-full h-3 bg-blue-500/40 -z-10 rounded-full " /> */}
+      
           </span>
           , and{' '}
           <span className="relative">
             <span className="relative z-10 font-bold text-cyan-600">Artificial Intelligence</span>
-            {/* <span className="absolute bottom-0 left-0 w-full h-3 bg-cyan-500/40 -z-10 rounded-full " /> */}
+          
           </span>
           .
-        </motion.p>
+        </motion.p> */}
+
+        <p className="text-xl sm:text-2xl text-black/90 max-w-2xl mx-auto leading-relaxed mb-8">
+         We specialize in Data Cabling, Data Physical Security, Data Security , Data Infra, and Artificial Intelligence.
+        </p>
 
         {/* CTA Buttons - Enhanced for dark background */}
         {/* <motion.div
