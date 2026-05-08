@@ -997,8 +997,8 @@ import dataInfraImage from '../../assets/Servicesimages/DataInfraimg.jpeg';
 import dataSecurityImage from '../../assets/Servicesimages/DataSecurityImage.webp';
 import physicalSecurityImage from '../../assets/Servicesimages/PhysicalSecurity.png';
 import dataCablingImage from '../../assets/Servicesimages/DataInfraimg.jpeg';
-import aiImage from '../../assets/Servicesimages/AI Image1.png';
-
+import aiImage from '../../assets/Servicesimages/AIimg.jpeg';
+import aiservice from '../../assets/Servicesimages/AI Image1.png';
 
 
 const services = [
@@ -1136,7 +1136,7 @@ const services = [
     iconBg: "bg-cyan-100",
     iconColor: "text-cyan-600",
     borderColor: "border-cyan-200",
-    image: aiImage ,
+    image: aiservice ,
     colorMeaning: "Driven by Intelligence",
     features: [
       "Manufacturing process performance analytics, Alert analytics, Shopfloor productivity",
