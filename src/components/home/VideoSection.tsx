@@ -318,7 +318,7 @@
 
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import videoFile from "@/assets/MVBFinalinfinity video.mp4";
+import videoFile from "@/assets/finalpyramidvideo.mp4";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
