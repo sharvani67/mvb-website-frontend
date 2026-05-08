@@ -27287,7 +27287,7 @@
 
 
 
-import Storytelling from "@/pages/Storytelling";
+import Storytelling from "@/pages/StoryTellingNew";
 import { Compass, Shield, Cpu, Award, ArrowRight, Star, Sparkles, Menu, X, ChevronDown, Rocket, Target, Heart, Network, Lock, Database, Cloud, Users, Globe, Clock, Phone, Mail, MapPin, Linkedin, Twitter, Facebook, Zap, Infinity, Building2, Lightbulb, Headphones, BarChart3, Quote, Activity, Wifi, Gem, Crown, Orbit, CheckCircle, Layers, ZapOff, Fingerprint, Eye, Code, Terminal, Server, HardDrive, Monitor, Smartphone, Tablet, Package, Briefcase, FileText, Calendar, TrendingDown, AlertCircle, CheckSquare, BriefcaseBusiness, GraduationCap, Home, Factory, School, Building, Hotel, UtensilsCrossed, Trophy, Medal, BadgeCheck, ShieldCheck, EyeOff, Video, Fence, Settings, Gauge, Boxes, Scale, TrendingUp as TrendingUpIcon, Users as UsersIcon, HeartHandshake, Lightbulb as LightbulbIcon, RefreshCw, Target as TargetIcon, Smile, HandshakeIcon, UserCheck, User, Truck, Wrench, Star as StarIcon, Settings2, ShoppingBag, UserCog, UserPlus, UserMinus, UserX, ThumbsUp, ThumbsDown, ClipboardList, HardHat, FileText as Drafting, DollarSign, Clock3, TrendingUp, ShieldAlert, MessageCircle } from "lucide-react";
 import { useState, useEffect, useRef, useCallback } from "react";
 import logo from "../../assets/logg.png";

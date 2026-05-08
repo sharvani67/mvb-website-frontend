@@ -908,17 +908,13 @@ const VisionMission = () => {
               </h3>
             </div>
 
-            <p className="text-gray-600 leading-relaxed">
-              Our mission is to build{" "}
-              <span className="text-[#22C55E] font-medium">
-                Data Cabling, Data Physical Security, Data Security, Data Infra & A.I.
-              </span>{" "}
-              as a business strategy to deploy{" "}
-              <span className="text-[#C026D3] font-medium">
-                Core IT Infrastructure
-              </span>
-              , that will help customers in ease of doing their business.
-            </p>
+            <p className="text-gray-700 leading-relaxed">
+                Our mission is to build{" "}
+                <span className="font-semibold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
+                  Data Cabling, Data Physical Security, Data Security, Data Infra & A.I.
+                </span>{" "}
+                as Business Strategy to deploy Core IT Infra, that will help customers in ease of doing their business.
+              </p>
           </div>
         </div>
 

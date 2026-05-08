@@ -1314,7 +1314,7 @@ export default function WhyUs() {
               </div>
 
               {/* Trust indicators */}
-              <div className="flex flex-wrap justify-center gap-8 mt-16">
+              {/* <div className="flex flex-wrap justify-center gap-8 mt-16">
                 <div className="flex items-center gap-2">
                   <Shield size={20} className="text-yellow-300" />
                   <span className="text-sm font-medium text-white">ISO 27001 Certified</span>
@@ -1329,7 +1329,7 @@ export default function WhyUs() {
                   <Users size={20} className="text-blue-300" />
                   <span className="text-sm font-medium text-white">500+ Happy Clients</span>
                 </div>
-              </div>
+              </div> */}
 
             </div>
           </SectionWrapper>
@@ -1357,9 +1357,8 @@ export default function WhyUs() {
       <TrustedClients />
 
       {/* Testimonial/Commitment Section */}
-      <section className="relative py-28 overflow-hidden">
+      {/* <section className="relative py-28 overflow-hidden">
 
-        {/* Background Glow */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] 
           bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 
@@ -1372,12 +1371,12 @@ export default function WhyUs() {
             <SectionWrapper>
               <div className="relative">
 
-                {/* Top Glow */}
+                
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-24 rounded-full 
                 bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 
                 opacity-20 blur-2xl" />
 
-                {/* Main Icon */}
+                
                 <div className="flex justify-center mb-6 relative z-10">
                   <div className="p-4 rounded-full 
                   bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 shadow-lg">
@@ -1385,18 +1384,18 @@ export default function WhyUs() {
                   </div>
                 </div>
 
-                {/* Quote */}
+                
                 <blockquote className="text-2xl md:text-3xl font-light text-gray-800 mb-8 leading-relaxed">
                   "MV Branding Strategy doesn't just deliver solutions—they deliver peace of mind. 
                   Their commitment to our success goes far beyond the contract."
                 </blockquote>
 
-                {/* Profile */}
+                
                 <div className="flex items-center justify-center gap-3 mb-8">
-                  {/* Avatar */}
+                  
                   <div className="w-12 h-12 rounded-full 
                   bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 shadow-md" />
-                  {/* Info */}
+                  
                   <div className="text-left">
                     <div className="font-bold text-gray-900">Sarah Johnson</div>
                     <div className="text-sm text-gray-500">
@@ -1405,7 +1404,7 @@ export default function WhyUs() {
                   </div>
                 </div>
 
-                {/* Rating */}
+                
                 <div className="flex justify-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star
@@ -1421,7 +1420,7 @@ export default function WhyUs() {
 
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Final CTA */}
       <section className="py-20 relative overflow-hidden">

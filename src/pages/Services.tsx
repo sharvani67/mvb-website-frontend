@@ -908,15 +908,15 @@ export default function Services() {
 
             {/* Main Heading */}
             <h1 className="text-3xl sm:text-7xl lg:text-8xl font-black text-white mb-6 leading-[1.1]">
-             
-              <span className="block bg-gradient-to-r from-yellow-400 to-pink-400 bg-clip-text text-transparent">
-                Data As the Core 
+             Your Trusted 
+              <span className="block bg-gradient-to-r from-yellow-600 to-pink-600 bg-clip-text text-transparent">
+               IT Partner 
               </span>
             </h1>
 
             {/* Subheading */}
-            <p className="text-xl sm:text-2xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-8">
-              Cabling - Physical Security - Security - Infra - AI
+            <p className="text-xl sm:text-2xl text-black/90 max-w-2xl mx-auto leading-relaxed mb-8">
+              Data Cabling - Data Physical Security - Data Security - Data Infra - Data AI
             </p>
 
             {/* CTA Buttons */}

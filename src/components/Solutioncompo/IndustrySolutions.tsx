@@ -161,6 +161,17 @@ const solutions = [
     ],
   },
   {
+    title: "Large Enterprise",
+    image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
+    desc: "Large enterprises require scalable infrastructure to support global operations and complex ecosystems.",
+    points: [
+      "AI Data Centre & Security Operations Centre",
+      "Network Operations Centre (NOC)",
+      "Unified access & surveillance platform",
+      "Scalable data cabling & infrastructure",
+    ],
+  },
+  {
     title: "Manufacturing",
     image: "https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc",
     desc: "Industry 4.0 leverages AI, IoT, and cloud technologies. Data is at its core, requiring secure and reliable infrastructure.",
@@ -171,17 +182,7 @@ const solutions = [
       "Ruggedized cabling for harsh environments",
     ],
   },
-  {
-    title: "ABC (Architects, Builders & Consultants)",
-    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
-    desc: "Driving urbanization through smart infrastructure and innovative solutions for scalable and future-ready environments.",
-    points: [
-      "Smart & Digital Building solutions",
-      "Campus Networks & IoT integration",
-      "Fast and scalable infrastructure deployment",
-      "Data Cabling & Physical Security",
-    ],
-  },
+  
   {
     title: "Data Centre",
     image: "https://i.pinimg.com/736x/92/57/12/925712f5118ce5b40818f649364cd84f.jpg",
@@ -193,15 +194,16 @@ const solutions = [
       "Remote power monitoring",
     ],
   },
+  
   {
-    title: "Large Enterprise",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
-    desc: "Large enterprises require scalable infrastructure to support global operations and complex ecosystems.",
+    title: "ABC (Architects, Builders & Consultants)",
+    image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
+    desc: "Driving urbanization through smart infrastructure and innovative solutions for scalable and future-ready environments.",
     points: [
-      "AI Data Centre & Security Operations Centre",
-      "Network Operations Centre (NOC)",
-      "Unified access & surveillance platform",
-      "Scalable data cabling & infrastructure",
+      "Smart & Digital Building solutions",
+      "Campus Networks & IoT integration",
+      "Fast and scalable infrastructure deployment",
+      "Data Cabling & Physical Security",
     ],
   },
 ];

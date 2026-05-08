@@ -911,6 +911,99 @@ const SolutionsPage: React.FC = () => {
   </div>
   </div>
 
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+  <div className="text-center mb-12">
+    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+      Real-World{" "}
+      <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent">
+        Use Cases
+      </span>
+    </h2>
+    <p className="text-gray-600 max-w-2xl mx-auto">
+      See how leading enterprises are leveraging MV technology across industries
+    </p>
+  </div>
+
+  <div className="grid md:grid-cols-2 gap-8">
+    {[
+      {
+        industry: "AI Infrastructure",
+        title: "Cost Reduction & Increase Revenue",
+        description:
+          "Our Solution Approach: Automating repetitive operations, optimizing compute/storage usage, predictive maintenance & anomaly detection. Energy-efficient AI infrastructure reduces operational costs & drives new revenue by enabling faster insights, smarter decisions, and scalable innovation.",
+        metrics: "Reduced OPEX + Increased Revenue",
+        image:
+          "https://i.pinimg.com/1200x/3e/c9/71/3ec97149abab0b8eec30006737226a90.jpg",
+      },
+      {
+        industry: "OT Security",
+        title: "Manufacturing Protection",
+        description:
+          "MV OT Security Architecture Approach is built on assessing your OT Network Segment, SCADA, ICS, PLC, HMI, Industrial Protocol, Asset discovery, Critical Mapping & Recovery readiness review.",
+        metrics: "Complete OT Coverage",
+        image:
+          "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=500&q=80",
+      },
+      {
+        industry: "Data Centre",
+        title: "800G Infrastructure",
+        description:
+          "Our Overall 800G Infrastructure Approach specifies solutions to manage your business needs with Green Efficiency and resource optimization for next-generation data centers.",
+        metrics: "800G Speed + Green Efficiency",
+        image:
+          "https://i.pinimg.com/736x/81/58/98/8158981a6aa85696ba470a208ee97eef.jpg",
+      },
+      {
+        industry: "Network Monitoring",
+        title: "Corporate Network Excellence",
+        description:
+          "Our Network Monitoring solutions approach supports uninterrupted business operations that increase revenue, ensuring real-time visibility, proactive issue detection and optimized performance.",
+        metrics: "24/7 Real-time Visibility",
+        image:
+          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80",
+      },
+      {
+        industry: "VAPT Security",
+        title: "End Devices to Cloud Security",
+        description:
+          "Comprehensive vulnerability assessment and penetration testing across endpoints, networks, and cloud environments identifies risks. Our recommendations and solutions strengthen your overall security infrastructure.",
+        metrics: "End-to-End Protection",
+        image:
+          "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80",
+      },
+    ].map((useCase, idx) => (
+      <div
+        key={idx}
+        className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col md:flex-row"
+      >
+        {/* Image Box */}
+        <div className="relative md:w-1/3">
+          <img
+            src={useCase.image}
+            alt={useCase.title}
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent opacity-60" />
+        </div>
+
+        {/* Content */}
+        <div className="p-6 md:w-2/3">
+          <div className="text-sm font-semibold text-pink-600 mb-2">
+            {useCase.industry}
+          </div>
+          <h3 className="text-xl font-bold text-gray-900 mb-2">
+            {useCase.title}
+          </h3>
+          <p className="text-gray-600 mb-3">{useCase.description}</p>
+          <div className="inline-flex items-center px-3 py-1 bg-gray-100 rounded-full text-sm font-medium text-gray-700">
+            📊 {useCase.metrics}
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
       {/* <div className="py-20" style={{ backgroundColor: '#FFDE42' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
@@ -1146,98 +1239,7 @@ const SolutionsPage: React.FC = () => {
         </div> */}
 
 
-       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-  <div className="text-center mb-12">
-    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-      Real-World{" "}
-      <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent">
-        Use Cases
-      </span>
-    </h2>
-    <p className="text-gray-600 max-w-2xl mx-auto">
-      See how leading enterprises are leveraging MV technology across industries
-    </p>
-  </div>
-
-  <div className="grid md:grid-cols-2 gap-8">
-    {[
-      {
-        industry: "AI Infrastructure",
-        title: "Cost Reduction & Increase Revenue",
-        description:
-          "Our Solution Approach: Automating repetitive operations, optimizing compute/storage usage, predictive maintenance & anomaly detection. Energy-efficient AI infrastructure reduces operational costs & drives new revenue by enabling faster insights, smarter decisions, and scalable innovation.",
-        metrics: "Reduced OPEX + Increased Revenue",
-        image:
-          "https://i.pinimg.com/1200x/3e/c9/71/3ec97149abab0b8eec30006737226a90.jpg",
-      },
-      {
-        industry: "OT Security",
-        title: "Manufacturing Protection",
-        description:
-          "MV OT Security Architecture Approach is built on assessing your OT Network Segment, SCADA, ICS, PLC, HMI, Industrial Protocol, Asset discovery, Critical Mapping & Recovery readiness review.",
-        metrics: "Complete OT Coverage",
-        image:
-          "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=500&q=80",
-      },
-      {
-        industry: "Data Centre",
-        title: "800G Infrastructure",
-        description:
-          "Our Overall 800G Infrastructure Approach specifies solutions to manage your business needs with Green Efficiency and resource optimization for next-generation data centers.",
-        metrics: "800G Speed + Green Efficiency",
-        image:
-          "https://i.pinimg.com/736x/81/58/98/8158981a6aa85696ba470a208ee97eef.jpg",
-      },
-      {
-        industry: "Network Monitoring",
-        title: "Corporate Network Excellence",
-        description:
-          "Our Network Monitoring solutions approach supports uninterrupted business operations that increase revenue, ensuring real-time visibility, proactive issue detection and optimized performance.",
-        metrics: "24/7 Real-time Visibility",
-        image:
-          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80",
-      },
-      {
-        industry: "VAPT Security",
-        title: "End Devices to Cloud Security",
-        description:
-          "Comprehensive vulnerability assessment and penetration testing across endpoints, networks, and cloud environments identifies risks. Our recommendations and solutions strengthen your overall security infrastructure.",
-        metrics: "End-to-End Protection",
-        image:
-          "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80",
-      },
-    ].map((useCase, idx) => (
-      <div
-        key={idx}
-        className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden flex flex-col md:flex-row"
-      >
-        {/* Image Box */}
-        <div className="relative md:w-1/3">
-          <img
-            src={useCase.image}
-            alt={useCase.title}
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-br from-black/40 to-transparent opacity-60" />
-        </div>
-
-        {/* Content */}
-        <div className="p-6 md:w-2/3">
-          <div className="text-sm font-semibold text-pink-600 mb-2">
-            {useCase.industry}
-          </div>
-          <h3 className="text-xl font-bold text-gray-900 mb-2">
-            {useCase.title}
-          </h3>
-          <p className="text-gray-600 mb-3">{useCase.description}</p>
-          <div className="inline-flex items-center px-3 py-1 bg-gray-100 rounded-full text-sm font-medium text-gray-700">
-            📊 {useCase.metrics}
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+       
 
       {/* CTA Section */}
       <div className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 py-20">

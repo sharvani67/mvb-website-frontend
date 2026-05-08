@@ -1094,7 +1094,7 @@ const services = [
       "Smart Cabinets/Server & Network Cabinets/4&2 Post Racks",
       "Hot & Cold Aisle Containment",
       "Liquid Cooling & Liquid Immerse Solutions",
-      "6.	Intelligent PDU & KVMs Power Monitoring (Rack PDU/Socket)",
+      "Intelligent PDU & KVMs Power Monitoring (Rack PDU/Socket)",
       "High Density Fiber - MPO/SN/MTP",
       "Others (Labelling/Cable Basket/Fiber Pathway/Raceway)",
     ],
