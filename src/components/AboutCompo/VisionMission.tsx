@@ -853,11 +853,93 @@
 
 
 
+// import React from "react";
+// import { Target, Sparkles } from "lucide-react";
+
+// const VisionMission = () => {
+//   const isLight = true; // change to false if you want the softer version
+
+//   const backgroundStyle = {
+//     background: isLight
+//       ? "linear-gradient(to right, #FECDD3, #FEF08A, #BFDBFE)"
+//       : "linear-gradient(to right, #FFF1F2, #FEFCE8, #EFF6FF)",
+//   };
+
+//   return (
+//     <section className="py-16" style={backgroundStyle}>
+//       <div className="max-w-6xl mx-auto px-6 text-center">
+
+//         {/* Title */}
+//         <h2 className="text-4xl font-semibold text-gray-800 mb-6">
+//           Our Vision & Mission
+//         </h2>
+
+//         <div className="w-20 h-[4px] bg-gray-700 mx-auto mb-12 rounded-full"></div>
+
+//         {/* Cards */}
+//         <div className="grid md:grid-cols-2 gap-8">
+
+//           {/* VISION CARD */}
+//           <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#E11D48] text-left hover:scale-105 transition">
+            
+//             <div className="flex items-center gap-4 mb-4">
+//               <div className="bg-[#FEE2E2] p-3 rounded-full">
+//                 <Target className="text-[#E11D48]" size={24} />
+//               </div>
+//               <h3 className="text-2xl font-semibold text-gray-800">
+//                 Our Vision
+//               </h3>
+//             </div>
+
+//             <p className="text-gray-600 leading-relaxed">
+//               Customer Centricity with Peace of Mind
+//             </p>
+//           </div>
+
+//           {/* MISSION CARD */}
+//           <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#2563EB] text-left hover:scale-105 transition">
+            
+//             <div className="flex items-center gap-4 mb-4">
+//               <div className="bg-[#DBEAFE] p-3 rounded-full">
+//                 <Sparkles className="text-[#2563EB]" size={24} />
+//               </div>
+//               <h3 className="text-2xl font-semibold text-gray-800">
+//                 Our Mission
+//               </h3>
+//             </div>
+
+//             <p className="text-gray-700 leading-relaxed">
+//                 Our mission is to build{" "}
+//                 <span className="font-semibold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
+//                   Data Cabling, Data Physical Security, Data Security, Data Infra & A.I.
+//                 </span>{" "}
+//                 as Business Strategy to deploy Core IT Infra, that will help customers in ease of doing their business.
+//               </p>
+//           </div>
+//         </div>
+
+//         {/* Bottom Quote */}
+//         <div className="mt-12">
+//           <p className="text-gray-700 italic text-lg max-w-3xl mx-auto">
+//             "We offer simplified solutions to your complex challenges. Our talents create innovative solutions and services that deliver customer centricity with peace of mind."
+//           </p>
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default VisionMission;
+
+
+
+
 import React from "react";
 import { Target, Sparkles } from "lucide-react";
 
 const VisionMission = () => {
-  const isLight = true; // change to false if you want the softer version
+  const isLight = true; // Change To False If You Want The Softer Version
 
   const backgroundStyle = {
     background: isLight
@@ -879,49 +961,51 @@ const VisionMission = () => {
         {/* Cards */}
         <div className="grid md:grid-cols-2 gap-8">
 
-          {/* VISION CARD */}
+          {/* Vision Card */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#E11D48] text-left hover:scale-105 transition">
             
             <div className="flex items-center gap-4 mb-4">
               <div className="bg-[#FEE2E2] p-3 rounded-full">
                 <Target className="text-[#E11D48]" size={24} />
               </div>
+
               <h3 className="text-2xl font-semibold text-gray-800">
                 Our Vision
               </h3>
             </div>
 
             <p className="text-gray-600 leading-relaxed">
-              Customer Centricity with Peace of Mind
+              Customer Centricity With Peace Of Mind
             </p>
           </div>
 
-          {/* MISSION CARD */}
+          {/* Mission Card */}
           <div className="bg-white rounded-2xl p-8 shadow-lg border-l-4 border-[#2563EB] text-left hover:scale-105 transition">
             
             <div className="flex items-center gap-4 mb-4">
               <div className="bg-[#DBEAFE] p-3 rounded-full">
                 <Sparkles className="text-[#2563EB]" size={24} />
               </div>
+
               <h3 className="text-2xl font-semibold text-gray-800">
                 Our Mission
               </h3>
             </div>
 
             <p className="text-gray-700 leading-relaxed">
-                Our mission is to build{" "}
-                <span className="font-semibold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
-                  Data Cabling, Data Physical Security, Data Security, Data Infra & A.I.
-                </span>{" "}
-                as Business Strategy to deploy Core IT Infra, that will help customers in ease of doing their business.
-              </p>
+              Our Mission Is To Build{" "}
+              <span className="font-semibold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
+                Data Cabling, Data Physical Security, Data Security, Data Infra & A.I.
+              </span>{" "}
+              As Business Strategy To Deploy Core IT Infra, That Will Help Customers In Ease Of Doing Their Business.
+            </p>
           </div>
         </div>
 
         {/* Bottom Quote */}
         <div className="mt-12">
           <p className="text-gray-700 italic text-lg max-w-3xl mx-auto">
-            "We offer simplified solutions to your complex challenges. Our talents create innovative solutions and services that deliver customer centricity with peace of mind."
+            "We Offer Simplified Solutions To Your Complex Challenges. Our Talents Create Innovative Solutions And Services That Deliver Customer Centricity With Peace Of Mind."
           </p>
         </div>
 

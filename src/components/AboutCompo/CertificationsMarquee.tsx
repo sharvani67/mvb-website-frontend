@@ -171,8 +171,8 @@ export default function CertificationsMarquee() {
             Our Certifications
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Our engineers hold globally recognized certifications ensuring
-            enterprise-grade networking, security, and infrastructure expertise.
+            Our Engineers Hold Globally Recognized Certifications Ensuring
+            Enterprise-Grade Networking, Security, And Infrastructure Expertise.
           </p>
         </div>
 

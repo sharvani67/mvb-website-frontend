@@ -153,27 +153,27 @@ const textMap = {
 
 export default function ServicePromise() {
   const promises = [
-    {
-      icon: Clock,
-      text: "On-time delivery, every time",
-      color: "blue" as const,
-    },
-    {
-      icon: Award,
-      text: "Industry-leading quality standards",
-      color: "magenta" as const,
-    },
-    {
-      icon: HeartHandshake,
-      text: "Transparent pricing, no hidden costs",
-      color: "green" as const,
-    },
-    {
-      icon: Zap,
-      text: "Rapid response and resolution times",
-      color: "blue" as const,
-    },
-  ];
+  {
+    icon: Clock,
+    text: "On-Time Delivery, Every Time",
+    color: "blue" as const,
+  },
+  {
+    icon: Award,
+    text: "Industry-Leading Quality Standards",
+    color: "magenta" as const,
+  },
+  {
+    icon: HeartHandshake,
+    text: "Transparent Pricing, No Hidden Costs",
+    color: "green" as const,
+  },
+  {
+    icon: Zap,
+    text: "Rapid Response And Resolution Times",
+    color: "blue" as const,
+  },
+];
 
   return (
     <section className="relative py-28 overflow-hidden bg-muted/30">
@@ -202,9 +202,9 @@ export default function ServicePromise() {
           </h1>
 
               <p className="text-lg text-muted-foreground leading-relaxed mb-10">
-                When you partner with MV Branding Strategy, you're gaining a
-                dedicated infrastructure partner committed to delivering
-                reliable, secure, and scalable technology solutions.
+               When You Partner With MV Branding Strategy, You're Gaining A
+                 Dedicated Infrastructure Partner Committed To Delivering
+                Reliable, Secure, And Scalable Technology Solutions.
               </p>
 
               <div className="space-y-5">

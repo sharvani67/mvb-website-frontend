@@ -609,7 +609,7 @@ export function HeroSection() {
         </motion.p> */}
 
         <p className="text-xl sm:text-2xl text-black/90 max-w-2xl mx-auto leading-relaxed mb-8">
-         We specialize in Data Cabling, Data Physical Security, Data Security , Data Infra, and Artificial Intelligence.
+         We Specialize In Data Cabling, Data Physical Security, Data Security , Data Infra, And Artificial Intelligence.
         </p>
 
         {/* CTA Buttons - Enhanced for dark background */}

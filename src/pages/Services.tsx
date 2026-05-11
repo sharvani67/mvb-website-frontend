@@ -984,7 +984,7 @@ export default function Services() {
                 Industries We Serve
               </h2>
               <p className="text-gray-600 max-w-lg mx-auto">
-                Trusted by organizations across diverse sectors
+                Trusted By Organizations Across Diverse Sectors
               </p>
             </div>
           </SectionWrapper>
@@ -1054,7 +1054,7 @@ export default function Services() {
                 </h2>
 
                 <p className="text-white/80 mb-10 max-w-2xl mx-auto text-lg">
-                  Let's discuss how we can tailor our services to your specific infrastructure needs.
+                  Let's Discuss How We Can Tailor Our Services To Your Specific Infrastructure Needs.
                 </p>
 
                 <button

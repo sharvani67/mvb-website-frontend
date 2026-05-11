@@ -989,64 +989,64 @@ const ProjectsPage: React.FC = () => {
   };
 
   // Projects data - Updated with new client projects
-  const projects = [
-    {
-      id: 1,
-      title: "Data Centre",
-      category: "Infrastructure",
-      description: "Hyperscale infrastructure solution with 100G & 400G spine-leaf architecture for high bandwidth domestic & international connectivity.",
-      icon: "🏢",
-      gradient: "from-blue-600 to-blue-400",
-    },
-    {
-      id: 2,
-      title: "Anthem Bioscience",
-      category: "Manufacturing",
-      description: "Complete IT/OT network & security solution for 20-acre manufacturing campus with structured cabling and physical security.",
-      icon: "🧬",
-      gradient: "from-green-600 to-green-400",
-    },
-    {
-      id: 3,
-      title: "UNext",
-      category: "Enterprise",
-      description: "Next-gen firewall design & implementation for 2000+ users across multiple locations, eliminating frequent reboots.",
-      icon: "🔥",
-      gradient: "from-orange-600 to-orange-400",
-    },
-    {
-      id: 4,
-      title: "String Bio",
-      category: "Manufacturing",
-      description: "End-to-end IT infrastructure solution for 7-acre manufacturing campus covering data cabling, security, and data infrastructure.",
-      icon: "🧪",
-      gradient: "from-purple-600 to-purple-400",
-    },
-    {
-      id: 5,
-      title: "Data Center Migration",
-      category: "Migration",
-      description: "Complete physical data center migration within 48 hours with zero downtime and precise port mapping.",
-      icon: "🔄",
-      gradient: "from-red-600 to-red-400",
-    },
-    {
-      id: 6,
-      title: "The School of RAYA",
-      category: "Education",
-      description: "Smart connected 10-acre campus with centralized surveillance, command center, and integrated PA system.",
-      icon: "🏫",
-      gradient: "from-teal-600 to-teal-400",
-    },
-    {
-      id: 7,
-      title: "IWPS",
-      category: "Enterprise",
-      description: "45,000 sqft ready-to-move office fit-out delivered within 45 days with complete data cabling solutions.",
-      icon: "🏢",
-      gradient: "from-indigo-600 to-indigo-400",
-    },
-  ];
+ const projects = [
+  {
+    id: 1,
+    title: "Data Centre",
+    category: "Infrastructure",
+    description: "Hyperscale Infrastructure Solution With 100G & 400G Spine-Leaf Architecture For High Bandwidth Domestic & International Connectivity.",
+    icon: "🏢",
+    gradient: "from-blue-600 to-blue-400",
+  },
+  {
+    id: 2,
+    title: "Anthem Bioscience",
+    category: "Manufacturing",
+    description: "Complete IT/OT Network & Security Solution For 20-Acre Manufacturing Campus With Structured Cabling And Physical Security.",
+    icon: "🧬",
+    gradient: "from-green-600 to-green-400",
+  },
+  {
+    id: 3,
+    title: "UNext",
+    category: "Enterprise",
+    description: "Next-Gen Firewall Design & Implementation For 2000+ Users Across Multiple Locations, Eliminating Frequent Reboots.",
+    icon: "🔥",
+    gradient: "from-orange-600 to-orange-400",
+  },
+  {
+    id: 4,
+    title: "String Bio",
+    category: "Manufacturing",
+    description: "End-To-End IT Infrastructure Solution For 7-Acre Manufacturing Campus Covering Data Cabling, Security, And Data Infrastructure.",
+    icon: "🧪",
+    gradient: "from-purple-600 to-purple-400",
+  },
+  {
+    id: 5,
+    title: "Data Center Migration",
+    category: "Migration",
+    description: "Complete Physical Data Center Migration Within 48 Hours With Zero Downtime And Precise Port Mapping.",
+    icon: "🔄",
+    gradient: "from-red-600 to-red-400",
+  },
+  {
+    id: 6,
+    title: "The School Of RAYA",
+    category: "Education",
+    description: "Smart Connected 10-Acre Campus With Centralized Surveillance, Command Center, And Integrated PA System.",
+    icon: "🏫",
+    gradient: "from-teal-600 to-teal-400",
+  },
+  {
+    id: 7,
+    title: "IWPS",
+    category: "Enterprise",
+    description: "45,000 Sqft Ready-To-Move Office Fit-Out Delivered Within 45 Days With Complete Data Cabling Solutions.",
+    icon: "🏢",
+    gradient: "from-indigo-600 to-indigo-400",
+  },
+];
 
   // Filter categories - Updated
   const categories = ["All", "Infrastructure", "Manufacturing", "Enterprise", "Migration", "Education"];
@@ -1102,7 +1102,7 @@ const ProjectsPage: React.FC = () => {
 
             {/* Description */}
             <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
-              Well-defined systems, Process and methodologies ensuring smooth execution
+              Well-Defined Systems, Process And Methodologies Ensuring Smooth Execution
             </p>
 
             {/* Buttons */}
@@ -1136,7 +1136,7 @@ const ProjectsPage: React.FC = () => {
           </h2>
         
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Discover how we've transformed enterprise IT infrastructure across industries
+            Discover How We'Ve Transformed Enterprise IT Infrastructure Across Industries
           </p>
         </div>
 
@@ -1220,7 +1220,7 @@ const ProjectsPage: React.FC = () => {
             Ready to Transform Your IT Infrastructure?
           </h2>
           <p className="text-white/90 max-w-2xl mx-auto mb-8">
-            Join leading enterprises that trust us for their network, security, and data center solutions
+            Join Leading Enterprises That Trust Us For Their Network, Security, And Data Center Solutions
           </p>
           <button
             onClick={scrollToContactForm}

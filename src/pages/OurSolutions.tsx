@@ -787,7 +787,7 @@ const SolutionsPage: React.FC = () => {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
-            Bringing multiple IT infrastructure needs together into Efficient, Deliverable & Simplified Solutions 
+            Bringing Multiple IT Infrastructure Needs Together Into Efficient, Deliverable & Simplified Solutions 
           </p>
 
           {/* Buttons */}
@@ -863,7 +863,7 @@ const SolutionsPage: React.FC = () => {
       </span>
     </h2>
     <p className="text-gray-600 max-w-2xl mx-auto">
-      Comprehensive solutions designed for modern enterprises leveraging MVB technology
+      Comprehensive Solutions Designed For Modern Enterprises Leveraging MV Lechnology
     </p>
   </div>
 
@@ -871,25 +871,25 @@ const SolutionsPage: React.FC = () => {
     {[
       {
         title: "Technical Sales",
-        desc: "Driving business growth by aligning technology solutions with customer needs",
+        desc: "Driving Business Growth By Aligning Technology Solutions With Customer Needs",
         color: "from-pink-600 to-pink-400",
         icon: "💼",
       },
       {
         title: "Architecture & Solutioning",
-        desc: "Designing scalable and efficient system architectures for enterprise success",
+        desc: "Designing Scalable And Efficient System Architectures For Enterprise Success",
         color: "from-yellow-500 to-yellow-400",
         icon: "🏗️",
       },
       {
         title: "Operations",
-        desc: "Ensuring smooth and optimized business operations with high efficiency",
+        desc: "Ensuring Smooth And Optimized Business Operations With High Efficiency",
         color: "from-blue-600 to-blue-400",
         icon: "⚙️",
       },
       {
         title: "Project Management",
-        desc: "Planning, executing, and delivering projects on time with quality outcomes",
+        desc: "Planning, Executing, And Delivering Projects On Time With Quality Outcomes",
         color: "from-green-500 to-green-400",
         icon: "📊",
       },
@@ -920,57 +920,57 @@ const SolutionsPage: React.FC = () => {
       </span>
     </h2>
     <p className="text-gray-600 max-w-2xl mx-auto">
-      See how leading enterprises are leveraging MV technology across industries
+      See How Leading Enterprises Are Leveraging MV Technology Across Industries
     </p>
   </div>
 
   <div className="grid md:grid-cols-2 gap-8">
     {[
-      {
-        industry: "AI Infrastructure",
-        title: "Cost Reduction & Increase Revenue",
-        description:
-          "Our Solution Approach: Automating repetitive operations, optimizing compute/storage usage, predictive maintenance & anomaly detection. Energy-efficient AI infrastructure reduces operational costs & drives new revenue by enabling faster insights, smarter decisions, and scalable innovation.",
-        metrics: "Reduced OPEX + Increased Revenue",
-        image:
-          "https://i.pinimg.com/1200x/3e/c9/71/3ec97149abab0b8eec30006737226a90.jpg",
-      },
-      {
-        industry: "OT Security",
-        title: "Manufacturing Protection",
-        description:
-          "MV OT Security Architecture Approach is built on assessing your OT Network Segment, SCADA, ICS, PLC, HMI, Industrial Protocol, Asset discovery, Critical Mapping & Recovery readiness review.",
-        metrics: "Complete OT Coverage",
-        image:
-          "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=500&q=80",
-      },
-      {
-        industry: "Data Centre",
-        title: "800G Infrastructure",
-        description:
-          "Our Overall 800G Infrastructure Approach specifies solutions to manage your business needs with Green Efficiency and resource optimization for next-generation data centers.",
-        metrics: "800G Speed + Green Efficiency",
-        image:
-          "https://i.pinimg.com/736x/81/58/98/8158981a6aa85696ba470a208ee97eef.jpg",
-      },
-      {
-        industry: "Network Monitoring",
-        title: "Corporate Network Excellence",
-        description:
-          "Our Network Monitoring solutions approach supports uninterrupted business operations that increase revenue, ensuring real-time visibility, proactive issue detection and optimized performance.",
-        metrics: "24/7 Real-time Visibility",
-        image:
-          "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80",
-      },
-      {
-        industry: "VAPT Security",
-        title: "End Devices to Cloud Security",
-        description:
-          "Comprehensive vulnerability assessment and penetration testing across endpoints, networks, and cloud environments identifies risks. Our recommendations and solutions strengthen your overall security infrastructure.",
-        metrics: "End-to-End Protection",
-        image:
-          "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80",
-      },
+ {
+  industry: "AI Infrastructure",
+  title: "Cost Reduction & Increase Revenue",
+  description:
+    "Our Solution Approach: Automating Repetitive Operations, Optimizing Compute/Storage Usage, Predictive Maintenance & Anomaly Detection. Energy-Efficient AI Infrastructure Reduces Operational Costs & Drives New Revenue By Enabling Faster Insights, Smarter Decisions, And Scalable Innovation.",
+  metrics: "Reduced OPEX + Increased Revenue",
+  image:
+    "https://i.pinimg.com/1200x/3e/c9/71/3ec97149abab0b8eec30006737226a90.jpg",
+},
+{
+  industry: "OT Security",
+  title: "Manufacturing Protection",
+  description:
+    "MV OT Security Architecture Approach Is Built On Assessing Your OT Network Segment, SCADA, ICS, PLC, HMI, Industrial Protocol, Asset Discovery, Critical Mapping & Recovery Readiness Review.",
+  metrics: "Complete OT Coverage",
+  image:
+    "https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?auto=format&fit=crop&w=500&q=80",
+},
+  {
+  industry: "Data Centre",
+  title: "800G Infrastructure",
+  description:
+    "Our Overall 800G Infrastructure Approach Specifies Solutions To Manage Your Business Needs With Green Efficiency And Resource Optimization For Next-Generation Data Centers.",
+  metrics: "800G Speed + Green Efficiency",
+  image:
+    "https://i.pinimg.com/736x/81/58/98/8158981a6aa85696ba470a208ee97eef.jpg",
+},
+ {
+  industry: "Network Monitoring",
+  title: "Corporate Network Excellence",
+  description:
+    "Our Network Monitoring Solutions Approach Supports Uninterrupted Business Operations That Increase Revenue, Ensuring Real-Time Visibility, Proactive Issue Detection And Optimized Performance.",
+  metrics: "24/7 Real-Time Visibility",
+  image:
+    "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80",
+},
+  {
+  industry: "VAPT Security",
+  title: "End Devices To Cloud Security",
+  description:
+    "Comprehensive Vulnerability Assessment And Penetration Testing Across Endpoints, Networks, And Cloud Environments Identifies Risks. Our Recommendations And Solutions Strengthen Your Overall Security Infrastructure.",
+  metrics: "End-To-End Protection",
+  image:
+    "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80",
+},
     ].map((useCase, idx) => (
       <div
         key={idx}
@@ -1051,7 +1051,7 @@ const SolutionsPage: React.FC = () => {
         Enterprise-Grade <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent">Technology Stack</span>
       </h2>
       <p className="text-gray-700 max-w-2xl mx-auto">
-        World-class infrastructure powering enterprise security and performance
+        World-Class Infrastructure Powering Enterprise Security And Performance
       </p>
     </div>
 
@@ -1073,7 +1073,7 @@ const SolutionsPage: React.FC = () => {
 
     <div className="bg-white/90 rounded-xl p-6 text-center border border-gray-200">
       <div className="text-2xl font-bold mb-2 text-gray-900">Ready to Build on MV?</div>
-      <p className="text-gray-700 mb-4">Join hundreds of enterprises already building on our platform</p>
+      <p className="text-gray-700 mb-4">Join Hundreds Of Enterprises Already Building On Our Platform</p>
       <button
         onClick={scrollToContactForm}
         className="px-6 py-2 bg-gradient-to-r from-pink-600 to-blue-600 text-white rounded-lg font-semibold hover:shadow-lg transition-all hover:scale-105 transform cursor-pointer"
@@ -1095,7 +1095,7 @@ const SolutionsPage: React.FC = () => {
               </span>
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Our Minimum Viable Blockchain approach delivers unparalleled advantages for enterprise adoption
+              Our Minimum Viable Blockchain Approach Delivers Unparalleled Advantages For Enterprise Adoption
             </p>
           </div>
           
@@ -1248,7 +1248,7 @@ const SolutionsPage: React.FC = () => {
             Ready to Transform Your Business?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto text-white/90">
-            Get started with MV technology today and join the future of enterprise blockchain
+            Get Started With MV Technology Today And Join The Future Of Enterprise Blockchain
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button

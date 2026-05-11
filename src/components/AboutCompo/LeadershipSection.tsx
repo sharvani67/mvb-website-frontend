@@ -281,6 +281,153 @@
 
 
 
+
+
+// import { Crown, Quote } from "lucide-react";
+// import { TiltCard } from "./TiltCard";
+// import profile from "../../assets/profileicon.jpg";
+
+// const leadership = [
+//   {
+//     name: "Venkatesh Krishnan",
+//     title: "Chief Executive Officer",
+//     description:
+//       "22+ years of industrial experience in Enterprise IT Infrastructure, focused on value and solution selling. Successfully executed projects across Data Center, Manufacturing, Enterprises, and Educational sectors.",
+//     gradient: "from-[#E11D48] via-[#F97316] to-[#FACC15]",
+//     image: profile,
+//     quote: "We don't just build networks. We build trust.",
+//   },
+//   {
+//     name: "Marishwari Venkatesh",
+//     title: "Chief Financial Officer",
+//     description:
+//       "Steering financial strategy with precision and integrity, ensuring sustainable growth and operational excellence across all business verticals.",
+//     gradient: "from-[#C026D3] via-[#E11D48] to-[#F97316]",
+//     image: profile,
+//     quote:
+//       "Every investment in infrastructure is an investment in peace of mind.",
+//   },
+//   {
+//     name: "Vikas Sagar",
+//     title: "Technical Lead",
+//    description:
+//        "Vikas Sagar holds prestigious certifications, including CCIE/ Azure Security Engineer has thirst for technology that are client centric, being network specialist/security architecture, specialising in IP Core/MPLS backbone infra/ cloud security solutions. He has proven track record of managing complex, multi-vendor network environments and implementing advanced SIEM and SOAR platforms.",
+//     gradient: "from-[#FACC15] via-[#F97316] to-[#E11D48]",
+//     image: profile,
+//     quote: "Security isn't a product. It's a mindset.",
+//   },
+// ];
+
+// export function LeadershipSection() {
+//   const isOdd = leadership.length % 2 !== 0;
+
+//   return (
+//     <section className="py-4 bg-gradient-to-b from-white via-gray-50 to-white">
+//       <div className="container mx-auto px-6">
+
+//         {/* Header */}
+//         <div className="text-center max-w-3xl mx-auto mb-20">
+//           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#E11D48] via-[#FACC15] to-[#2563EB] rounded-full mb-6 shadow-md">
+//             <Crown className="w-4 h-4 text-white" />
+//             <span className="text-sm font-medium text-white">
+//               Leadership Team
+//             </span>
+//           </div>
+
+//           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-[#E11D48] via-[#FACC15] to-[#2563EB] text-transparent bg-clip-text">
+//             Meet the Minds Behind MV
+//           </h2>
+
+//           <p className="text-xl text-gray-600">
+//             Four leaders. One vision. Decades of experience building
+//             enterprise-grade IT infrastructure solutions.
+//           </p>
+//         </div>
+
+//         {/* Grid */}
+//         <div className="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto">
+//           {leadership.map((leader, i) => {
+//             const isLast = i === leadership.length - 1;
+
+//             return (
+//               <div
+//                 key={i}
+//                 className={
+//                   isOdd && isLast
+//                     ? "md:col-span-2 flex justify-center"
+//                     : ""
+//                 }
+//               >
+//                 <div className={isOdd && isLast ? "md:w-1/2" : ""}>
+//                   <TiltCard>
+//                     <div className="group relative h-full">
+
+//                       {/* Glow */}
+//                       <div
+//                         className={`absolute -inset-0.5 bg-gradient-to-r ${leader.gradient} rounded-3xl blur-xl opacity-0 group-hover:opacity-50 transition duration-500`}
+//                       />
+
+//                       {/* Card */}
+//                       <div className="relative bg-white rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 h-full border border-gray-100">
+
+//                         <div className="flex items-start gap-6">
+
+//                           {/* Avatar */}
+//                           <div className="relative">
+//                             <div
+//                               className={`absolute -inset-1 rounded-2xl bg-gradient-to-r ${leader.gradient} blur opacity-70`}
+//                             />
+//                             <img
+//                               src={leader.image}
+//                               alt={leader.name}
+//                               className="relative w-20 h-20 rounded-2xl object-cover border-2 border-white shadow-lg"
+//                             />
+//                           </div>
+
+//                           {/* Content */}
+//                           <div className="flex-1">
+//                             <h3 className="text-xl font-bold text-gray-900">
+//                               {leader.name}
+//                             </h3>
+
+//                             <p
+//                               className={`text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r ${leader.gradient} mb-3`}
+//                             >
+//                               {leader.title}
+//                             </p>
+
+//                             <p className="text-gray-600 text-sm leading-relaxed mb-5">
+//                               {leader.description}
+//                             </p>
+
+//                             {/* Quote */}
+//                             <div className="relative">
+//                               <Quote className="absolute -top-2 -left-2 w-4 h-4 text-gray-300" />
+//                               <p className="text-sm italic text-gray-500 pl-4">
+//                                 "{leader.quote}"
+//                               </p>
+//                             </div>
+//                           </div>
+
+//                         </div>
+//                       </div>
+
+//                     </div>
+//                   </TiltCard>
+//                 </div>
+//               </div>
+//             );
+//           })}
+//         </div>
+
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
+
 import { Crown, Quote } from "lucide-react";
 import { TiltCard } from "./TiltCard";
 import profile from "../../assets/profileicon.jpg";
@@ -290,29 +437,29 @@ const leadership = [
     name: "Venkatesh Krishnan",
     title: "Chief Executive Officer",
     description:
-      "22+ years of industrial experience in Enterprise IT Infrastructure, focused on value and solution selling. Successfully executed projects across Data Center, Manufacturing, Enterprises, and Educational sectors.",
+      "22+ Years Of Industrial Experience In Enterprise IT Infrastructure, Focused On Value And Solution Selling. Successfully Executed Projects Across Data Center, Manufacturing, Enterprises, And Educational Sectors.",
     gradient: "from-[#E11D48] via-[#F97316] to-[#FACC15]",
     image: profile,
-    quote: "We don't just build networks. We build trust.",
+    quote: "We Don't Just Build Networks. We Build Trust.",
   },
   {
     name: "Marishwari Venkatesh",
     title: "Chief Financial Officer",
     description:
-      "Steering financial strategy with precision and integrity, ensuring sustainable growth and operational excellence across all business verticals.",
+      "Steering Financial Strategy With Precision And Integrity, Ensuring Sustainable Growth And Operational Excellence Across All Business Verticals.",
     gradient: "from-[#C026D3] via-[#E11D48] to-[#F97316]",
     image: profile,
     quote:
-      "Every investment in infrastructure is an investment in peace of mind.",
+      "Every Investment In Infrastructure Is An Investment In Peace Of Mind.",
   },
   {
     name: "Vikas Sagar",
     title: "Technical Lead",
-   description:
-       "Vikas Sagar holds prestigious certifications, including CCIE/ Azure Security Engineer has thirst for technology that are client centric, being network specialist/security architecture, specialising in IP Core/MPLS backbone infra/ cloud security solutions. He has proven track record of managing complex, multi-vendor network environments and implementing advanced SIEM and SOAR platforms.",
+    description:
+      "Vikas Sagar Holds Prestigious Certifications, Including CCIE / Azure Security Engineer, Has Thirst For Technology That Are Client Centric, Being Network Specialist / Security Architecture, Specialising In IP Core / MPLS Backbone Infra / Cloud Security Solutions. He Has Proven Track Record Of Managing Complex, Multi-Vendor Network Environments And Implementing Advanced SIEM And SOAR Platforms.",
     gradient: "from-[#FACC15] via-[#F97316] to-[#E11D48]",
     image: profile,
-    quote: "Security isn't a product. It's a mindset.",
+    quote: "Security Isn't A Product. It's A Mindset.",
   },
 ];
 
@@ -327,18 +474,19 @@ export function LeadershipSection() {
         <div className="text-center max-w-3xl mx-auto mb-20">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#E11D48] via-[#FACC15] to-[#2563EB] rounded-full mb-6 shadow-md">
             <Crown className="w-4 h-4 text-white" />
+
             <span className="text-sm font-medium text-white">
               Leadership Team
             </span>
           </div>
 
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-[#E11D48] via-[#FACC15] to-[#2563EB] text-transparent bg-clip-text">
-            Meet the Minds Behind MV
+            Meet The Minds Behind MV
           </h2>
 
           <p className="text-xl text-gray-600">
-            Four leaders. One vision. Decades of experience building
-            enterprise-grade IT infrastructure solutions.
+            Four Leaders. One Vision. Decades Of Experience Building
+            Enterprise-Grade IT Infrastructure Solutions.
           </p>
         </div>
 
@@ -375,6 +523,7 @@ export function LeadershipSection() {
                             <div
                               className={`absolute -inset-1 rounded-2xl bg-gradient-to-r ${leader.gradient} blur opacity-70`}
                             />
+
                             <img
                               src={leader.image}
                               alt={leader.name}
@@ -401,6 +550,7 @@ export function LeadershipSection() {
                             {/* Quote */}
                             <div className="relative">
                               <Quote className="absolute -top-2 -left-2 w-4 h-4 text-gray-300" />
+
                               <p className="text-sm italic text-gray-500 pl-4">
                                 "{leader.quote}"
                               </p>

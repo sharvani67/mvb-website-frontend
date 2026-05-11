@@ -156,13 +156,13 @@ import { TiltCard } from './TiltCard';
 
 const values = [
   { icon: Users, title: "Customer Centricity",  },
-  { icon: ShieldCheck, title: "Peace of Mind", },
-  { icon: Lightbulb, title: "Complex to Simplified Solutions",  },
-  { icon: Sprout, title: "Value, Respect & Growth for Talents",   },
+  { icon: ShieldCheck, title: "Peace Of Mind", },
+  { icon: Lightbulb, title: "Complex To Simplified Solutions",  },
+  { icon: Sprout, title: "Value, Respect & Growth For Talents",   },
   { icon: BookOpen, title: "Continuous Learning",  },
-  { icon: CheckCircle, title: "Responsibility with Accountability & Transparency",  },
+  { icon: CheckCircle, title: "Responsibility With Accountability & Transparency",  },
   { icon: Target, title: "Right Product, Right Solutions, Right Value Proposition", },
-  { icon: Trophy, title: "Work with Integrity, Commitment & Result oriented",  },
+  { icon: Trophy, title: "Work With Integrity, Commitment & Result Oriented",  },
 ];
 
 export function CoreValuesSection() {
@@ -183,7 +183,7 @@ export function CoreValuesSection() {
       </h2>
 
           <p className="text-lg text-gray-800">
-            These principles guide every decision, every solution, and every relationship.
+            These Principles Guide Every Decision, Every Solution, And Every Relationship.
           </p>
         </div>
 
