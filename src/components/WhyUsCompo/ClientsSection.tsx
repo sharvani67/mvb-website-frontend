@@ -692,7 +692,7 @@ const ClientsSection = () => {
             </h2>
 
             <p className="text-gray-600 max-w-2xl mx-auto">
-              Powering success for industry leaders across the globe.
+              Powering Success For Industry Leaders Across The Globe.
             </p>
           </div>
         </SectionWrapper>

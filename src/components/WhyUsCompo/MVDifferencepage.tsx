@@ -555,38 +555,38 @@ import diffImage from "@/assets/team-collaboration.jpg";
 const differentiators = [
   {
     icon: Cpu,
-    title: "Innovative and Enterprise graded Technologies",
-    desc: "Leveraging advanced, scalable technologies built for enterprise performance.",
+    title: "Innovative And Enterprise Graded Technologies",
+    desc: "Leveraging Advanced, Scalable Technologies Built For Enterprise Performance.",
     color: "pink",
   },
   {
     icon: UserCheck,
-    title: "Subject matter expert",
-    desc: "Highly skilled experts delivering deep domain knowledge and precision.",
+    title: "Subject Matter Expert",
+    desc: "Highly Skilled Experts Delivering Deep Domain Knowledge And Precision.",
     color: "orange",
   },
   {
     icon: Settings,
-    title: "Tailored solutions for customers unique requirements",
-    desc: "Custom-built solutions designed to fit your exact business needs.",
+    title: "Tailored Solutions For Customers Unique Requirements",
+    desc: "Custom-Built Solutions Designed To Fit Your Exact Business Needs.",
     color: "yellow",
   },
   {
     icon: CheckCircle,
-    title: "Quality product & services",
-    desc: "Committed to delivering reliable, high-quality solutions every time.",
+    title: "Quality Product & Services",
+    desc: "Committed To Delivering Reliable, High-Quality Solutions Every Time.",
     color: "blue",
   },
   {
     icon: Rocket,
-    title: "Project management with Proactive approach",
-    desc: "Driving projects forward with proactive planning and execution.",
+    title: "Project Management With Proactive Approach",
+    desc: "Driving Projects Forward With Proactive Planning And Execution.",
     color: "cyan",
   },
   {
     icon: Handshake,
-    title: "Organizational direction towards customer centricity",
-    desc: "Focused on building long-term partnerships through customer-first values.",
+    title: "Organizational Direction Towards Customer Centricity",
+    desc: "Focused On Building Long-Term Partnerships Through Customer-First Values.",
     color: "green",
   },
 ];
@@ -629,7 +629,7 @@ const MVDifferencePage = () => {
   </span>
           </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
-              We don't just meet expectations—we exceed them. Here's how we're different.
+              We Don't Just Meet Expectations—We Exceed Them. Here's How We're Different.
             </p>
           </div>
         </SectionWrapper>
@@ -703,7 +703,7 @@ const MVDifferencePage = () => {
           <div className="text-center mt-20">
             <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-gradient-to-r from-pink-600/10 via-yellow-400/10 to-blue-600/10 border border-pink-500/20">
               <span className="text-sm font-medium bg-gradient-to-r from-pink-600 to-yellow-400 bg-clip-text text-transparent">
-                Ready to experience the difference?
+                Ready To Experience The Difference?
               </span>
               <div className="w-6 h-6 rounded-full bg-gradient-to-r from-pink-600 to-yellow-400 flex items-center justify-center">
                 <Rocket size={14} className="text-white" />

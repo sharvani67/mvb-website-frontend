@@ -112,7 +112,7 @@ import SectionWrapper from "@/components/SectionWrapper";
 
 const achievements = [
   {
-    title: "Completing 10 Years in Industry",
+    title: "Completing 10 Years In Industry",
     icon: Award,
   },
   {
@@ -120,7 +120,7 @@ const achievements = [
     icon: CheckCircle,
   },
   {
-    title: "Client Retention at 88%",
+    title: "Client Retention At 88%",
     icon: BarChart3,
   },
 ];
@@ -157,7 +157,7 @@ const AchievementsSection = () => {
             </h2>
 
             <p className="text-gray-500 max-w-2xl mx-auto">
-              Our commitment to excellence has been recognized through our journey and results.
+              Our Commitment To Excellence Has Been Recognized Through Our Journey And Results.
             </p>
 
           </div>
