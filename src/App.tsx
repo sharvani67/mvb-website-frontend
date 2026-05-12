@@ -83,6 +83,10 @@ import BlogComingSoon from "./pages/BlogComingSoon";
 import CareersComingSoon from "./pages/CareersComingSoon";
 import ChangePassword from "./pages/ForgotPassword";
 import ProtectedRoute from "./test/ProtectedRoute";
+import AdminBlogManager from "./components/AdminBlogManager"; // 👈 IMPORT ADMIN BLOG MANAGER
+import CareersPage from "./pages/CareersComingSoon";
+import AdminCareerManager from "./components/AdminCareerManager";
+import AdminApplications from "./components/AdminApplications";
 
 const queryClient = new QueryClient();
 
@@ -97,46 +101,78 @@ const App = () => (
 
         <Routes>
 
-  {/* ✅ PUBLIC ROUTES */}
-  <Route element={<Layout />}>
-    <Route path="/" element={<HomePage />} />
-    <Route path="/home" element={<Index />} />
-    <Route path="/Demo" element={<Demo />} />
-    <Route path="/about" element={<About />} />
-    <Route path="/services" element={<Services />} />
-    <Route path="/values" element={<Values />} />
-    <Route path="/brand" element={<Brand />} />
-    <Route path="/contact" element={<Contact />} />
-    <Route path="/blog" element={<Blog />} />
-    <Route path="/oursolution" element={<Oursolution />} />
-    <Route path="/projectpage" element={<ProjectsPage />} />
-    <Route path="/missionvalues" element={<MissionValues />} />
-    <Route path="/viewdetailspage" element={<ViewDetailsPage />} />
-    <Route path="/whyus" element={<WhyUs />} />
-    <Route path="/careers" element={<Careers />} />
-    <Route path="/careerscomingsoon" element={<CareersComingSoon />} />
-    <Route path="/blogcomingsoon" element={<BlogComingSoon />} />
-    <Route path="/hh" element={<ArcaHero />} />
-  </Route>
+          {/* ✅ PUBLIC ROUTES */}
+          <Route element={<Layout />}>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/home" element={<Index />} />
+            <Route path="/Demo" element={<Demo />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/values" element={<Values />} />
+            <Route path="/brand" element={<Brand />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/oursolution" element={<Oursolution />} />
+            <Route path="/projectpage" element={<ProjectsPage />} />
+            <Route path="/missionvalues" element={<MissionValues />} />
+            <Route path="/viewdetailspage" element={<ViewDetailsPage />} />
+            <Route path="/whyus" element={<WhyUs />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/careerscomingsoon" element={<CareersPage />} />
+            <Route path="/blogcomingsoon" element={<BlogComingSoon />} />
+            <Route path="/hh" element={<ArcaHero />} />
+          </Route>
 
-  {/* ✅ ADMIN ROUTES */}
-  <Route element={<AdminLayout />}>
-    <Route path="/admin" element={<Login />} />
-     <Route
-  path="/contacts"
+          {/* ✅ ADMIN ROUTES */}
+          <Route element={<AdminLayout />}>
+            <Route path="/admin" element={<Login />} />
+            
+            {/* Admin Blog Management - Protected */}
+            <Route
+              path="/admin/blog"
+              element={
+                <ProtectedRoute>
+                  <AdminBlogManager />
+                </ProtectedRoute>
+              }
+            />
+
+            <Route
+  path="/admin/applications"
   element={
     <ProtectedRoute>
-      <ContactTable />
+      <AdminApplications />
     </ProtectedRoute>
   }
 />
-     <Route path="/forgot-password" element={<ChangePassword />} />
-  </Route>
 
-  {/* ✅ 404 */}
-  <Route path="*" element={<NotFound />} />
+            <Route
+  path="/admin/careers"
+  element={
+    <ProtectedRoute>
+      <AdminCareerManager />
+    </ProtectedRoute>
+  }
+/>
+            
+            {/* Contacts Management - Protected */}
+            <Route
+              path="/contacts"
+              element={
+                <ProtectedRoute>
+                  <ContactTable />
+                </ProtectedRoute>
+              }
+            />
+            
+            {/* Forgot Password */}
+            <Route path="/forgot-password" element={<ChangePassword />} />
+          </Route>
 
-</Routes>
+          {/* ✅ 404 */}
+          <Route path="*" element={<NotFound />} />
+
+        </Routes>
 
         <WhatsAppFloat />
 
