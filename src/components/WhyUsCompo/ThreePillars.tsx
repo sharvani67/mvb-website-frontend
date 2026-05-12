@@ -748,8 +748,8 @@ import { motion, AnimatePresence } from "framer-motion";
 const coreValues = [
   {
     icon: Cpu,
-    title: "Technical capabilities",
-    desc: "We deliver robust, scalable solutions backed by deep technical expertise. Our team ensures reliability, security, and performance at every stage.",
+    title: "Technical Capabilities",
+    desc: "We Deliver Robust, Scalable Solutions Backed By Deep Technical Expertise. Our Team Ensures Reliability, Security, And Performance At Every Stage.",
     stats: "88% Client Retention",
     image: "https://i.pinimg.com/736x/2a/7d/44/2a7d442e58891b050afbee0fd3ef9b45.jpg",
     color: "pink",
@@ -757,15 +757,15 @@ const coreValues = [
   {
     icon: Users,
     title: "Customer Centricity",
-    desc: "We prioritize customer needs by delivering tailored, value-driven solutions. Every decision is focused on enhancing client satisfaction and long-term success.",
+    desc: "We Prioritize Customer Needs By Delivering Tailored, Value-Driven Solutions. Every Decision Is Focused On Enhancing Client Satisfaction And Long-Term Success.",
     stats: "10+ Years R&D Investment",
     image: "https://i.pinimg.com/736x/8b/6f/d1/8b6fd1da7cb3f0b7e9f7bceb5dd3a05d.jpg",
     color: "yellow",
   },
   {
     icon: ShieldCheck,
-    title: "Peace of mind",
-    desc: "We provide dependable support and seamless operations you can trust. With us, you gain confidence to focus on growth without worries.",
+    title: "Peace Of Mind",
+    desc: "We Provide Dependable Support And Seamless Operations You Can Trust. With Us, You Gain Confidence To Focus On Growth Without Worries.",
     stats: "200% Avg. Client Growth",
     image: "https://i.pinimg.com/1200x/89/d3/cc/89d3cc8e012994366b8f10fc306c4695.jpg",
     color: "blue",
@@ -857,7 +857,7 @@ export default function ThreePillars() {
               </span>
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Every solution we deliver is rooted in our core values.
+              Every Solution We Deliver Is Rooted In Our Core Values.
             </p>
           </div>
         </SectionWrapper>

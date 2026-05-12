@@ -924,7 +924,7 @@ const MissionVision: React.FC = () => {
             </h2>
 
             <p className="text-2xl md:text-3xl font-bold leading-snug">
-              Customer Centricity with Peace of Mind
+              Customer Centricity With Peace Of Mind
             </p>
 
             <div className="mt-6 w-12 h-[2px] bg-white/60 group-hover:w-20 transition-all duration-300"></div>
@@ -946,18 +946,18 @@ const MissionVision: React.FC = () => {
                 Our Mission
               </h2>
 
-              <p className="text-gray-700 leading-relaxed">
-                Our mission is to build{" "}
-                <span className="font-semibold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
-                  Data Cabling, Data Physical Security, Data Security, Data Infra & A.I.
-                </span>{" "}
-                as Business Strategy to deploy Core IT Infra, that will help customers in ease of doing their business.
-              </p>
+             <p className="text-gray-700 leading-relaxed">
+  Our Mission Is To Build{" "}
+  <span className="font-semibold bg-gradient-to-r from-pink-500 to-blue-500 bg-clip-text text-transparent">
+    Data Cabling, Data Physical Security, Data Security, Data Infra & A.I.
+  </span>{" "}
+  As Business Strategy To Deploy Core IT Infra, That Will Help Customers In Ease Of Doing Their Business.
+          </p>
 
-              <p className="text-gray-600 mt-4 italic border-l-2 border-pink-400 pl-4">
-                We offer simplified solutions to your complex challenges. Our talents create innovative
-                solutions and services that deliver customer centricity with peace of mind.
-              </p>
+      <p className="text-gray-600 mt-4 italic border-l-2 border-pink-400 pl-4">
+  We Offer Simplified Solutions To Your Complex Challenges. Our Talents Create Innovative
+  Solutions And Services That Deliver Customer Centricity With Peace Of Mind.
+      </p>
 
               <div className="mt-6 w-12 h-[2px] bg-gray-400 group-hover:w-20 transition-all duration-300"></div>
             </div>

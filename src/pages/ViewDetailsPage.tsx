@@ -23,47 +23,54 @@ const ViewDetailsPage: React.FC = () => {
     let solution = '';
     let approach = '';
 
-    switch (project.title) {
-      case "Data Centre":
-        clientExpectations = "Hyperscale Infrastructure for high bandwidth & availability for domestic and international";
-        solution = "Data center switches to support 100G & 400G Infra.";
-        approach = "Evaluation & understanding of existing infra. spine & leaf Architecture. User accessibility, Application & Compliances.";
-        break;
-      case "Anthem Bioscience":
-        clientExpectations = "Manufacturing campus of 20 acres to have reliable network & security for IT & OT , Wireless Connectivity Across the campus Campus , wide access control & surveillance . ";
-        solution = "Structured cabling solutions Physical security solutions , Industrial & Enterprise graded AP’s , long range coverage , Physical security solutions .";
-        approach = "Subsystem Approach Entry facility Backbone Telecommunication Horizontal Work area Administrative , Complete campus survey & Heat map prepared , Master & slave Controller Centralized monitoring Indoor & outdoor long- & short-range CCTV’s ";
-        break;
-      case "UNext":
-        clientExpectations = "Frequent reboot of Firewall connecting 2000+ users from multiple locations.";
-        solution = "Design & recommendation of Next Gen Firewall.";
-        approach = "Understanding customer business goals & pain points. Evaluation of existing Firewall. Recommended reliable & scalable firewall & Log analytic tools.";
-        break;
-      case "String Bio":
-        clientExpectations = "Manufacturing campus of 7 acres to have reliable network & security for IT & OT";
-        solution = "Comprehensive end to end solutions";
-        approach = "Design and implemented Data cabling, Data physical Security, Data Security & Data Infra";
-        break;
-      case "Data Center Migration":
-        clientExpectations = "Physical migration of data center within 48hrs.";
-        solution = "Dismantling of existing devices. Setup new Data cabling Infrastructure. Documentation of Existing device connectivity.";
-        approach = "Port Mapping & Dismantling of existing devices. Deployment of large resource for Data cabling & re-connectivity at co-location within 48hrs.";
-        break;
-      case "The School of RAYA":
-        clientExpectations = "Smart & Digitally Connected – 10 acres campus of classrooms in multiple blocks , Sports area, Canteen, Admin, Auditorium, Lobbies etc. Centralized surveillance of people, school assets, safety, Public announcement at various location of the campus . ";
-        solution = "Comprehensive end to end IT infra-approach, Command center to monitor campus infrastructure. Integration of CCTV, IP PA system & IP phone . ";
-        approach = "Design and implemented Data cabling, Data physical Security, Data Security & Data Infra ,Star topology for CCTV data cabling of 350 cameras. Single Dashboard viewing 6 displays , Centralized management Software was used to integration & communication at command center. ";
-        break;
-      case "IWPS":
-        clientExpectations = "Fit-out or ready to move facility within 45days for 45,000sqft office.";
-        solution = "Data cabling solutions for office area.";
-        approach = "Required-Allocate-Delivered: Required 2 teams at each floor. Allocated resources, tools & material. Delivered through Project management process.";
-        break;
-      default:
-        clientExpectations = project.description;
-        solution = project.solution;
-        approach = project.approach;
-    }
+   switch (project.title) {
+  case "Data Centre":
+    clientExpectations = "Hyperscale Infrastructure For High Bandwidth & Availability For Domestic And International";
+    solution = "Data Center Switches To Support 100G & 400G Infra.";
+    approach = "Evaluation & Understanding Of Existing Infra. Spine & Leaf Architecture. User Accessibility, Application & Compliances.";
+    break;
+
+  case "Anthem Bioscience":
+    clientExpectations = "Manufacturing Campus Of 20 Acres To Have Reliable Network & Security For IT & OT, Wireless Connectivity Across The Campus, Campus Wide Access Control & Surveillance.";
+    solution = "Structured Cabling Solutions, Physical Security Solutions, Industrial & Enterprise Graded AP’s, Long Range Coverage, Physical Security Solutions.";
+    approach = "Subsystem Approach Entry Facility Backbone Telecommunication Horizontal Work Area Administrative, Complete Campus Survey & Heat Map Prepared, Master & Slave Controller Centralized Monitoring Indoor & Outdoor Long- & Short-Range CCTV’s.";
+    break;
+
+  case "UNext":
+    clientExpectations = "Frequent Reboot Of Firewall Connecting 2000+ Users From Multiple Locations.";
+    solution = "Design & Recommendation Of Next Gen Firewall.";
+    approach = "Understanding Customer Business Goals & Pain Points. Evaluation Of Existing Firewall. Recommended Reliable & Scalable Firewall & Log Analytic Tools.";
+    break;
+
+  case "String Bio":
+    clientExpectations = "Manufacturing Campus Of 7 Acres To Have Reliable Network & Security For IT & OT";
+    solution = "Comprehensive End To End Solutions";
+    approach = "Design And Implemented Data Cabling, Data Physical Security, Data Security & Data Infra";
+    break;
+
+  case "Data Center Migration":
+    clientExpectations = "Physical Migration Of Data Center Within 48Hrs.";
+    solution = "Dismantling Of Existing Devices. Setup New Data Cabling Infrastructure. Documentation Of Existing Device Connectivity.";
+    approach = "Port Mapping & Dismantling Of Existing Devices. Deployment Of Large Resource For Data Cabling & Re-Connectivity At Co-Location Within 48Hrs.";
+    break;
+
+  case "The School Of RAYA":
+    clientExpectations = "Smart & Digitally Connected – 10 Acres Campus Of Classrooms In Multiple Blocks, Sports Area, Canteen, Admin, Auditorium, Lobbies Etc. Centralized Surveillance Of People, School Assets, Safety, Public Announcement At Various Location Of The Campus.";
+    solution = "Comprehensive End To End IT Infra-Approach, Command Center To Monitor Campus Infrastructure. Integration Of CCTV, IP PA System & IP Phone.";
+    approach = "Design And Implemented Data Cabling, Data Physical Security, Data Security & Data Infra, Star Topology For CCTV Data Cabling Of 350 Cameras. Single Dashboard Viewing 6 Displays, Centralized Management Software Was Used To Integration & Communication At Command Center.";
+    break;
+
+  case "IWPS":
+    clientExpectations = "Fit-Out Or Ready To Move Facility Within 45Days For 45,000Sqft Office.";
+    solution = "Data Cabling Solutions For Office Area.";
+    approach = "Required-Allocate-Delivered: Required 2 Teams At Each Floor. Allocated Resources, Tools & Material. Delivered Through Project Management Process.";
+    break;
+
+  default:
+    clientExpectations = project.description;
+    solution = project.solution;
+    approach = project.approach;
+}
 
     return (
       <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
@@ -133,7 +140,7 @@ const ViewDetailsPage: React.FC = () => {
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
           </svg>
-          Back to Projects
+          Back To Projects
         </button>
 
         {/* Project Details Card */}
@@ -143,11 +150,11 @@ const ViewDetailsPage: React.FC = () => {
       <div className="mt-12 bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 rounded-2xl p-8 text-center shadow-xl">
 
   <h3 className="text-2xl font-bold text-white mb-3">
-    Interested in a similar solution?
+    Interested In a Similar Solution?
   </h3>
 
   <p className="text-white/90 mb-6">
-    Let's discuss how we can help transform your IT infrastructure
+    Let's Discuss How We Can Help Transform Your IT Infrastructure
   </p>
 
   <button

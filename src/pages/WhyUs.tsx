@@ -1432,7 +1432,7 @@ export default function WhyUs() {
                 Ready to Experience the MV Difference?
               </h2>
               <p className="text-lg text-gray-600 mb-10">
-                Join hundreds of satisfied clients who've transformed their infrastructure with us.
+                Join Hundreds Of Satisfied Clients Who've Transformed Their Infrastructure With Us.
               </p>
               <div className="flex flex-wrap gap-4 justify-center">
                 <button
