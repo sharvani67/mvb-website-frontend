@@ -145,8 +145,8 @@ export default function CTASection() {
           </h2>
 
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's help you navigate the complex B2B buying journey with tailored
-            solutions for each persona.
+            Let's Help You Navigate The Complex B2B Buying Journey With Tailored
+            Solutions For Each Persona.
           </p>
 
           {/* 🔹 Buttons */}

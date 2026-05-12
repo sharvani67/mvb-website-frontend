@@ -27306,7 +27306,7 @@ const timelineStory = [
   {
     title: "Requirement Capturing",
     subtitle: "",
-    desc: "Understanding client needs, goals, and capturing all requirements for the project.",
+    desc: "Understanding Client Needs, Goals, And Capturing All Requirements For The Project.",
     icon: ClipboardList,
     side: "left",
     image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f",
@@ -27315,7 +27315,7 @@ const timelineStory = [
   {
     title: "Project Technicalities",
     subtitle: "",
-    desc: "Analyzing the site conditions, infrastructure, and feasibility before planning.",
+    desc: "Analyzing The Site Conditions, Infrastructure, And Feasibility Before Planning.",
     icon: MapPin,
     side: "right",
     image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e",
@@ -27324,7 +27324,7 @@ const timelineStory = [
   {
     title: "Design & Planning",
     subtitle: "",
-    desc: "Creating technical designs and planning execution strategy for the project.",
+    desc: "Creating Technical Designs And Planning Execution Strategy For The Project.",
     icon: Drafting,
     side: "left",
     image: "https://images.unsplash.com/photo-1507238691740-187a5b1d37b8",
@@ -27333,7 +27333,7 @@ const timelineStory = [
   {
     title: "Resource Allocation",
     subtitle: "",
-    desc: "Allocating skilled resource, materials, and tools required for implementation.",
+    desc: "Allocating Skilled Resource, Materials, And Tools Required For Implementation.",
     icon: Users,
     side: "right",
     image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
@@ -27342,7 +27342,7 @@ const timelineStory = [
   {
     title: "Testing & Validation",
     subtitle: "",
-    desc: "Ensuring systems are working correctly through proper testing and validation.",
+    desc: "Ensuring Systems Are Working Correctly Through Proper Testing And Validation.",
     icon: CheckCircle,
     side: "left",
     image: "https://i.pinimg.com/1200x/18/30/8d/18308d46ce6699445930cef594ae5845.jpg",
@@ -27351,7 +27351,7 @@ const timelineStory = [
   {
     title: "Project Handover",
     subtitle: "",
-    desc: "Delivering the completed project to the client with proper documentation.",
+    desc: "Delivering The Completed Project To The Client With Proper Documentation.",
     icon: HandshakeIcon,
     side: "right",
     image: "https://i.pinimg.com/736x/10/b5/0e/10b50e3eba437e01848227fb2b870f22.jpg",
@@ -27360,7 +27360,7 @@ const timelineStory = [
   {
     title: "Integration with 3rd Party",
     subtitle: "",
-    desc: "Integrating systems with third-party services and platforms as required.",
+    desc: "Integrating Systems With Third-Party Services And Platforms As Required.",
     icon: Network,
     side: "left",
     image: "https://i.pinimg.com/736x/9f/1b/3c/9f1b3cc7a89f92825b2850ba1f57b33f.jpg",
@@ -27369,7 +27369,7 @@ const timelineStory = [
   {
     title: "Support & Maintenance",
     subtitle: "",
-    desc: "Providing ongoing support and maintenance to ensure smooth operations.",
+    desc: "Providing Ongoing Support And Maintenance To Ensure Smooth Operations.",
     icon: Wrench,
     side: "right",
     image: "https://i.pinimg.com/736x/dc/b2/54/dcb25442fb0340fc07625668e7f251ed.jpg",
@@ -27378,7 +27378,7 @@ const timelineStory = [
   {
     title: "Feedback & Inputs",
     subtitle: "",
-    desc: "Collecting feedback and inputs to improve future implementations.",
+    desc: "Collecting Feedback And Inputs To Improve Future Implementations.",
     icon: MessageCircle,
     side: "left",
     image: "https://i.pinimg.com/736x/a2/f8/e0/a2f8e0daf254b2feda89dba4ac45a249.jpg",
@@ -27606,7 +27606,7 @@ export default function HomePage() {
               </span>
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-gray-800 leading-relaxed px-2">
-              A comprehensive mapping of user personas across industries and the B2B buying journey.
+              A Comprehensive Mapping Of User Personas Across Industries And The B2B Buying Journey.
             </p>
           </div>
   

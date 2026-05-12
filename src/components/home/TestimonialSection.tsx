@@ -7,31 +7,30 @@ const testimonials = [
     company: "",
     scope: "Core IT Infrastructure, Surveillance & Security",
     quote:
-      "The team clearly understood our challenges and delivered a customized end-to-end IT infrastructure solution including surveillance and security. Over the past year, we have experienced seamless operations with zero major issues.",
+      "The Team Clearly Understood Our Challenges And Delivered A Customized End-To-End IT Infrastructure Solution Including Surveillance And Security. Over The Past Year, We Have Experienced Seamless Operations With Zero Major Issues.",
     points: [
-      "Management expressed satisfaction with overall implementation",
-      "Smooth performance with no issues for over a year",
-      "Large manufacturing Plant",
-      "Strong collaboration on future upgrades for Nagasandra office",
-      "Focus on automation security enhancements",
+      "Management Expressed Satisfaction With Overall Implementation",
+      "Smooth Performance With No Issues For Over A Year",
+      "Large Manufacturing Plant",
+      "Strong Collaboration On Future Upgrades For Nagasandra Office",
+      "Focus On Automation Security Enhancements",
     ],
   },
   {
     name: "Mr. Chandan Rao",
     role: "",
-    company: "The School of Raya",
+    company: "The School Of Raya",
     scope: "Core IT Infrastructure, Surveillance & Security",
     quote:
-      "Overall, we are happy with the work delivered. The team has improved significantly in coordination and execution over time.",
+      "Overall, We Are Happy With The Work Delivered. The Team Has Improved Significantly In Coordination And Execution Over Time.",
     points: [
-      "Bhupathi coordinates very well",
-      "MV Process improved productivity and punctuality",
-      "Happy with overall execution by MV",
-      "Additional projects and orders have been assigned",
-      "Firewall capacity upgrade planned next year",
-      "Additional camera installation in progress",
-      "10 acres of IB School ",
-    
+      "Bhupathi Coordinates Very Well",
+      "MV Process Improved Productivity And Punctuality",
+      "Happy With Overall Execution By MV",
+      "Additional Projects And Orders Have Been Assigned",
+      "Firewall Capacity Upgrade Planned Next Year",
+      "Additional Camera Installation In Progress",
+      "10 Acres Of IB School",
     ],
   },
 ];
@@ -52,7 +51,7 @@ const TestimonialsSectionss: React.FC = () => {
           </p>
 
           <h2 className="mt-3 text-4xl md:text-5xl font-bold text-[#1f2937]">
-            Voice of the Customer
+            Voice Of The Customer
           </h2>
 
           <div className="w-20 h-[3px] bg-gradient-to-r from-[#ff4d8d] via-[#ffc857] to-[#3b82f6] mx-auto mt-6 rounded-full"></div>
@@ -106,14 +105,14 @@ const TestimonialsSectionss: React.FC = () => {
         {/* 🔹 Appreciation Note */}
         <div className="mt-12 text-center">
           <p className="text-gray-600 text-sm">
-            Appreciation for the team:{" "}
+            Appreciation For The Team:{" "}
             <span className="font-semibold text-[#1f2937]">
               Bhupathi, Chandan, Gaurav, Malay
             </span>
           </p>
 
           <p className="text-gray-500 text-xs mt-2">
-            Upgrade planning in progress • Budget allocation expected before March 31, 2026
+            Upgrade Planning In progress • Budget Allocation Expected Before March 31, 2026
           </p>
         </div>
       </div>
