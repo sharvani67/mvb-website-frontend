@@ -5346,8 +5346,6 @@
 
 // export default StoryCarousel;
 
-
-
 import React, { useState, useEffect, useRef } from "react";
 import introBg from "../assets/images/hero1.jpg";
 import historyBg2015 from "../assets/images/hero2.jpg";
@@ -5486,7 +5484,8 @@ const slideshowData: SlideshowData = {
       title: "Ready to Transform Your IT Infrastructure?",
       description: "Join Us in Building Reliable, Secure, and Future-Ready IT Ecosystems.",
       bgImage: ctaBg,
-      overlay: "linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1))"
+      overlay: "linear-gradient(135deg, rgba(0,0,0,0.2), rgba(0,0,0,0.1))",
+      content: "Join Us in Building Reliable, Secure, and Future-Ready IT Ecosystems."
     }
   ]
 };
@@ -5590,7 +5589,8 @@ const StoryCarousel = () => {
             <h1 className="slide-title large">{currentSlideData.title}</h1>
             <p className="slide-subtitle">{currentSlideData.subtitle}</p>
             <p className="slide-description">{currentSlideData.description}</p>
-            <div className="gradient-card">{currentSlideData.content}</div>
+            {/* Content now uses same stats-card class as history stats */}
+            <div className="stats-card">{currentSlideData.content}</div>
             <button className="slide-button" onClick={() => { nextSlide(); pauseAutoPlay(); }}>
               Begin Story <span>→</span>
             </button>
@@ -5600,9 +5600,10 @@ const StoryCarousel = () => {
       case "history":
         return (
           <div className="slide-content history-slide">
-            <h2 className="slide-title large">{currentSlideData.title}</h2>
+            <div className="timeline-badge">{currentSlideData.year}</div>
+            <h2 className="slide-title">{currentSlideData.title}</h2>
             <p className="slide-description">{currentSlideData.description}</p>
-            <div className="gradient-card">{currentSlideData.stats}</div>
+            <div className="stats-card">{currentSlideData.stats}</div>
           </div>
         );
 
@@ -5613,7 +5614,7 @@ const StoryCarousel = () => {
             <p className="slide-description">{currentSlideData.description}</p>
             <div className="leadership-grid">
               {currentSlideData.leaders?.map((leader, idx) => (
-                <div key={idx} className="gradient-card leadership-card">
+                <div key={idx} className="leadership-card">
                   <div className="card-role">{leader.role}</div>
                   <div className="card-focus">{leader.focus}</div>
                 </div>
@@ -5628,7 +5629,7 @@ const StoryCarousel = () => {
             <h2 className="slide-title large">{currentSlideData.title}</h2>
             <div className="stakeholders-grid">
               {currentSlideData.stakeholders?.map((stakeholder, idx) => (
-                <div key={idx} className="gradient-card stakeholder-card">
+                <div key={idx} className="stakeholder-card">
                   <div className="card-role">{stakeholder.role}</div>
                   <div className="card-focus">{stakeholder.focus}</div>
                 </div>
@@ -5642,10 +5643,10 @@ const StoryCarousel = () => {
           <div className="slide-content vision-slide">
             <h2 className="slide-title large">{currentSlideData.title}</h2>
             <p className="slide-subtitle">{currentSlideData.subtitle}</p>
-            <div className="gradient-card vision-description">{currentSlideData.description}</div>
+            <div className="vision-description-card">{currentSlideData.description}</div>
             <div className="values-list">
               {currentSlideData.values?.map((value, idx) => (
-                <span key={idx} className="gradient-card value-tag">{value}</span>
+                <span key={idx} className="value-tag">{value}</span>
               ))}
             </div>
           </div>
@@ -5655,7 +5656,7 @@ const StoryCarousel = () => {
         return (
           <div className="slide-content cta-slide">
             <h2 className="slide-title large">{currentSlideData.title}</h2>
-            <div className="gradient-card cta-description">{currentSlideData.description}</div>
+            <div className="stats-card cta-description">{currentSlideData.content || currentSlideData.description}</div>
           </div>
         );
 
@@ -5795,6 +5796,19 @@ const StoryCarousel = () => {
           background: transparent;
         }
 
+        .timeline-badge {
+          display: inline-block;
+          padding: 8px 24px;
+          background: linear-gradient(135deg, #E11D48, #F97316, #FACC15);
+          border-radius: 50px;
+          font-size: 1.2rem;
+          font-weight: 700;
+          margin-bottom: 25px;
+          color: white;
+          font-family: 'Neue Machina', 'Clash Grotesk', sans-serif;
+          text-transform: uppercase;
+        }
+
         @keyframes fadeInUp {
           from { opacity: 0; transform: translateY(30px); }
           to { opacity: 1; transform: translateY(0); }
@@ -5876,31 +5890,35 @@ const StoryCarousel = () => {
           font-family: 'PP Mori', 'Inter', sans-serif;
         }
 
-        /* Unified Gradient Card Style - Same as "Crafting Reliable IT Infrastructure Since Day One" */
-        .gradient-card {
-          font-size: 1.2rem;
+        /* Stats Card - Same for both history stats and intro content */
+        .stats-card {
+          font-size: 1rem;
           font-style: normal;
           margin: 25px auto;
-          padding: 18px 32px;
-          border-left: 4px solid #FAE251;
+          padding: 15px 30px;
           max-width: 90%;
           width: auto;
-          font-weight: 700;
-          background: rgba(0, 0, 0, 0.45);
-          border-radius: 16px;
-          backdrop-filter: blur(8px);
-          background: linear-gradient(135deg, #E11D48, #F97316, #FACC15, #06B6D4, #2563EB) !important;
-          -webkit-background-clip: text !important;
-          background-clip: text !important;
-          color: transparent !important;
-          text-shadow: none;
-          letter-spacing: 0.5px;
+          font-weight: 600;
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5));
+          backdrop-filter: blur(10px);
+          border-radius: 50px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: #FAE251 !important;
+          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+          letter-spacing: 1px;
           font-family: 'Neue Machina', 'Clash Grotesk', sans-serif;
-          text-transform: uppercase;
           line-height: 1.5;
           display: inline-block;
           text-align: center;
           transition: all 0.3s ease;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+          text-transform: uppercase;
+        }
+
+        .stats-card:hover {
+          transform: translateY(-2px);
+          border-color: rgba(255, 255, 255, 0.4);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
         }
 
         /* Leadership & Stakeholders Grid */
@@ -5911,29 +5929,29 @@ const StoryCarousel = () => {
           margin-top: 30px;
         }
 
-        /* Card Styles for Leadership and Stakeholders */
+        /* Card Styles */
         .leadership-card, .stakeholder-card {
-          margin: 0;
+          background: rgba(0, 0, 0, 0.5);
+          backdrop-filter: blur(10px);
+          border-radius: 16px;
           padding: 24px 16px;
-          max-width: 100%;
-          cursor: pointer;
+          text-align: center;
           transition: all 0.3s ease;
+          cursor: pointer;
+          border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .leadership-card:hover, .stakeholder-card:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-          border-left: 4px solid #FAE251;
+          border-color: #FAE251;
+          background: rgba(0, 0, 0, 0.6);
         }
 
         .card-role {
           font-size: 1.3rem;
           font-weight: 800;
           margin-bottom: 12px;
-          background: linear-gradient(135deg, #E11D48, #F97316, #FACC15, #06B6D4, #2563EB) !important;
-          -webkit-background-clip: text !important;
-          background-clip: text !important;
-          color: transparent !important;
+          color: #FAE251 !important;
           text-transform: uppercase;
           letter-spacing: 1px;
         }
@@ -5943,7 +5961,21 @@ const StoryCarousel = () => {
           color: rgba(255, 255, 255, 0.9);
           font-weight: 500;
           line-height: 1.4;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Vision Description Card */
+        .vision-description-card {
+          font-size: 1rem;
+          margin: 20px auto;
+          padding: 15px 28px;
+          max-width: 800px;
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+          backdrop-filter: blur(10px);
+          border-radius: 50px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          color: white !important;
+          text-align: center;
+          line-height: 1.6;
         }
 
         /* Value Tags */
@@ -5952,33 +5984,35 @@ const StoryCarousel = () => {
           justify-content: center;
           flex-wrap: wrap;
           gap: 15px;
-          margin-top: 35px;
+          margin-top: 20px;
         }
 
         .value-tag {
           margin: 0;
-          padding: 12px 28px;
+          padding: 12px 24px;
           font-size: 0.9rem;
           cursor: pointer;
           transition: all 0.3s ease;
+          background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4));
+          backdrop-filter: blur(10px);
+          color: #FAE251 !important;
+          border-radius: 50px;
+          text-transform: uppercase;
+          font-weight: 700;
+          letter-spacing: 1px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .value-tag:hover {
           transform: translateY(-3px);
-          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-
-        /* Vision Description */
-        .vision-description {
-          max-width: 800px;
-          font-size: 1.1rem;
-          line-height: 1.6;
+          border-color: #FAE251;
+          background: rgba(0, 0, 0, 0.6);
         }
 
         /* CTA Description */
         .cta-description {
+          font-size: 1.1rem;
           max-width: 700px;
-          font-size: 1.3rem;
         }
 
         /* Buttons */
@@ -6140,14 +6174,15 @@ const StoryCarousel = () => {
           .nav-arrow { width: 40px; height: 40px; }
           .nav-arrow span { font-size: 1.5rem; }
           .keyboard-hint { display: none; }
-          .gradient-card { 
-            font-size: 0.85rem; 
-            padding: 12px 20px; 
+          .stats-card { 
+            font-size: 0.8rem; 
+            padding: 10px 20px; 
             max-width: 95%;
           }
           .card-role { font-size: 1rem; }
           .card-focus { font-size: 0.75rem; }
-          .value-tag { padding: 8px 20px; font-size: 0.7rem; }
+          .value-tag { padding: 8px 16px; font-size: 0.7rem; }
+          .vision-description-card { font-size: 0.85rem; padding: 10px 18px; }
         }
 
         @media (max-width: 576px) {
@@ -6155,10 +6190,12 @@ const StoryCarousel = () => {
           .slide-title.large { font-size: 1.8rem; }
           .nav-arrow { width: 35px; height: 35px; }
           .nav-arrow span { font-size: 1.2rem; }
-          .gradient-card { 
+          .stats-card { 
             font-size: 0.7rem; 
-            padding: 10px 15px;
+            padding: 8px 15px;
           }
+          .value-tag { padding: 6px 12px; font-size: 0.65rem; }
+          .vision-description-card { font-size: 0.7rem; padding: 8px 12px; }
         }
       `}</style>
 

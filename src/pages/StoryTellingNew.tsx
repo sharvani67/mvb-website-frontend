@@ -132,7 +132,8 @@ const slideshowData: SlideshowData = {
       type: "cta",
       title: "Ready To Transform Your IT Infrastructure?",
       description: "Join Us In Building Reliable, Secure, And Future-Ready IT Ecosystems.",
-      bgImage: ctaBg
+      bgImage: ctaBg,
+      content: "Join Us In Building Reliable, Secure, And Future-Ready IT Ecosystems."
     }
   ]
 };
@@ -240,10 +241,13 @@ const StoryCarousel = () => {
             <div className="glass-bg description-wrapper">
               <p className="slide-description">{currentSlideData.description}</p>
             </div>
-            <div className="quote-highlight ">{currentSlideData.content}</div>
-            <button className="slide-button" onClick={() => { nextSlide(); pauseAutoPlay(); }}>
-              Begin Story <span>→</span>
-            </button>
+            {/* Content wrapper with block display */}
+            <div className="content-wrapper">
+              <div className="history-stats">{currentSlideData.content}</div>
+              <button className="slide-button" onClick={() => { nextSlide(); pauseAutoPlay(); }}>
+                Begin Story <span>→</span>
+              </button>
+            </div>
           </div>
         );
 
@@ -268,7 +272,6 @@ const StoryCarousel = () => {
             <div className="stakeholders-grid">
               {currentSlideData.leaders?.map((leader, idx) => (
                 <div key={idx} className="leader-card">
-                  {/* <div className="leader-icon">{leader.icon || "👤"}</div> */}
                   <div className="leader-role">{leader.role}</div>
                   <div className="leader-focus">{leader.focus}</div>
                 </div>
@@ -284,7 +287,6 @@ const StoryCarousel = () => {
             <div className="stakeholders-grid">
               {currentSlideData.stakeholders?.map((stakeholder, idx) => (
                 <div key={idx} className="stakeholder-card">
-                  {/* <div className="stakeholder-icon">{stakeholder.icon || "🎯"}</div> */}
                   <div className="stakeholder-role">{stakeholder.role}</div>
                   <div className="stakeholder-focus">{stakeholder.focus}</div>
                 </div>
@@ -345,8 +347,13 @@ const StoryCarousel = () => {
       case "cta":
         return (
           <div className="slide-content cta-slide">
-            <h2 className="slide-title large">{currentSlideData.title}</h2>
-            <div className="quote-highlight">{currentSlideData.description}</div>
+            <h1 className="slide-title large">{currentSlideData.title}</h1>
+            <div className="content-wrapper">
+              <div className="history-stats">{currentSlideData.content}</div>
+              <button className="slide-button" onClick={() => { nextSlide(); pauseAutoPlay(); }}>
+                Get Started <span>→</span>
+              </button>
+            </div>
           </div>
         );
 
@@ -472,6 +479,26 @@ const StoryCarousel = () => {
           text-align: center;
           animation: fadeInUp 0.6s ease;
           background: transparent;
+        }
+
+        /* Content Wrapper - Forces block layout */
+        .content-wrapper {
+          display: block;
+          width: 100%;
+          text-align: center;
+          margin-top: 30px;
+        }
+
+        .content-wrapper .history-stats {
+          display: block;
+          margin: 0 auto 20px auto;
+          width: fit-content;
+        }
+
+        .content-wrapper .slide-button {
+          display: block;
+          margin: 0 auto;
+          width: fit-content;
         }
 
         @keyframes fadeInUp {
@@ -601,7 +628,6 @@ const StoryCarousel = () => {
         }
 
         .history-stats {
-          margin-top: 25px;
           padding: 12px 28px;
           background: linear-gradient(
             135deg,
@@ -614,7 +640,7 @@ const StoryCarousel = () => {
             #dbeafe
           ) !important;
           border-radius: 50px;
-          font-size: 0.85rem;
+          font-size: 0.9rem;
           display: inline-block;
           font-weight: 600;
           color: #1a2a3a !important;
@@ -801,7 +827,6 @@ const StoryCarousel = () => {
           border: none;
           border-radius: 60px;
           cursor: pointer;
-          margin-top: 20px;
           transition: all 0.3s ease;
           font-family: 'Neue Machina', 'Clash Grotesk', sans-serif;
           text-transform: uppercase;
@@ -963,6 +988,8 @@ const StoryCarousel = () => {
           .slide-subtitle { font-size: 1rem; }
           .slide-description { font-size: 0.9rem; }
           .quote-highlight { font-size: 1rem; padding: 10px 20px; }
+          .history-stats { font-size: 0.8rem; padding: 10px 20px; }
+          .slide-button { padding: 10px 28px; font-size: 0.9rem; }
         }
 
         @media (max-width: 576px) {
@@ -975,6 +1002,8 @@ const StoryCarousel = () => {
           .description-wrapper { padding: 8px 16px; }
           .slide-subtitle { font-size: 0.9rem; }
           .slide-description { font-size: 0.85rem; }
+          .history-stats { font-size: 0.7rem; padding: 8px 16px; }
+          .slide-button { padding: 8px 20px; font-size: 0.8rem; }
         }
       `}</style>
 
