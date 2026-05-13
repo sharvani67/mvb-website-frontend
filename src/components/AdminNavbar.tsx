@@ -209,9 +209,10 @@ import logo from '@/assets/logg.png';
 const navItems = [
   { path: '/', label: 'Home' },
   { path: '/contacts', label: 'Contact Submissions' },
-  { path: '/admin/blog', label: 'Admin Blog' },
-  { path: '/admin/careers', label: 'Admin Careers' },
-  { path: '/admin/applications', label: 'Admin Applications' },
+  { path: '/admin/blog', label: 'Blog' },
+  { path: '/admin/careers', label: ' Careers' },
+  { path: '/admin/applications', label: 'Job Applications' },
+  { path: '/admin/projects', label: 'Projects' },
 ];
 
 export default function AdminNavbar() {

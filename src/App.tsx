@@ -87,6 +87,7 @@ import AdminBlogManager from "./components/AdminBlogManager"; // 👈 IMPORT ADM
 import CareersPage from "./pages/CareersComingSoon";
 import AdminCareerManager from "./components/AdminCareerManager";
 import AdminApplications from "./components/AdminApplications";
+import AdminProjects from "./components/AdminProjects";
 
 const queryClient = new QueryClient();
 
@@ -142,6 +143,15 @@ const App = () => (
   element={
     <ProtectedRoute>
       <AdminApplications />
+    </ProtectedRoute>
+  }
+/>
+
+<Route
+  path="/admin/projects"
+  element={
+    <ProtectedRoute>
+      <AdminProjects />
     </ProtectedRoute>
   }
 />
