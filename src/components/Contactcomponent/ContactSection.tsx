@@ -644,10 +644,10 @@ export default function ContactSection() {
           <div className="h-full rounded-2xl bg-white/70 backdrop-blur-lg border p-8 shadow-lg flex flex-col justify-between">
             <div>
               <h3 className="text-2xl font-bold mb-4">Get in Touch 🚀</h3>
-              <p className="text-gray-600 mb-6">
-                We're here to help you grow your business with the best solutions.
-                Contact us anytime and our team will respond quickly.
-              </p>
+            <p className="text-gray-600 mb-6">
+  We're Here To Help You Grow Your Business With The Best Solutions.
+  Contact Us Anytime And Our Team Will Respond Quickly.
+        </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="text-pink-500" />
