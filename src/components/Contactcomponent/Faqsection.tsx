@@ -55,19 +55,19 @@ import { Plus, ArrowRight } from "lucide-react";
 
 const faqs = [
   {
-    q: "Where is Head office Located?",
+    q: "Where Is Head Office Located?",
     a: "We are HQ is Bangalore and our services are available in Bangalore, Hyderabad, Chennai and Mumbai.",
   },
   {
-    q: "Why should we look at MV?",
+    q: "Why Should We Look At MV?",
     a: "We are client centric for innovative, needed and adaptive technologies. We focus on understanding your business needs with Experienced, skilled & Certified team. Project Management for quality & timely deliveries. ",
   },
   {
-    q: "Do you provide consultancy, design and integration?",
+    q: "Do You Provide Consultancy, Design And Integration?",
     a: "Yes, we provide all services including Data Cabling/ICT, Networks, Security & Complete IT Infrastructure.",
   },
   {
-    q: "What is your standard response time?",
+    q: "What Is Your Standard Response Time?",
     a: "We offer Next Business Day services. Same-day support is available via remote & telephonic assistance.",
   },
 ];
@@ -99,7 +99,7 @@ export default function Faqsection() {
           </h1>
 
           <p className="text-gray-500 mt-4">
-            Quick answers to common questions about our services
+            Quick Answers To Common Questions About Our Services
           </p>
         </div>
 
@@ -154,7 +154,7 @@ export default function Faqsection() {
   >
     {/* Left Text */}
     <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent font-medium">
-      Still have questions?
+      Still Have Questions?
     </span>
 
     {/* Arrow Circle */}

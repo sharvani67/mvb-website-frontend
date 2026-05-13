@@ -34,15 +34,15 @@ export default function ContactHero() {
             </h1>
 
             <p className="text-xl text-white/90 leading-relaxed">
-              Ready to transform your IT infrastructure? Get in touch.
+              Ready To Transform Your IT Infrastructure? Get In Touch.
             </p>
             
             <br></br>
 
                <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
-         Let us tailor a service package that meets your needs.
-              Tell us a little about your business, and we will get back to you
-              with some ideas as soon as possible. 
+         Let Us Tailor a Service Package That Meets Your Needs.
+              Tell Us a Little About Your Business, And We Will Get Back To You
+              With Some Ideas As Soon As Possible. 
           </p>
           </div>
         </SectionWrapper>
