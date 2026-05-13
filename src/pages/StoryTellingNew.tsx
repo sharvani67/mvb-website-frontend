@@ -350,9 +350,9 @@ const StoryCarousel = () => {
             <h1 className="slide-title large">{currentSlideData.title}</h1>
             <div className="content-wrapper">
               <div className="history-stats">{currentSlideData.content}</div>
-              <button className="slide-button" onClick={() => { nextSlide(); pauseAutoPlay(); }}>
+              {/* <button className="slide-button" onClick={() => { nextSlide(); pauseAutoPlay(); }}>
                 Get Started <span>→</span>
-              </button>
+              </button> */}
             </div>
           </div>
         );
