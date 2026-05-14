@@ -868,18 +868,18 @@ const CareersPage = () => {
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
               <Input
                 type="text"
-                placeholder="Search jobs by title, department, or description..."
+                placeholder="Search jobs by title, department, or description... "
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10 w-full"
               />
             </div>
             <div className="relative">
-              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" />
+              <Filter className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400 " />
               <select
                 value={selectedDepartment}
                 onChange={(e) => setSelectedDepartment(e.target.value)}
-                className="pl-10 pr-8 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent appearance-none bg-white"
+                className="pl-10 pr-8 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent appearance-none bg-white "
               >
                 {departments.map((dept) => (
                   <option key={dept} value={dept}>{dept}</option>
@@ -902,7 +902,7 @@ const CareersPage = () => {
                   <div className="bg-gradient-to-r from-yellow-500 to-orange-500 h-2"></div>
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-3">
-                      <h3 className="text-xl font-bold text-gray-800">{job.title}</h3>
+                      <h3 className="text-xl font-bold text-gray-800 capitalize">{job.title}</h3>
                       <span className="px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-xs font-semibold">
                         Featured
                       </span>
@@ -927,7 +927,7 @@ const CareersPage = () => {
                         </div>
                       )}
                     </div>
-                    <p className="text-gray-600 mb-4 line-clamp-2">{job.description.replace(/<[^>]*>/g, '')}</p>
+                    <p className="text-gray-600 mb-4 line-clamp-2 capitalize">{job.description.replace(/<[^>]*>/g, '')}</p>
                     <Button 
                       onClick={() => openApplyForm(job)}
                       className="w-full bg-gradient-to-r from-pink-600 to-blue-600 hover:from-pink-700 hover:to-blue-700"
@@ -947,13 +947,13 @@ const CareersPage = () => {
             <h2 className="text-2xl font-bold text-gray-800">
               {selectedDepartment === "All" ? "All Openings" : `${selectedDepartment} Positions`}
             </h2>
-            <span className="text-sm text-gray-500">{jobs.length} positions</span>
+            <span className="text-sm text-gray-500 ">{jobs.length} positions</span>
           </div>
 
           {jobs.length === 0 ? (
             <div className="text-center py-12 bg-white rounded-2xl">
               <Briefcase className="h-16 w-16 text-gray-300 mx-auto mb-4" />
-              <p className="text-gray-500">No job openings found. Check back later!</p>
+              <p className="text-gray-500 capitalize">No job openings found. Check back later!</p>
             </div>
           ) : (
             <div className="grid gap-6">
@@ -968,19 +968,19 @@ const CareersPage = () => {
                   <div className="p-6">
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-gray-800 mb-2">{job.title}</h3>
+                        <h3 className="text-xl font-bold text-gray-800 mb-2 capitalize">{job.title}</h3>
                         <div className="flex flex-wrap gap-3">
                           <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs">
-                            <Briefcase className="h-3 w-3" /> {job.department}
+                            <Briefcase className="h-3 w-3 capitalize"/> {job.department}
                           </span>
                           <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs">
-                            <MapPin className="h-3 w-3" /> {job.location}
+                            <MapPin className="h-3 w-3 " /> {job.location}
                           </span>
                           <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs">
-                            <Clock className="h-3 w-3" /> {job.type}
+                            <Clock className="h-3 w-3 capitalize" /> {job.type}
                           </span>
                           <span className="inline-flex items-center gap-1 px-2 py-1 bg-gray-100 text-gray-700 rounded-md text-xs">
-                            <GraduationCap className="h-3 w-3" /> {job.experience}
+                            <GraduationCap className="h-3 w-3 capitalize" /> {job.experience}
                           </span>
                         </div>
                       </div>
@@ -992,11 +992,11 @@ const CareersPage = () => {
                       </Button>
                     </div>
                     
-                    <p className="text-gray-600 mb-4">{job.description.replace(/<[^>]*>/g, '').substring(0, 200)}...</p>
+                    <p className="text-gray-600 mb-4 capitalize">{job.description.replace(/<[^>]*>/g, '').substring(0, 200)}...</p>
                     
                     <button 
                       onClick={() => setSelectedJob(job)}
-                      className="text-pink-600 hover:text-pink-700 text-sm font-medium"
+                      className="text-pink-600 hover:text-pink-700 text-sm font-medium capitalize"
                     >
                       View Full Details →
                     </button>
@@ -1013,7 +1013,7 @@ const CareersPage = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4 overflow-y-auto">
           <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
-              <h2 className="text-2xl font-bold text-gray-800">{selectedJob.title}</h2>
+              <h2 className="text-2xl font-bold text-gray-800 capitalize">{selectedJob.title}</h2>
               <button
                 onClick={() => setSelectedJob(null)}
                 className="text-gray-500 hover:text-gray-700"
@@ -1025,16 +1025,16 @@ const CareersPage = () => {
             <div className="p-6">
               <div className="flex flex-wrap gap-3 mb-6 pb-4 border-b">
                 <span className="inline-flex items-center gap-1 px-3 py-1 bg-pink-100 text-pink-700 rounded-full text-sm">
-                  <Briefcase className="h-4 w-4" /> {selectedJob.department}
+                  <Briefcase className="h-4 w-4 capitalize" /> {selectedJob.department}
                 </span>
                 <span className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
                   <MapPin className="h-4 w-4" /> {selectedJob.location}
                 </span>
                 <span className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                  <Clock className="h-4 w-4" /> {selectedJob.type}
+                  <Clock className="h-4 w-4 capitalize" /> {selectedJob.type}
                 </span>
                 <span className="inline-flex items-center gap-1 px-3 py-1 bg-gray-100 text-gray-700 rounded-full text-sm">
-                  <GraduationCap className="h-4 w-4" /> {selectedJob.experience}
+                  <GraduationCap className="h-4 w-4 capitalize" /> {selectedJob.experience}
                 </span>
                 {selectedJob.salary_range && (
                   <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
@@ -1045,24 +1045,24 @@ const CareersPage = () => {
               
               <div className="space-y-6">
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">About the Role</h3>
-                  <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.description }} />
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">About the Role</h3>
+                  <div className="text-gray-600 leading-relaxed capitalize" dangerouslySetInnerHTML={{ __html: selectedJob.description }} />
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Key Responsibilities</h3>
-                  <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.responsibilities }} />
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">Key Responsibilities</h3>
+                  <div className="text-gray-600 leading-relaxed capitalize" dangerouslySetInnerHTML={{ __html: selectedJob.responsibilities }} />
                 </div>
                 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-800 mb-3">Requirements</h3>
-                  <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.requirements }} />
+                  <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">Requirements</h3>
+                  <div className="text-gray-600 leading-relaxed capitalize" dangerouslySetInnerHTML={{ __html: selectedJob.requirements }} />
                 </div>
                 
                 {selectedJob.benefits && (
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-800 mb-3">Benefits & Perks</h3>
-                    <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.benefits }} />
+                    <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">Benefits & Perks</h3>
+                    <div className="text-gray-600 leading-relaxed capitalize" dangerouslySetInnerHTML={{ __html: selectedJob.benefits }} />
                   </div>
                 )}
               </div>
@@ -1070,7 +1070,7 @@ const CareersPage = () => {
               <div className="mt-8 pt-6 border-t flex gap-3">
                 <Button 
                   onClick={() => openApplyForm(selectedJob)}
-                  className="flex-1 bg-gradient-to-r from-pink-600 to-blue-600 hover:from-pink-700 hover:to-blue-700"
+                  className="flex-1 bg-gradient-to-r from-pink-600 to-blue-600 hover:from-pink-700 hover:to-blue-700 capitalize"
                 >
                   Apply for this Position
                 </Button>
@@ -1092,8 +1092,8 @@ const CareersPage = () => {
           <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
             <div className="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center">
               <div>
-                <h2 className="text-2xl font-bold text-gray-800">Apply for {selectedJob.title}</h2>
-                <p className="text-sm text-gray-500 mt-1">{selectedJob.department} • {selectedJob.location}</p>
+                <h2 className="text-2xl font-bold text-gray-800 capitalize">Apply for {selectedJob.title}</h2>
+                <p className="text-sm text-gray-500 mt-1 capitalize">{selectedJob.department} • {selectedJob.location}</p>
               </div>
               <button
                 onClick={() => {
@@ -1110,7 +1110,7 @@ const CareersPage = () => {
               <div className="p-12 text-center">
                 <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">Application Submitted!</h3>
-                <p className="text-gray-600">Thank you for applying. We'll review your application and get back to you soon.</p>
+                <p className="text-gray-600 capitalize">Thank you for applying. We'll review your application and get back to you soon.</p>
               </div>
             ) : (
               <form onSubmit={submitApplication} className="p-6 space-y-4">
