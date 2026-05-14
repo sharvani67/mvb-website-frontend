@@ -786,7 +786,7 @@ const SolutionsPage: React.FC = () => {
           </h1>
 
           {/* Description */}
-          <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
+          <p className="text-lg md:text-xl text-black/90 max-w-3xl mx-auto mb-8 leading-relaxed">
             Bringing Multiple IT Infrastructure Needs Together Into Efficient, Deliverable & Simplified Solutions 
           </p>
 

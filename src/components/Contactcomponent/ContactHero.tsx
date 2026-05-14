@@ -33,13 +33,13 @@ export default function ContactHero() {
               </span>
             </h1>
 
-            <p className="text-xl text-white/90 leading-relaxed">
+            <p className="text-xl text-black/90 leading-relaxed">
               Ready To Transform Your IT Infrastructure? Get In Touch.
             </p>
             
             <br></br>
 
-               <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto mb-8 leading-relaxed">
+               <p className="text-lg md:text-xl text-black/90 max-w-3xl mx-auto mb-8 leading-relaxed">
          Let Us Tailor a Service Package That Meets Your Needs.
               Tell Us a Little About Your Business, And We Will Get Back To You
               With Some Ideas As Soon As Possible. 
