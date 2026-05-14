@@ -1539,11 +1539,9 @@ interface Project {
   description: string;
   solution?: string;
   approach?: string;
+  client_expectation?: string;
   icon: string;
   gradient: string;
-  image: string | null;
-  client?: string;
-  location?: string;
   created_at: string;
 }
 
@@ -1554,7 +1552,6 @@ const ProjectsPage: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("All");
-  const [imageErrors, setImageErrors] = useState<Record<number, boolean>>({});
 
   useEffect(() => {
     fetchProjects();
@@ -1567,7 +1564,6 @@ const ProjectsPage: React.FC = () => {
       console.log("Full API Response:", response.data);
       if (response.data.success) {
         console.log("Projects Data:", response.data.data);
-        // Log each project's solution and approach
         response.data.data.forEach((project: any) => {
           console.log(`Project: ${project.title}`, {
             solution: project.solution,
@@ -1601,17 +1597,6 @@ const ProjectsPage: React.FC = () => {
         contactFormElement.scrollIntoView({ behavior: 'smooth' });
       }
     }, 100);
-  };
-
-  const handleImageError = (projectId: number) => {
-    setImageErrors(prev => ({ ...prev, [projectId]: true }));
-  };
-
-  const getImageUrl = (imagePath: string | null) => {
-    if (!imagePath) return null;
-    let cleanPath = imagePath.replace(/^\/api/, '');
-    if (!cleanPath.startsWith('/')) cleanPath = '/' + cleanPath;
-    return `${API_BASE_URL}${cleanPath}`;
   };
 
   if (loading) {
@@ -1721,25 +1706,6 @@ const ProjectsPage: React.FC = () => {
               >
                 <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
                 
-                {/* Image Section with Fallback */}
-                <div className="h-48 overflow-hidden bg-gray-100">
-                  {project.image && !imageErrors[project.id] ? (
-                    <img 
-                      src={getImageUrl(project.image)} 
-                      alt={project.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      onError={() => handleImageError(project.id)}
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-100 to-gray-200">
-                      <div className="text-center">
-                        <div className="text-5xl mb-2">{project.icon}</div>
-                        <p className="text-gray-400 text-sm">No image available</p>
-                      </div>
-                    </div>
-                  )}
-                </div>
-                
                 <div className="p-6 flex flex-col flex-grow">
                   <div className="flex justify-between items-start mb-4">
                     <div className="text-5xl">{project.icon}</div>
@@ -1749,40 +1715,26 @@ const ProjectsPage: React.FC = () => {
                   </div>
                   
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                  <p  className="text-gray-600 leading-relaxed flex-grow line-clamp-3 capitalize">
+                  <p className="text-gray-600 leading-relaxed flex-grow line-clamp-3 capitalize">
                     {project.description}
                   </p>
                   
-                  {/* Optional: Show client and location if available */}
-                  {(project.client || project.location) && (
-                    <div className="mt-3 pt-3 border-t border-gray-100">
-                      {project.client && (
-                        <p className="text-xs text-gray-500">
-                          <span className="font-medium">Client:</span> {project.client}
-                        </p>
-                      )}
-                      {project.location && (
-                        <p className="text-xs text-gray-500 mt-1">
-                          <span className="font-medium">Location:</span> {project.location}
-                        </p>
-                      )}
-                    </div>
-                  )}
-                  
-                  <button
-                    onClick={() => navigate('/viewdetailspage', { 
-                      state: { 
-                        project: {
-                          ...project,
-                          solution: project.solution,
-                          approach: project.approach
-                        }
-                      } 
-                    })}
-                    className="mt-5 w-full py-2 text-center text-blue-600 font-medium rounded-lg border border-blue-200 hover:bg-gradient-to-r hover:from-pink-600 hover:via-yellow-400 hover:to-blue-600 hover:text-white hover:border-transparent transition-all duration-300"
-                  >
-                    View Details →
-                  </button>
+                 
+<button
+  onClick={() => navigate('/viewdetailspage', { 
+    state: { 
+      project: {
+        ...project,
+        client_expectation: project.client_expectation,
+        solution: project.solution,
+        approach: project.approach
+      }
+    } 
+  })}
+  className="mt-5 w-full py-2 text-center text-blue-600 font-medium rounded-lg border border-blue-200 hover:bg-gradient-to-r hover:from-pink-600 hover:via-yellow-400 hover:to-blue-600 hover:text-white hover:border-transparent transition-all duration-300"
+>
+  View Details →
+</button>
                 </div>
               </div>
             ))}
