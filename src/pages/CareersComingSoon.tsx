@@ -836,12 +836,13 @@ const CareersPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-2xl mx-auto text-lg md:text-xl text-white/90 mb-10"
+            className="max-w-2xl mx-auto text-lg md:text-xl text-black/90 mb-10"
           >
             Join Our Team Of Innovators, Engineers, And Technology Experts
             Building Next-Generation Infrastructure Solutions For Modern
             Enterprises.
           </motion.p>
+       
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}

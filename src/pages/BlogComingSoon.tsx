@@ -1590,9 +1590,9 @@ const BlogComingSoon = () => {
         {/* Description */}
         <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-10">
           Expert Insights, Industry Trends, And Practical Guidance From The Frontlines Of
-          <span className="text-yellow-200 font-semibold"> IT Infrastructure</span>,
-          <span className="text-pink-200 font-semibold"> Security</span>, And
-          <span className="text-blue-200 font-semibold"> Innovation</span>.
+          <span className="text-yellow-400 font-semibold"> IT Infrastructure</span>,
+          <span className="text-pink-600 font-semibold"> Security</span>, And
+          <span className="text-blue-600 font-semibold"> Innovation</span>.
         </p>
 
   
