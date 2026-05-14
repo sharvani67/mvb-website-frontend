@@ -600,6 +600,8 @@ import { Input } from "@/components/ui/input";
 import axios from "axios";
 import BASE_URL from "@/Config/Api";
 import SectionWrapper from "@/components/SectionWrapper";
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 interface Job {
   id: number;
@@ -766,6 +768,13 @@ const CareersPage = () => {
     }
   };
 
+  const openingsRef = useRef(null);
+  
+    const scrollToOpenings = () => {
+      openingsRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+  
+
   const featuredJobs = jobs.filter(job => job.featured);
   const regularJobs = jobs.filter(job => !job.featured);
 
@@ -794,68 +803,59 @@ const CareersPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-pink-50 via-yellow-50 to-blue-50">
+    <div className="min-h-screen ">
       {/* Hero Section - Matching BlogHeroSection Style */}
-      <section className="relative pt-36 pb-24 overflow-hidden">
-        {/* Footer Matching Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-200 via-yellow-100 to-blue-200" />
+    <section className="relative min-h-[70vh] flex items-center justify-center text-white overflow-hidden">
+        {/* Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=2070&q=80')",
+          }}
+        />
 
-        {/* Glow Effects */}
-        <div className="absolute top-0 left-0 w-[450px] h-[450px] bg-pink-500/20 blur-3xl rounded-full" />
-        <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-blue-500/20 blur-3xl rounded-full" />
-
-        {/* Top Gradient Line */}
-        <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500" />
+        {/* Bright Gradient Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-pink-600/80 via-yellow-400/70 to-blue-600/80" />
 
         {/* Content */}
-        <div className="container mx-auto px-4 lg:px-8 relative z-10">
-          <SectionWrapper>
-            <div className="max-w-5xl mx-auto text-center">
-              {/* Badge */}
-              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/70 border border-white shadow-lg backdrop-blur-md mb-8">
-                <Briefcase size={16} className="text-pink-600" />
-                <span className="text-xs uppercase tracking-[0.25em] text-gray-800 font-bold">
-                  Career Opportunities
-                </span>
-              </div>
+        <div className="relative max-w-7xl mx-auto px-6 text-center z-10">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6"
+          >
+            Build Your Career
+            <span className="block bg-gradient-to-r from-yellow-600 to-pink-600 bg-clip-text text-transparent">
+              With Us
+            </span>
+          </motion.h1>
 
-              {/* Heading */}
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 leading-tight mb-8">
-                Join Our{" "}
-                <span className="bg-gradient-to-r from-pink-600 via-yellow-500 to-blue-600 bg-clip-text text-transparent">
-                  Dream Team
-                </span>
-                <br />
-                Build Your Future
-              </h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="max-w-2xl mx-auto text-lg md:text-xl text-white/90 mb-10"
+          >
+            Join Our Team Of Innovators, Engineers, And Technology Experts
+            Building Next-Generation Infrastructure Solutions For Modern
+            Enterprises.
+          </motion.p>
 
-              {/* Description */}
-              <p className="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-12 font-medium">
-                Discover exciting career opportunities in
-                <span className="text-yellow-600 font-bold"> IT infrastructure</span>,
-                <span className="text-pink-600 font-bold"> network cabling</span>,
-                <span className="text-blue-600 font-bold"> AI/ML</span>, and
-                <span className="text-green-600 font-bold"> data center solutions</span>.
-              </p>
-
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-5">
-                <button 
-                  onClick={() => document.getElementById('jobs-section')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="px-8 py-4 rounded-2xl bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 text-white font-bold hover:scale-105 transition-all duration-300 shadow-2xl flex items-center gap-2"
-                >
-                  Explore Opportunities
-                  <ArrowRight size={18} />
-                </button>
-                <button 
-                  onClick={() => window.location.href = "/contact"}
-                  className="px-8 py-4 rounded-2xl bg-white/70 backdrop-blur-md text-gray-800 font-semibold border border-white shadow-lg hover:bg-white transition-all duration-300"
-                >
-                  Contact Recruiter
-                </button>
-              </div>
-            </div>
-          </SectionWrapper>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <button
+              onClick={scrollToOpenings}
+              className="inline-flex items-center gap-2 bg-white text-pink-600 px-8 py-3 rounded-lg font-medium hover:scale-105 transition shadow-lg group cursor-pointer"
+            >
+              View Open Positions
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </button>
+          </motion.div>
         </div>
       </section>
 

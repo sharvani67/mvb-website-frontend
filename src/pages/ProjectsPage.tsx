@@ -1749,7 +1749,7 @@ const ProjectsPage: React.FC = () => {
                   </div>
                   
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
-                  <p className="text-gray-600 leading-relaxed flex-grow line-clamp-3">
+                  <p  className="text-gray-600 leading-relaxed flex-grow line-clamp-3 capitalize">
                     {project.description}
                   </p>
                   

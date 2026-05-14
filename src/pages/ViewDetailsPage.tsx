@@ -568,7 +568,7 @@ const ViewDetailsPage: React.FC = () => {
               <h3 className="text-lg font-semibold text-blue-600 mb-3 flex items-center gap-2">
                 <span>🎯</span> Client Expectation
               </h3>
-              <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg">
+              <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg capitalize">
                 {clientExpectations}
               </p>
             </div>
@@ -578,7 +578,7 @@ const ViewDetailsPage: React.FC = () => {
               <h3 className="text-lg font-semibold text-cyan-600 mb-3 flex items-center gap-2">
                 <span>💡</span> Solution Delivered
               </h3>
-              <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg">
+              <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg capitalize">
                 {solution}
               </p>
             </div>
@@ -588,13 +588,13 @@ const ViewDetailsPage: React.FC = () => {
               <h3 className="text-lg font-semibold text-indigo-600 mb-3 flex items-center gap-2">
                 <span>⚙️</span> Our Approach
               </h3>
-              <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg">
+              <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg capitalize">
                 {approach}
               </p>
             </div>
 
             {/* Client & Location Info */}
-            {(project.client || project.location) && (
+            {/* {(project.client || project.location) && (
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 bg-gray-50 rounded-lg mt-4">
                 {project.client && (
                   <div>
@@ -609,10 +609,10 @@ const ViewDetailsPage: React.FC = () => {
                   </div>
                 )}
               </div>
-            )}
+            )} */}
 
             {/* Created Date */}
-            {project.created_at && (
+            {/* {project.created_at && (
               <div className="pt-4 border-t border-gray-200">
                 <div className="flex items-center gap-2 text-sm text-gray-500">
                   <span>📅 Project Completed:</span>
@@ -623,7 +623,7 @@ const ViewDetailsPage: React.FC = () => {
                   })}</span>
                 </div>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </div>

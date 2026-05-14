@@ -1542,9 +1542,65 @@ const BlogComingSoon = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50">
+    <div className="min-h-screen ">
       {/* Hero Section - IMPROVED TEXT VISIBILITY */}
-    <BlogHeroSection />
+    {/* <BlogHeroSection /> */}
+
+    <section className="relative pt-32 pb-20 overflow-hidden mt-4">
+
+  {/* Background Image */}
+  <div className="absolute inset-0 -z-10">
+    <img
+      src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+      alt="Infrastructure Background"
+      className="w-full h-full object-cover"
+    />
+
+    {/* Bright Gradient Overlay (UPDATED) */}
+    <div className="absolute inset-0 bg-gradient-to-r from-pink-600/80 via-yellow-400/70 to-blue-600/80"></div>
+  </div>
+
+  <NetworkBackground />
+
+  {/* Animated blobs (match gradient theme) */}
+  <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-pink-500/20 blur-[120px] animate-mesh-float" />
+  <div
+    className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-blue-500/20 blur-[120px] animate-mesh-float"
+    style={{ animationDelay: "3s" }}
+  />
+
+  <div className="container mx-auto px-4 lg:px-8 relative z-10">
+    <SectionWrapper>
+      <div className="max-w-4xl mx-auto text-center">
+
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 mb-8 backdrop-blur-md">
+          <TrendingUp size={16} className="text-white" />
+          <span className="text-xs uppercase tracking-widest text-white font-semibold">
+            Insights & Perspectives
+          </span>
+        </div>
+
+        {/* Heading */}
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95]">
+          Where <span className="text-yellow-300">Infrastructure</span><br />
+          Meets Intelligence
+        </h1>
+
+        {/* Description */}
+        <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-10">
+          Expert Insights, Industry Trends, And Practical Guidance From The Frontlines Of
+          <span className="text-yellow-200 font-semibold"> IT Infrastructure</span>,
+          <span className="text-pink-200 font-semibold"> Security</span>, And
+          <span className="text-blue-200 font-semibold"> Innovation</span>.
+        </p>
+
+  
+
+      </div>
+    </SectionWrapper>
+  </div>
+</section>
 
       {/* Search and Filter Section */}
       <div className="max-w-6xl mx-auto px-4 py-8">
@@ -1610,10 +1666,10 @@ const BlogComingSoon = () => {
                       </span>
                       <span className="text-xs text-gray-400">{new Date(post.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors line-clamp-2">
+                    <h3 className="text-xl font-bold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors line-clamp-2 capitalize">
                       {post.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 line-clamp-3">{post.excerpt}</p>
+                    </h3> 
+                    <p className="text-gray-600 mb-4 line-clamp-3 capitalize">{post.excerpt}</p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2 text-sm text-gray-500">
                         <User className="h-4 w-4" />
@@ -1684,7 +1740,7 @@ const BlogComingSoon = () => {
                     <h3 className="text-lg font-bold text-gray-800 mb-2 group-hover:text-pink-600 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">{post.excerpt}</p>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2 capitalize">{post.excerpt}</p>
                     <div className="flex items-center justify-between text-xs text-gray-400">
                       <div className="flex items-center gap-1">
                         <User className="h-3 w-3" />
@@ -1744,7 +1800,7 @@ const BlogComingSoon = () => {
           >
             <div className="sticky top-0 bg-white border-b px-6 py-4 flex justify-between items-center z-10">
               <div className="flex items-center gap-2">
-                <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${selectedPost.category_color} text-white`}>
+                <span className={`inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-gradient-to-r ${selectedPost.category_color} text-white capitalize`}>
                   {iconMap[selectedPost.icon_name] || <Database className="h-4 w-4" />}
                   <span>{selectedPost.category}</span>
                 </span>
@@ -1780,17 +1836,17 @@ const BlogComingSoon = () => {
               </h2>
               
               <div className="flex items-center gap-4 mb-6 pb-4 border-b">
-                <div className="flex items-center gap-2 text-sm text-gray-500">
+                <div className="flex items-center gap-2 text-sm text-gray-500 capitalize">
                   <User className="h-4 w-4" />
-                  <span>{selectedPost.author}</span>
+                  <span className="capitalize">{selectedPost.author}</span>
                 </div>
-                <div className="flex items-center gap-2 text-sm text-gray-500">
+                <div className="flex items-center gap-2 text-sm text-gray-500 capitalize">
                   <Clock className="h-4 w-4" />
-                  <span>{selectedPost.read_time}</span>
+                  <span className="capitalize">{selectedPost.read_time}</span>
                 </div>
               </div>
               
-              <div className="prose prose-pink max-w-none">
+              <div className="prose prose-pink max-w-none capitalize">
                 <div dangerouslySetInnerHTML={{ __html: selectedPost.content }} />
               </div>
               
