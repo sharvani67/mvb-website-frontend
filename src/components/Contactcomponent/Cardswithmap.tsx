@@ -137,14 +137,14 @@ const contactMethods = [
   {
     label: "Call Us",
     value: "+91 96865 21214",
-    desc: "Monday - Saturday: 9am - 5pm | Sunday: Closed",
+    desc: "Monday - Saturday: 9AM - 6PM | Sunday: Closed",
     icon: Phone,
     color: "#22C55E", // green
   },
   {
     label: "Working Hours",
     value: "Open Today",
-    desc: "09:00 am – 05:00 pm",
+    desc: "09:00 AM – 06:00 PM  ",
     icon: Clock,
     color: "#C026D3", // magenta
   },
