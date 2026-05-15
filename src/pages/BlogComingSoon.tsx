@@ -1340,6 +1340,7 @@
 
 // BlogComingSoon.tsx
 // BlogComingSoon.tsx
+// BlogComingSoon.tsx
 import React, { useState, useEffect } from "react";
 import { 
   Clock, Mail, Bell, Calendar, Sparkles, 
@@ -1353,7 +1354,6 @@ import axios from "axios";
 import BASE_URL from "@/Config/Api";
 import NetworkBackground from "@/components/NetworkBackground";
 import SectionWrapper from "@/components/SectionWrapper";
-import BlogHeroSection from "./BlogHeroSection";
 
 // Define types
 interface BlogPost {
@@ -1434,7 +1434,9 @@ const BlogComingSoon = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(`${API_URL}/categories`);
-      setCategories(["All", ...response.data]);
+      // Filter out any "All" from the API response and add "All" only once
+      const apiCategories = response.data.filter((cat: string) => cat !== "All");
+      setCategories(["All", ...apiCategories]);
     } catch (err) {
       console.error("Error fetching categories:", err);
     }
@@ -1543,64 +1545,56 @@ const BlogComingSoon = () => {
 
   return (
     <div className="min-h-screen ">
-      {/* Hero Section - IMPROVED TEXT VISIBILITY */}
-    {/* <BlogHeroSection /> */}
-
-    <section className="relative pt-32 pb-20 overflow-hidden mt-4">
-
-  {/* Background Image */}
-  <div className="absolute inset-0 -z-10">
-    <img
-      src="https://images.unsplash.com/photo-1518770660439-4636190af475"
-      alt="Infrastructure Background"
-      className="w-full h-full object-cover"
-    />
-
-    {/* Bright Gradient Overlay (UPDATED) */}
-    <div className="absolute inset-0 bg-gradient-to-r from-pink-600/80 via-yellow-400/70 to-blue-600/80"></div>
-  </div>
-
-  <NetworkBackground />
-
-  {/* Animated blobs (match gradient theme) */}
-  <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-pink-500/20 blur-[120px] animate-mesh-float" />
-  <div
-    className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-blue-500/20 blur-[120px] animate-mesh-float"
-    style={{ animationDelay: "3s" }}
-  />
-
-  <div className="container mx-auto px-4 lg:px-8 relative z-10">
-    <SectionWrapper>
-      <div className="max-w-4xl mx-auto text-center">
-
-        {/* Badge */}
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 mb-8 backdrop-blur-md">
-          <TrendingUp size={16} className="text-white" />
-          <span className="text-xs uppercase tracking-widest text-white font-semibold">
-            Insights & Perspectives
-          </span>
+      {/* Hero Section */}
+      <section className="relative pt-32 pb-20 overflow-hidden mt-4">
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src="https://images.unsplash.com/photo-1518770660439-4636190af475"
+            alt="Infrastructure Background"
+            className="w-full h-full object-cover"
+          />
+          {/* Bright Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-pink-600/80 via-yellow-400/70 to-blue-600/80"></div>
         </div>
 
-        {/* Heading */}
-        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95]">
-          Where <span className="text-yellow-300">Infrastructure</span><br />
-          Meets Intelligence
-        </h1>
+        <NetworkBackground />
 
-        {/* Description */}
-        <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-10">
-          Expert Insights, Industry Trends, And Practical Guidance From The Frontlines Of
-          <span className="text-yellow-400 font-semibold"> IT Infrastructure</span>,
-          <span className="text-pink-600 font-semibold"> Security</span>, And
-          <span className="text-blue-600 font-semibold"> Innovation</span>.
-        </p>
+        {/* Animated blobs */}
+        <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full bg-pink-500/20 blur-[120px] animate-mesh-float" />
+        <div
+          className="absolute top-20 right-0 w-[500px] h-[500px] rounded-full bg-blue-500/20 blur-[120px] animate-mesh-float"
+          style={{ animationDelay: "3s" }}
+        />
 
-  
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <SectionWrapper>
+            <div className="max-w-4xl mx-auto text-center">
+              {/* Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 mb-8 backdrop-blur-md">
+                <TrendingUp size={16} className="text-white" />
+                <span className="text-xs uppercase tracking-widest text-white font-semibold">
+                  Insights & Perspectives
+                </span>
+              </div>
 
-      </div>
-    </SectionWrapper>
-  </div>
-</section>
+              {/* Heading */}
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-6 leading-[0.95]">
+                Where <span className="text-yellow-300">Infrastructure</span><br />
+                Meets Intelligence
+              </h1>
+
+              {/* Description */}
+              <p className="text-xl text-white/90 max-w-2xl mx-auto leading-relaxed mb-10">
+                Expert Insights, Industry Trends, And Practical Guidance From The Frontlines Of
+                <span className="text-yellow-400 font-semibold"> IT Infrastructure</span>,
+                <span className="text-pink-600 font-semibold"> Security</span>, And
+                <span className="text-blue-600 font-semibold"> Innovation</span>.
+              </p>
+            </div>
+          </SectionWrapper>
+        </div>
+      </section>
 
       {/* Search and Filter Section */}
       <div className="max-w-6xl mx-auto px-4 py-8">

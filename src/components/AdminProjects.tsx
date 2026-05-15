@@ -2082,24 +2082,20 @@ const AdminProjects: React.FC = () => {
           </div>
 
           {/* Stats Cards */}
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-6">
-            <div className="bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl p-4 text-white">
-              <p className="text-sm opacity-90">Total Projects</p>
-              <p className="text-2xl font-bold">{projects.length}</p>
-            </div>
-            <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl p-4 text-white">
-              <p className="text-sm opacity-90">Categories</p>
-              <p className="text-2xl font-bold">{new Set(projects.map(p => p.category)).size}</p>
-            </div>
-            <div className="bg-gradient-to-r from-blue-500 to-blue-600 rounded-xl p-4 text-white">
-              <p className="text-sm opacity-90">With Solutions</p>
-              <p className="text-2xl font-bold">{projects.filter(p => p.solution).length}</p>
-            </div>
-            <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-4 text-white">
-              <p className="text-sm opacity-90">Total</p>
-              <p className="text-2xl font-bold">{projects.length}</p>
-            </div>
-          </div>
+         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+  <div className="bg-gradient-to-r from-pink-500 to-pink-600 rounded-xl p-4 text-white">
+    <p className="text-sm opacity-90">Total Projects</p>
+    <p className="text-2xl font-bold">{projects.length}</p>
+  </div>
+  <div className="bg-gradient-to-r from-yellow-500 to-yellow-600 rounded-xl p-4 text-white">
+    <p className="text-sm opacity-90">Categories</p>
+    <p className="text-2xl font-bold">{new Set(projects.map(p => p.category)).size}</p>
+  </div>
+  <div className="bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl p-4 text-white">
+    <p className="text-sm opacity-90">Total Projects</p>
+    <p className="text-2xl font-bold">{projects.length}</p>
+  </div>
+</div>
 
           {/* Project Form Modal */}
           {showForm && (

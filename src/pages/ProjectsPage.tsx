@@ -1528,9 +1528,261 @@
 
 
 // ProjectsPage.tsx
+// import React, { useState, useEffect } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import axios from 'axios';
+
+// interface Project {
+//   id: number;
+//   title: string;
+//   category: string;
+//   description: string;
+//   solution?: string;
+//   approach?: string;
+//   client_expectation?: string;
+//   icon: string;
+//   gradient: string;
+//   created_at: string;
+// }
+
+// const API_BASE_URL = 'http://localhost:5000';
+
+// const ProjectsPage: React.FC = () => {
+//   const navigate = useNavigate();
+//   const [projects, setProjects] = useState<Project[]>([]);
+//   const [loading, setLoading] = useState(true);
+//   const [activeCategory, setActiveCategory] = useState("All");
+
+//   useEffect(() => {
+//     fetchProjects();
+//   }, []);
+
+//   const fetchProjects = async () => {
+//     try {
+//       setLoading(true);
+//       const response = await axios.get(`${API_BASE_URL}/api/projects`);
+//       console.log("Full API Response:", response.data);
+//       if (response.data.success) {
+//         console.log("Projects Data:", response.data.data);
+//         response.data.data.forEach((project: any) => {
+//           console.log(`Project: ${project.title}`, {
+//             solution: project.solution,
+//             approach: project.approach
+//           });
+//         });
+//         setProjects(response.data.data);
+//       } else if (Array.isArray(response.data)) {
+//         console.log("Array Projects Data:", response.data);
+//         setProjects(response.data);
+//       }
+//     } catch (error) {
+//       console.error("Error fetching projects:", error);
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   // Get unique categories from projects
+//   const categories = ["All", ...new Set(projects.map(p => p.category))];
+
+//   const filteredProjects = activeCategory === "All" 
+//     ? projects 
+//     : projects.filter(project => project.category === activeCategory);
+
+//   const scrollToContactForm = () => {
+//     navigate('/contact');
+//     setTimeout(() => {
+//       const contactFormElement = document.getElementById('contact-form');
+//       if (contactFormElement) {
+//         contactFormElement.scrollIntoView({ behavior: 'smooth' });
+//       }
+//     }, 100);
+//   };
+
+//   if (loading) {
+//     return (
+//       <div className="min-h-screen flex items-center justify-center">
+//         <div className="text-center">
+//           <div className="w-16 h-16 border-4 border-pink-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+//           <p className="text-gray-600">Loading projects...</p>
+//         </div>
+//       </div>
+//     );
+//   }
+
+//   return (
+//     <div className="min-h-screen bg-gray-50 mt-4">
+//       {/* Hero Section */}
+//       <section
+//         className="relative py-28 lg:py-36 overflow-hidden bg-cover bg-center bg-no-repeat"
+//         style={{
+//           backgroundImage:
+//             "url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=2232&auto=format&fit=crop')",
+//         }}
+//       >
+//         <div className="absolute inset-0 bg-gradient-to-r from-pink-600/85 via-yellow-400/80 to-blue-600/85"></div>
+        
+//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+//           <div className="max-w-4xl mx-auto text-center">
+//             <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 mb-6">
+//               <span className="text-sm font-semibold text-white tracking-wide">
+//                 🚀 Our Success Stories
+//               </span>
+//             </div>
+//             <h1 className="text-3xl sm:text-3xl lg:text-6xl font-black text-white mb-6 leading-tight">
+//               <span className="block mt-2 bg-clip-text text-transparent bg-gradient-to-r from-cyan-600 via-pink-600 to-yellow-600">
+//                 Client Success is Our Success
+//               </span>
+//             </h1>
+//             <p className="text-lg md:text-xl text-black/90 max-w-3xl mx-auto leading-relaxed">
+//               Well-Defined Systems, Process And Methodologies Ensuring Smooth Execution
+//             </p>
+//             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
+//               <button
+//                 onClick={scrollToContactForm}
+//                 className="px-8 py-3 bg-white text-blue-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer"
+//               >
+//                 Talk to Our Team →
+//               </button>
+//               <button
+//                 onClick={scrollToContactForm}
+//                 className="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-all duration-300 cursor-pointer"
+//               >
+//                 Start a Conversation
+//               </button>
+//             </div>
+//           </div>
+//         </div>
+//         <div className="absolute bottom-0 left-0 w-full h-20 bg-gray-50"></div>
+//       </section>
+
+//       {/* Projects Grid Section */}
+//       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+//         <div className="text-center mb-12">
+//           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+//             Featured <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent">Projects</span>
+//           </h2>
+//           <p className="text-gray-600 max-w-2xl mx-auto">
+//             Discover How We've Transformed Enterprise IT Infrastructure Across Industries
+//           </p>
+//         </div>
+
+//         {/* Category Filters */}
+//         {categories.length > 1 && (
+//           <div className="flex flex-wrap justify-center gap-3 mb-12">
+//             {categories.map((category) => (
+//               <button
+//                 key={category}
+//                 onClick={() => setActiveCategory(category)}
+//                 className={`px-5 py-2 rounded-full font-medium transition-all duration-300 ${
+//                   activeCategory === category
+//                     ? "bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 text-white shadow-lg"
+//                     : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+//                 }`}
+//               >
+//                 {activeCategory !== category && category !== "All" ? (
+//                   <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent">
+//                     {category}
+//                   </span>
+//                 ) : (
+//                   category
+//                 )}
+//               </button>
+//             ))}
+//           </div>
+//         )}
+
+//         {/* Projects Grid */}
+//         {filteredProjects.length === 0 ? (
+//           <div className="text-center py-12">
+//             <p className="text-gray-500">No projects found in this category.</p>
+//           </div>
+//         ) : (
+//           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+//             {filteredProjects.map((project) => (
+//               <div
+//                 key={project.id}
+//                 className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden transform hover:-translate-y-2 flex flex-col h-full"
+//               >
+//                 <div className={`h-2 bg-gradient-to-r ${project.gradient}`}></div>
+                
+//                 <div className="p-6 flex flex-col flex-grow">
+//                   <div className="flex justify-between items-start mb-4">
+//                     <div className="text-5xl">{project.icon}</div>
+//                     <span className="text-xs font-semibold px-3 py-1 rounded-full bg-gray-100 text-gray-600">
+//                       {project.category}
+//                     </span>
+//                   </div>
+                  
+//                   <h3 className="text-xl font-bold text-gray-900 mb-3">{project.title}</h3>
+//                   <p className="text-gray-600 leading-relaxed flex-grow line-clamp-3 capitalize">
+//                     {project.description}
+//                   </p>
+                  
+                 
+// <button
+//   onClick={() => navigate('/viewdetailspage', { 
+//     state: { 
+//       project: {
+//         ...project,
+//         client_expectation: project.client_expectation,
+//         solution: project.solution,
+//         approach: project.approach
+//       }
+//     } 
+//   })}
+//   className="mt-5 w-full py-2 text-center text-blue-600 font-medium rounded-lg border border-blue-200 hover:bg-gradient-to-r hover:from-pink-600 hover:via-yellow-400 hover:to-blue-600 hover:text-white hover:border-transparent transition-all duration-300"
+// >
+//   View Details →
+// </button>
+//                 </div>
+//               </div>
+//             ))}
+//           </div>
+//         )}
+
+//         <div className="text-center mt-12">
+//           <button
+//             onClick={scrollToContactForm}
+//             className="px-8 py-3 bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 text-white font-semibold rounded-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 cursor-pointer"
+//           >
+//             Start a Conversation ⭐
+//           </button>
+//         </div>
+//       </div>
+
+//       {/* CTA Section */}
+//       <div className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 py-16">
+//         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+//           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+//             Ready to Transform Your IT Infrastructure?
+//           </h2>
+//           <p className="text-white/90 max-w-2xl mx-auto mb-8">
+//             Join Leading Enterprises That Trust Us For Their Network, Security, And Data Center Solutions
+//           </p>
+//           <button
+//             onClick={scrollToContactForm}
+//             className="px-8 py-3 bg-white text-pink-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-lg cursor-pointer"
+//           >
+//             Start Your Journey →
+//           </button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ProjectsPage;
+
+
+
+
+
+// ProjectsPage.tsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import BASE_URL from '@/Config/Api';
 
 interface Project {
   id: number;
@@ -1545,13 +1797,14 @@ interface Project {
   created_at: string;
 }
 
-const API_BASE_URL = 'http://localhost:5000';
-
 const ProjectsPage: React.FC = () => {
   const navigate = useNavigate();
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [activeCategory, setActiveCategory] = useState("All");
+
+  // Use BASE_URL from config
+  const API_URL = `${BASE_URL}/api`;
 
   useEffect(() => {
     fetchProjects();
@@ -1560,7 +1813,7 @@ const ProjectsPage: React.FC = () => {
   const fetchProjects = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_BASE_URL}/api/projects`);
+      const response = await axios.get(`${API_URL}/projects`);
       console.log("Full API Response:", response.data);
       if (response.data.success) {
         console.log("Projects Data:", response.data.data);
@@ -1634,7 +1887,7 @@ const ProjectsPage: React.FC = () => {
                 Client Success is Our Success
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-black/90 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
               Well-Defined Systems, Process And Methodologies Ensuring Smooth Execution
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
@@ -1719,22 +1972,21 @@ const ProjectsPage: React.FC = () => {
                     {project.description}
                   </p>
                   
-                 
-<button
-  onClick={() => navigate('/viewdetailspage', { 
-    state: { 
-      project: {
-        ...project,
-        client_expectation: project.client_expectation,
-        solution: project.solution,
-        approach: project.approach
-      }
-    } 
-  })}
-  className="mt-5 w-full py-2 text-center text-blue-600 font-medium rounded-lg border border-blue-200 hover:bg-gradient-to-r hover:from-pink-600 hover:via-yellow-400 hover:to-blue-600 hover:text-white hover:border-transparent transition-all duration-300"
->
-  View Details →
-</button>
+                  <button
+                    onClick={() => navigate('/viewdetailspage', { 
+                      state: { 
+                        project: {
+                          ...project,
+                          client_expectation: project.client_expectation,
+                          solution: project.solution,
+                          approach: project.approach
+                        }
+                      } 
+                    })}
+                    className="mt-5 w-full py-2 text-center text-blue-600 font-medium rounded-lg border border-blue-200 hover:bg-gradient-to-r hover:from-pink-600 hover:via-yellow-400 hover:to-blue-600 hover:text-white hover:border-transparent transition-all duration-300"
+                  >
+                    View Details →
+                  </button>
                 </div>
               </div>
             ))}
