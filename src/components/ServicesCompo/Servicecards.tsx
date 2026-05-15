@@ -996,7 +996,7 @@ import { Button } from "@/components/ui/button";
 import dataInfraImage from '../../assets/Servicesimages/DataInfraimg.jpeg';
 import dataSecurityImage from '../../assets/Servicesimages/DataSecurityImage.webp';
 import physicalSecurityImage from '../../assets/Servicesimages/PhysicalSecurity.png';
-import dataCablingImage from '../../assets/Servicesimages/DataInfraimg.jpeg';
+import dataCablingImage from '../../assets/Servicesimages/datacabling.jpg';
 import aiImage from '../../assets/Servicesimages/AIimg.jpeg';
 import aiservice from '../../assets/Servicesimages/AI Image1.png';
 
