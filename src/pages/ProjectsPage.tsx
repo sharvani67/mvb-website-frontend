@@ -1887,7 +1887,7 @@ const ProjectsPage: React.FC = () => {
                 Client Success is Our Success
               </span>
             </h1>
-            <p className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg md:text-xl text-black/90 max-w-3xl mx-auto leading-relaxed">
               Well-Defined Systems, Process And Methodologies Ensuring Smooth Execution
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">

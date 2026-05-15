@@ -1320,7 +1320,7 @@ const AdminBlogManager = () => {
                 </div>
                 
                 <div className="mb-4">
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Excerpt *</label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Overview *</label>
                   <textarea
                     placeholder="Short description (will appear in blog cards)"
                     value={currentPost.excerpt}

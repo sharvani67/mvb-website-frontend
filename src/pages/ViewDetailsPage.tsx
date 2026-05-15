@@ -569,7 +569,7 @@ const ViewDetailsPage: React.FC = () => {
               <h3 className="text-lg font-semibold text-blue-600 mb-3 flex items-center gap-2">
                 <span>🎯</span> Client Expectation
               </h3>
-              <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg">
+              <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg capitalize">
                 {clientExpectations}
               </p>
             </div>
@@ -580,7 +580,7 @@ const ViewDetailsPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-cyan-600 mb-3 flex items-center gap-2">
                   <span>💡</span> Solution Delivered
                 </h3>
-                <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg">
+                <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg capitalize">
                   {solution}
                 </p>
               </div>
@@ -592,7 +592,7 @@ const ViewDetailsPage: React.FC = () => {
                 <h3 className="text-lg font-semibold text-indigo-600 mb-3 flex items-center gap-2">
                   <span>⚙️</span> Our Approach
                 </h3>
-                <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg">
+                <p className="text-gray-700 leading-relaxed bg-gray-50 p-4 rounded-lg capitalize">
                   {approach}
                 </p>
               </div>

@@ -1480,7 +1480,7 @@ const CareersPage = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="max-w-2xl mx-auto text-lg md:text-xl text-white/90 mb-10"
+            className="max-w-2xl mx-auto text-lg md:text-xl text-black/90 mb-10"
           >
             Join Our Team Of Innovators, Engineers, And Technology Experts
             Building Next-Generation Infrastructure Solutions For Modern
@@ -1570,7 +1570,7 @@ const CareersPage = () => {
                         </div>
                       )}
                     </div>
-                    <p className="text-gray-600 mb-4 line-clamp-3">
+                    <p className="text-gray-600 mb-4 line-clamp-3 capitalize">
                       {stripHtmlAndTruncate(job.description, 120)}
                     </p>
                     
@@ -1657,7 +1657,7 @@ const CareersPage = () => {
                       </div>
                     </div>
                     
-                    <p className="text-gray-600 mb-4 line-clamp-2">
+                    <p className="text-gray-600 mb-4 line-clamp-2 capitalize">
                       {stripHtmlAndTruncate(job.description, 150)}
                     </p>
                   </div>
@@ -1706,23 +1706,23 @@ const CareersPage = () => {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">About the Role</h3>
-                  <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.description }} />
+                  <div className=" capitalize text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.description }} />
                 </div>
                 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">Key Responsibilities</h3>
-                  <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.responsibilities }} />
+                  <div className=" capitalize text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.responsibilities }} />
                 </div>
                 
                 <div>
                   <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">Requirements</h3>
-                  <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.requirements }} />
+                  <div className=" capitalize text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.requirements }} />
                 </div>
                 
                 {selectedJob.benefits && (
                   <div>
                     <h3 className="text-lg font-semibold text-gray-800 mb-3 capitalize">Benefits & Perks</h3>
-                    <div className="text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.benefits }} />
+                    <div className=" capitalize text-gray-600 leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedJob.benefits }} />
                   </div>
                 )}
               </div>
