@@ -121,7 +121,7 @@
 
 
 import { useRef } from "react";
-import videoFile from "@/assets/newfinalpyramidvideo.mp4";
+import videoFile from "@/assets/finalpyramidvideo.mp4";
 
 export default function Pyramidvideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
