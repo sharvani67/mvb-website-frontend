@@ -451,8 +451,243 @@
 
 
 
+// import { useState } from "react";
+// import { Mail, Phone, MapPin, Send, CheckCircle, MessageSquare } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { Input } from "@/components/ui/input";
+// import { Textarea } from "@/components/ui/textarea";
+// import { Label } from "@/components/ui/label";
+// import BASE_URL from "@/Config/Api";
+// import axios from "axios";
+
+// export default function ContactSection() {
+//   const [submitted, setSubmitted] = useState(false);
+//   const [loading, setLoading] = useState(false);
+//   const [error, setError] = useState<string | null>(null);
+
+//   const [form, setForm] = useState({
+//     name: "",
+//     email: "",
+//     phone: "",
+//     company: "",
+//     subject: "",
+//     message: "",
+//   });
+
+//   const handleSubmit = async (e: React.FormEvent) => {
+//     e.preventDefault();
+//     setLoading(true);
+//     setError(null);
+
+//     try {
+//       // Save to database and send email to admin
+//       const response = await axios.post(`${BASE_URL}/api/contact/post`, form);
+      
+//       if (response.data.success || response.status === 201) {
+//         setSubmitted(true);
+//         setForm({
+//           name: "",
+//           email: "",
+//           phone: "",
+//           company: "",
+//           subject: "",
+//           message: "",
+//         });
+//       } else {
+//         setError("Something went wrong. Please try again.");
+//       }
+//     } catch (error: any) {
+//       console.error(error);
+//       setError(error.response?.data?.message || "Something went wrong. Please try again.");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   return (
+//     <section className="py-20 bg-gradient-to-r from-pink-50 via-yellow-50 to-blue-50">
+//       <div className="container mx-auto px-4 lg:px-8">
+//         <div className="grid lg:grid-cols-2 gap-8">
+//           {/* LEFT – FORM */}
+//           <div className="h-full rounded-2xl bg-white/70 backdrop-blur-lg border p-8 shadow-lg">
+//             {submitted ? (
+//               <div className="text-center py-16 flex flex-col justify-center h-full">
+//                 <div className="w-20 h-20 rounded-full bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 flex items-center justify-center mx-auto mb-6">
+//                   <CheckCircle size={40} className="text-white" />
+//                 </div>
+//                 <h3 className="text-2xl font-bold mb-4">Message Sent!</h3>
+//                 <p className="text-gray-600 mb-4">
+//                   Thank you for reaching out. Our team will get back to you soon!
+//                 </p>
+//                 <Button
+//                   variant="outline"
+//                   onClick={() => {
+//                     setSubmitted(false);
+//                     setForm({
+//                       name: "",
+//                       email: "",
+//                       phone: "",
+//                       company: "",
+//                       subject: "",
+//                       message: "",
+//                     });
+//                   }}
+//                 >
+//                   Send Another Message
+//                 </Button>
+//               </div>
+//             ) : (
+//               <form onSubmit={handleSubmit} className="space-y-5">
+//                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+//                   <MessageSquare size={22} className="text-pink-500" />
+//                   Send Us a Message
+//                 </h3>
+
+//                 {error && (
+//                   <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg text-sm">
+//                     {error}
+//                   </div>
+//                 )}
+
+//                 {/* NAME + EMAIL */}
+//                 <div className="grid sm:grid-cols-2 gap-4">
+//                   <div>
+//                     <Label>Full Name *</Label>
+//                     <Input
+//                       value={form.name}
+//                       onChange={(e) => setForm({ ...form, name: e.target.value })}
+//                       className="mt-2"
+//                       required
+//                     />
+//                   </div>
+//                   <div>
+//                     <Label>Email *</Label>
+//                     <Input
+//                       type="email"
+//                       value={form.email}
+//                       onChange={(e) => setForm({ ...form, email: e.target.value })}
+//                       className="mt-2"
+//                       required
+//                     />
+//                   </div>
+//                 </div>
+
+//                 {/* PHONE + COMPANY */}
+//                 <div className="grid sm:grid-cols-2 gap-4">
+//                   <div>
+//                     <Label>Phone *</Label>
+//                     <Input
+//                       value={form.phone}
+//                       onChange={(e) => setForm({ ...form, phone: e.target.value })}
+//                       className="mt-2"
+//                       required
+//                     />
+//                   </div>
+//                   <div>
+//                     <Label>Company (Optional)</Label>
+//                     <Input
+//                       value={form.company}
+//                       onChange={(e) => setForm({ ...form, company: e.target.value })}
+//                       className="mt-2"
+//                     />
+//                   </div>
+//                 </div>
+
+//                 {/* SUBJECT */}
+//                 <div>
+//                   <Label>Subject *</Label>
+//                   <Input
+//                     value={form.subject}
+//                     onChange={(e) => setForm({ ...form, subject: e.target.value })}
+//                     className="mt-2"
+//                     required
+//                   />
+//                 </div>
+
+//                 {/* MESSAGE */}
+//                 <div>
+//                   <Label>Message *</Label>
+//                   <Textarea
+//                     rows={4}
+//                     value={form.message}
+//                     onChange={(e) => setForm({ ...form, message: e.target.value })}
+//                     className="mt-2"
+//                     required
+//                   />
+//                 </div>
+
+//                 {/* BUTTON */}
+//                 <Button
+//                   type="submit"
+//                   disabled={loading}
+//                   className="w-full h-12 text-white font-semibold mt-4 
+//                   bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 
+//                   hover:opacity-90 transition-all duration-300"
+//                 >
+//                   {loading ? (
+//                     <div className="flex items-center gap-2">
+//                       <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+//                       Sending...
+//                     </div>
+//                   ) : (
+//                     <>
+//                       <Send size={18} className="mr-2" />
+//                       Send Message
+//                     </>
+//                   )}
+//                 </Button>
+//               </form>
+//             )}
+//           </div>
+
+//           {/* RIGHT – INFO */}
+//           <div className="h-full rounded-2xl bg-white/70 backdrop-blur-lg border p-8 shadow-lg flex flex-col justify-between">
+//             <div>
+//               <h3 className="text-2xl font-bold mb-4">Get in Touch 🚀</h3>
+//             <p className="text-gray-600 mb-6">
+//   We're Here To Help You Grow Your Business With The Best Solutions.
+//   Contact Us Anytime And Our Team Will Respond Quickly.
+//         </p>
+//               <div className="space-y-4">
+//                 <div className="flex items-center gap-3">
+//                   <Mail className="text-pink-500" />
+//                   <span>venkatesh@mvbsolutions.com</span>
+//                 </div>
+//                 <div className="flex items-center gap-3">
+//                   <Phone className="text-yellow-500" />
+//                   <span>+91 9686521214</span>
+//                 </div>
+//                 <div className="flex items-center gap-3">
+//                   <MapPin className="text-blue-500" />
+//                   <span>Bangalore, India</span>
+//                 </div>
+//               </div>
+//             </div>
+//             {/* <Button 
+//               className="mt-6 text-white 
+//               bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500"
+//               onClick={() => window.location.href = "mailto:venkatesh@mvbsolutions.com"}
+//             >
+//               Contact Now
+//             </Button> */}
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
+
+
+
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle, MessageSquare } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  MessageSquare,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -465,6 +700,13 @@ export default function ContactSection() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  // Validation Errors
+  const [validationErrors, setValidationErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+  });
+
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -474,17 +716,68 @@ export default function ContactSection() {
     message: "",
   });
 
+  // Validation Function
+  const validateForm = () => {
+    let valid = true;
+    const errors = {
+      name: "",
+      email: "",
+      phone: "",
+    };
+
+    // Name Validation
+    if (!form.name.trim()) {
+      errors.name = "Name is required";
+      valid = false;
+    } else if (!/^[A-Za-z\s]+$/.test(form.name)) {
+      errors.name = "Only letters are allowed";
+      valid = false;
+    }
+
+    // Email Validation
+    if (!form.email.trim()) {
+      errors.email = "Email is required";
+      valid = false;
+    } else if (
+      !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(form.email)
+    ) {
+      errors.email = "Invalid email address";
+      valid = false;
+    }
+
+    // Phone Validation
+    if (!form.phone.trim()) {
+      errors.phone = "Phone number is required";
+      valid = false;
+    } else if (!/^[0-9]{10}$/.test(form.phone)) {
+      errors.phone = "Phone number must be 10 digits";
+      valid = false;
+    }
+
+    setValidationErrors(errors);
+    return valid;
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    // Validate Form
+    if (!validateForm()) {
+      return;
+    }
+
     setLoading(true);
     setError(null);
 
     try {
-      // Save to database and send email to admin
-      const response = await axios.post(`${BASE_URL}/api/contact/post`, form);
-      
+      const response = await axios.post(
+        `${BASE_URL}/api/contact/post`,
+        form
+      );
+
       if (response.data.success || response.status === 201) {
         setSubmitted(true);
+
         setForm({
           name: "",
           email: "",
@@ -493,12 +786,22 @@ export default function ContactSection() {
           subject: "",
           message: "",
         });
+
+        setValidationErrors({
+          name: "",
+          email: "",
+          phone: "",
+        });
       } else {
         setError("Something went wrong. Please try again.");
       }
     } catch (error: any) {
       console.error(error);
-      setError(error.response?.data?.message || "Something went wrong. Please try again.");
+
+      setError(
+        error.response?.data?.message ||
+          "Something went wrong. Please try again."
+      );
     } finally {
       setLoading(false);
     }
@@ -515,14 +818,21 @@ export default function ContactSection() {
                 <div className="w-20 h-20 rounded-full bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500 flex items-center justify-center mx-auto mb-6">
                   <CheckCircle size={40} className="text-white" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Message Sent!</h3>
+
+                <h3 className="text-2xl font-bold mb-4">
+                  Message Sent!
+                </h3>
+
                 <p className="text-gray-600 mb-4">
-                  Thank you for reaching out. Our team will get back to you soon!
+                  Thank you for reaching out. Our team will get back
+                  to you soon!
                 </p>
+
                 <Button
                   variant="outline"
                   onClick={() => {
                     setSubmitted(false);
+
                     setForm({
                       name: "",
                       email: "",
@@ -539,7 +849,10 @@ export default function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  <MessageSquare size={22} className="text-pink-500" />
+                  <MessageSquare
+                    size={22}
+                    className="text-pink-500"
+                  />
                   Send Us a Message
                 </h3>
 
@@ -551,43 +864,89 @@ export default function ContactSection() {
 
                 {/* NAME + EMAIL */}
                 <div className="grid sm:grid-cols-2 gap-4">
+                  {/* NAME */}
                   <div>
                     <Label>Full Name *</Label>
+
                     <Input
                       value={form.name}
-                      onChange={(e) => setForm({ ...form, name: e.target.value })}
+                      onChange={(e) =>
+                        setForm({
+                          ...form,
+                          name: e.target.value,
+                        })
+                      }
                       className="mt-2"
-                      required
                     />
+
+                    {validationErrors.name && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {validationErrors.name}
+                      </p>
+                    )}
                   </div>
+
+                  {/* EMAIL */}
                   <div>
                     <Label>Email *</Label>
+
                     <Input
                       type="email"
                       value={form.email}
-                      onChange={(e) => setForm({ ...form, email: e.target.value })}
+                      onChange={(e) =>
+                        setForm({
+                          ...form,
+                          email: e.target.value,
+                        })
+                      }
                       className="mt-2"
-                      required
                     />
+
+                    {validationErrors.email && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {validationErrors.email}
+                      </p>
+                    )}
                   </div>
                 </div>
 
                 {/* PHONE + COMPANY */}
                 <div className="grid sm:grid-cols-2 gap-4">
+                  {/* PHONE */}
                   <div>
                     <Label>Phone *</Label>
+
                     <Input
                       value={form.phone}
-                      onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                      maxLength={10}
+                      onChange={(e) =>
+                        setForm({
+                          ...form,
+                          phone: e.target.value.replace(/\D/g, ""),
+                        })
+                      }
                       className="mt-2"
-                      required
                     />
+
+                    {validationErrors.phone && (
+                      <p className="text-red-500 text-sm mt-1">
+                        {validationErrors.phone}
+                      </p>
+                    )}
                   </div>
+
+                  {/* COMPANY */}
                   <div>
                     <Label>Company (Optional)</Label>
+
                     <Input
                       value={form.company}
-                      onChange={(e) => setForm({ ...form, company: e.target.value })}
+                      onChange={(e) =>
+                        setForm({
+                          ...form,
+                          company: e.target.value,
+                        })
+                      }
                       className="mt-2"
                     />
                   </div>
@@ -596,9 +955,15 @@ export default function ContactSection() {
                 {/* SUBJECT */}
                 <div>
                   <Label>Subject *</Label>
+
                   <Input
                     value={form.subject}
-                    onChange={(e) => setForm({ ...form, subject: e.target.value })}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        subject: e.target.value,
+                      })
+                    }
                     className="mt-2"
                     required
                   />
@@ -607,10 +972,16 @@ export default function ContactSection() {
                 {/* MESSAGE */}
                 <div>
                   <Label>Message *</Label>
+
                   <Textarea
                     rows={4}
                     value={form.message}
-                    onChange={(e) => setForm({ ...form, message: e.target.value })}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        message: e.target.value,
+                      })
+                    }
                     className="mt-2"
                     required
                   />
@@ -643,33 +1014,33 @@ export default function ContactSection() {
           {/* RIGHT – INFO */}
           <div className="h-full rounded-2xl bg-white/70 backdrop-blur-lg border p-8 shadow-lg flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-bold mb-4">Get in Touch 🚀</h3>
-            <p className="text-gray-600 mb-6">
-  We're Here To Help You Grow Your Business With The Best Solutions.
-  Contact Us Anytime And Our Team Will Respond Quickly.
-        </p>
+              <h3 className="text-2xl font-bold mb-4">
+                Get in Touch 🚀
+              </h3>
+
+              <p className="text-gray-600 mb-6">
+                We're Here To Help You Grow Your Business With The
+                Best Solutions. Contact Us Anytime And Our Team Will
+                Respond Quickly.
+              </p>
+
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail className="text-pink-500" />
                   <span>venkatesh@mvbsolutions.com</span>
                 </div>
+
                 <div className="flex items-center gap-3">
                   <Phone className="text-yellow-500" />
                   <span>+91 9686521214</span>
                 </div>
+
                 <div className="flex items-center gap-3">
                   <MapPin className="text-blue-500" />
                   <span>Bangalore, India</span>
                 </div>
               </div>
             </div>
-            {/* <Button 
-              className="mt-6 text-white 
-              bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500"
-              onClick={() => window.location.href = "mailto:venkatesh@mvbsolutions.com"}
-            >
-              Contact Now
-            </Button> */}
           </div>
         </div>
       </div>
