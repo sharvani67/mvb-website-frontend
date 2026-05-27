@@ -368,7 +368,7 @@ export default function Footer() {
       <div className="absolute top-0 left-0 w-full h-[4px] bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500" />
 
       {/* ================= NEWSLETTER ================= */}
-      <div className="relative border-b border-white/40 backdrop-blur-xl">
+      {/* <div className="relative border-b border-white/40 backdrop-blur-xl">
         <div className="container mx-auto px-4 lg:px-8 py-16">
           <div className="grid lg:grid-cols-2 gap-8 items-center">
 
@@ -393,7 +393,7 @@ export default function Footer() {
 
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* ================= MAIN FOOTER ================= */}
       <div className="relative container mx-auto px-4 lg:px-8 py-16">
@@ -415,7 +415,7 @@ export default function Footer() {
             {/* 🌍 SOCIAL MEDIA (OFFICIAL COLORS) */}
             <div className="flex gap-3">
 
-              {/* LinkedIn */}
+           
               <a
                 href="#"
                 target="_blank"
@@ -424,7 +424,7 @@ export default function Footer() {
                 <Linkedin size={18} />
               </a>
 
-              {/* Twitter */}
+     
               <a
                 href="#"
                 target="_blank"
@@ -433,7 +433,7 @@ export default function Footer() {
                 <Twitter size={18} />
               </a>
 
-              {/* Facebook */}
+           
               <a
                 href="#"
                 target="_blank"
@@ -442,7 +442,7 @@ export default function Footer() {
                 <Facebook size={18} />
               </a>
 
-              {/* Instagram */}
+             
               <a
                 href="#"
                 target="_blank"

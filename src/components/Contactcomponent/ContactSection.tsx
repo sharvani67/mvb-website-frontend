@@ -663,13 +663,13 @@ export default function ContactSection() {
                 </div>
               </div>
             </div>
-            <Button 
+            {/* <Button 
               className="mt-6 text-white 
               bg-gradient-to-r from-pink-500 via-yellow-400 to-blue-500"
               onClick={() => window.location.href = "mailto:venkatesh@mvbsolutions.com"}
             >
               Contact Now
-            </Button>
+            </Button> */}
           </div>
         </div>
       </div>

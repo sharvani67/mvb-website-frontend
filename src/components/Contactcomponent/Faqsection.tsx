@@ -145,25 +145,55 @@ export default function Faqsection() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="flex justify-center mt-16">
+        {/* <div className="flex justify-center mt-16">
   <button
     className="group flex items-center gap-4 px-6 py-3 rounded-full 
     border border-pink-200 
     bg-white/60 backdrop-blur-md
     hover:shadow-md transition-all duration-300"
   >
-    {/* Left Text */}
+    
     <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent font-medium">
       Still Have Questions?
     </span>
 
-    {/* Arrow Circle */}
+  
     <span className="flex items-center justify-center w-8 h-8 rounded-full 
       bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 text-white">
       →
     </span>
 
-    {/* Right Text */}
+
+    <span className="text-gray-600 font-medium">
+      Contact Our Team
+    </span>
+  </button>
+    </div> */}
+
+    <div className="flex justify-center mt-16">
+  <button
+    onClick={() => {
+      document
+        .getElementById("contact-form")
+        ?.scrollIntoView({ behavior: "smooth" });
+    }}
+    className="group flex items-center gap-4 px-6 py-3 rounded-full 
+    border border-pink-200 
+    bg-white/60 backdrop-blur-md
+    hover:shadow-md transition-all duration-300"
+  >
+    <span className="bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 bg-clip-text text-transparent font-medium">
+      Still Have Questions?
+    </span>
+
+    <span
+      className="flex items-center justify-center w-8 h-8 rounded-full 
+      bg-gradient-to-r from-pink-600 via-yellow-400 to-blue-600 text-white
+      group-hover:translate-x-1 transition-transform duration-300"
+    >
+      →
+    </span>
+
     <span className="text-gray-600 font-medium">
       Contact Our Team
     </span>
