@@ -417,7 +417,7 @@ export default function Footer() {
 
            
               <a
-                href="#"
+                href=""
                 target="_blank"
                 className="p-3 rounded-xl bg-[#0077B5] text-white shadow-lg hover:scale-110 hover:shadow-[0_0_15px_rgba(0,119,181,0.6)] transition"
               >
@@ -426,7 +426,7 @@ export default function Footer() {
 
      
               <a
-                href="#"
+                href=""
                 target="_blank"
                 className="p-3 rounded-xl bg-[#1DA1F2] text-white shadow-lg hover:scale-110 hover:shadow-[0_0_15px_rgba(29,161,242,0.6)] transition"
               >
@@ -435,7 +435,7 @@ export default function Footer() {
 
            
               <a
-                href="#"
+                href=""
                 target="_blank"
                 className="p-3 rounded-xl bg-[#1877F2] text-white shadow-lg hover:scale-110 hover:shadow-[0_0_15px_rgba(24,119,242,0.6)] transition"
               >
@@ -444,7 +444,7 @@ export default function Footer() {
 
              
               <a
-                href="#"
+                href=""
                 target="_blank"
                 className="p-3 rounded-xl bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 text-white shadow-lg hover:scale-110 hover:shadow-[0_0_15px_rgba(236,72,153,0.6)] transition"
               >
@@ -554,9 +554,9 @@ export default function Footer() {
           </p>
 
           <div className="flex gap-6 text-sm text-gray-700">
-            <a href="#" className="hover:text-pink-600 transition">Privacy Policy</a>
-            <a href="#" className="hover:text-yellow-600 transition">Terms of Service</a>
-            <a href="#" className="hover:text-blue-600 transition">Cookie Policy</a>
+            <a href="" className="hover:text-pink-600 transition">Privacy Policy</a>
+            <a href="" className="hover:text-yellow-600 transition">Terms of Service</a>
+            <a href="" className="hover:text-blue-600 transition">Cookie Policy</a>
           </div>
 
         </div>
