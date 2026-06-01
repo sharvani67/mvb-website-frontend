@@ -1887,6 +1887,7 @@
 
 
 
+
 import React, { useState, useEffect } from "react";
 import { 
   Briefcase, MapPin, Clock, DollarSign, GraduationCap, 
@@ -1979,14 +1980,16 @@ const CareersPage = () => {
     }
   };
 
-  const fetchDepartments = async () => {
-    try {
-      const response = await axios.get(`${API_URL}/departments`);
-      setDepartments(["All", ...response.data]);
-    } catch (err) {
-      console.error("Error fetching departments:", err);
-    }
-  };
+ const fetchDepartments = async () => {
+  try {
+    const response = await axios.get(`${API_URL}/departments`);
+    // Filter out any "All" from the response and then add "All" at the beginning
+    const filteredDepartments = response.data.filter((dept: string) => dept !== "All");
+    setDepartments(["All", ...filteredDepartments]);
+  } catch (err) {
+    console.error("Error fetching departments:", err);
+  }
+};
 
   const openApplyForm = (job: Job) => {
     setSelectedJob(job);
